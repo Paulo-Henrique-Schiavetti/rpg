@@ -1,0 +1,36 @@
+p, label, h1, a, .item, .botao {  
+    color: white;
+    background: none;
+    border: none;
+    outline: none; 
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: -2px 0 black, 0 -2px black,  0 2px black,  2px 0 black;
+    margin: 2%;    
+}
+p, label, a, .item, .botao {
+    font-size: 18pt;
+}
+.botao {
+    background: #252525;
+    border: solid black 2px;
+}
+.item:hover, .botao:hover {
+    background-color: #202020;
+    cursor: pointer;
+}
+.seta {
+    font-size: 26pt;
+    font-weight: 500;
+    margin: 0;
+}
+.pv {
+    background-color: greenyellow;
+    font-size: 6pt;
+    border-radius: 6px;
+}
+.green {
+    color:greenyellow;
+}
+.red {
+    color: lightcoral;
+}
