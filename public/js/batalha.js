@@ -19,6 +19,9 @@ function start(i1, i2, a1, a2){
         calcularvidaaliado(barra);  
     },800);
 }
+function rolar(){
+    return(Math.trunc(Math.random()*20+1));
+}
 function ataque(tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
 
     if (tipo<=4){
@@ -33,7 +36,7 @@ function ataque(tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
 }
 function ataquefisico(sucesso,danobase,af,df){
 
-    rolagem = Math.round(Math.random()*20);
+    rolagem = rolar();
     mostrarrolagem(rolagem);
     if(rolagem == 20){
         var dano = Math.round((danobase*af*3)/(df*0.5));
@@ -58,7 +61,7 @@ function ataquefisico(sucesso,danobase,af,df){
 }
 function ataquemagico(sucesso,danobase,am,dm){
     
-    rolagem = Math.round(Math.random()*20);
+    rolagem = rolar();
     mostrarrolagem(rolagem);
     if(rolagem == 20){
         var dano = Math.round((danobase*am*3)/(dm*0.5));
@@ -83,7 +86,7 @@ function ataquemagico(sucesso,danobase,am,dm){
 }
 function ataquenatural(sucesso,danobase,an,dn){
     
-    rolagem = Math.round(Math.random()*20);
+    rolagem = rolar();
     mostrarrolagem(rolagem);
     if(rolagem == 20){
         var dano = Math.round((danobase*an*3)/(dn*0.5));
@@ -108,7 +111,7 @@ function ataquenatural(sucesso,danobase,an,dn){
 }
 function ataquedivino(sucesso,danobase,ad,dd){
     
-    rolagem = Math.round(Math.random()*20);
+    rolagem = rolar();
     mostrarrolagem(rolagem);
     if(rolagem == 20){
         var dano = Math.round((danobase*ad*3)/(dd*0.5));
