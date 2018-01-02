@@ -40,10 +40,10 @@ function ataquefisico(sucesso,danobase,af,df){
         mensagem("<p>Crítico!</p>");
     } else if (rolagem>sucesso){
         var dano = Math.round((danobase*af*3)/df);
-        mensagem("<p>O ataque físico acertou.</p>");
+        mensagem("<p>O ataque acertou.</p>");
     } else {
         var dano = 0;
-        mensagem("<p>O ataque físico falhou.</p>");
+        mensagem("<p>O ataque falhou.</p>");
     }
 
     ipv -= dano;
@@ -65,10 +65,10 @@ function ataquemagico(sucesso,danobase,am,dm){
         mensagem("<p>Crítico!</p>");
     } else if (rolagem>sucesso){
         var dano = Math.round((danobase*am*3)/dm);
-        mensagem("<p>O ataque mágico acertou.</p>");
+        mensagem("<p>A magia acertou.</p>");
     } else {
         var dano = 0;
-        mensagem("<p>O ataque mágico falhou.</p>");
+        mensagem("<p>A magia falhou.</p>");
     }
 
     ipv -= dano;
@@ -90,10 +90,10 @@ function ataquenatural(sucesso,danobase,an,dn){
         mensagem("<p>Crítico!</p>");
     } else if (rolagem>sucesso){
         var dano = Math.round((danobase*an*3)/dn);
-        mensagem("<p>O ataque natural acertou.</p>");
+        mensagem("<p>O ataque acertou.</p>");
     } else {
         var dano = 0;
-        mensagem("<p>O ataque natural falhou.</p>");
+        mensagem("<p>O ataque falhou.</p>");
     }
 
     ipv -= dano;
@@ -115,10 +115,10 @@ function ataquedivino(sucesso,danobase,ad,dd){
         mensagem("<p>Crítico!</p>");
     } else if (rolagem>sucesso){
         var dano = Math.round((danobase*ad*3)/dd);
-        mensagem("<p>O ataque divino acertou.</p>");
+        mensagem("<p>O ataque acertou.</p>");
     } else {
         var dano = 0;
-        mensagem("<p>O ataque divino falhou.</p>");
+        mensagem("<p>O ataque falhou.</p>");
     }
 
     ipv -= dano;
