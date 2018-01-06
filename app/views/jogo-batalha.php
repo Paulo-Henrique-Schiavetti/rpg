@@ -23,11 +23,11 @@
                         <p class="seta">---------------⇀</p>
                     </div>
                     <p class="small"><?=$inimigo['nome']?></p>
-                    <div id="ibarra">
+                    <div id="i2barra">
                         <p class="seta">---------------⇀</p>
                     </div>
                     <p class="small"><?=$inimigo['nome']?></p>
-                    <div id="ibarra">
+                    <div id="i3barra">
                         <p class="seta">---------------⇀</p>
                     </div>
                 </div>
@@ -46,11 +46,11 @@
                         <p class="seta">↼---------------</p>
                     </div>
                     <p class="small"><?=$aliado1['apelido']?></p>
-                    <div id="abarra">
+                    <div id="a1barra">
                         <p class="seta">↼---------------</p>
                     </div>
                     <p class="small"><?=$aliado1['apelido']?></p>
-                    <div id="abarra">
+                    <div id="a2barra">
                         <p class="seta">↼---------------</p>
                     </div>
                 </div>            

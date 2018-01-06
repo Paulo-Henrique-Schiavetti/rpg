@@ -31,6 +31,9 @@ p, label, a, .item, .botao {
     font-size: 6pt;
     border-radius: 6px;
 }
+.notpv{
+        font-size: 6pt;
+    }
 .green {
     color:greenyellow;
 }
