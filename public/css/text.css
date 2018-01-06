@@ -10,6 +10,9 @@ p, label, h1, a, .item, .botao {
 p, label, a, .item, .botao {
     font-size: 18pt;
 }
+.small {
+    font-size: 12pt;
+}
 .botao {
     background: #252525;
     border: solid black 2px;
@@ -33,4 +36,15 @@ p, label, a, .item, .botao {
 }
 .red {
     color: lightcoral;
+}
+@media only screen and (max-width: 768px) {
+    .pv {
+        font-size: 2pt;
+    }
+    .notpv{
+        font-size: 2pt;
+    }
+    .seta {
+        font-size: 8pt;
+    }
 }
