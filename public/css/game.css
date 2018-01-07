@@ -1,5 +1,6 @@
 .game {
-    width: 720px;
+    width: 75%;
+    margin-left: 12.5%;
 }
 .tela {
     height: 420px;
@@ -49,7 +50,7 @@
     left: 37%;
 }
 .menu {
-    height: 160px;
+    height: 200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -67,16 +68,16 @@
 }
 .menu > .caixa {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: space-between;
     flex-wrap: wrap;
-    justify-content: space-around;
-    width: 75%;
+    width: 85%;
 }
 .menu > .caixa.pequena {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 25%;
+    width: 15%;
 }    
 .barra {
     display: flex;
@@ -91,7 +92,8 @@
 }
 @media only screen and (max-width: 768px) {
     .game {
-        width: 420px;
+        width: 98%;
+        margin-left:1%;
     }
     .tela {
     height: 320px;

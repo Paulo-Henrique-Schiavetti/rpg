@@ -116,7 +116,9 @@ class QueryBuilder
                 ataques1.nome as ataque1nome, ataques1.tipo as ataque1tipo, ataques1.sucesso as ataque1sucesso, ataques1.danobase as ataque1danobase,
                 ataques2.nome as ataque2nome, ataques2.tipo as ataque2tipo, ataques2.sucesso as ataque2sucesso, ataques2.danobase as ataque2danobase,
                 ataques3.nome as ataque3nome, ataques3.tipo as ataque3tipo, ataques3.sucesso as ataque3sucesso, ataques3.danobase as ataque3danobase,
-                ataques4.nome as ataque4nome, ataques4.tipo as ataque4tipo, ataques4.sucesso as ataque4sucesso, ataques4.danobase as ataque4danobase
+                ataques4.nome as ataque4nome, ataques4.tipo as ataque4tipo, ataques4.sucesso as ataque4sucesso, ataques4.danobase as ataque4danobase,
+                ataques5.nome as ataque5nome, ataques5.tipo as ataque5tipo, ataques5.sucesso as ataque5sucesso, ataques5.danobase as ataque5danobase,
+                ataques6.nome as ataque6nome, ataques6.tipo as ataque6tipo, ataques6.sucesso as ataque6sucesso, ataques6.danobase as ataque6danobase
                 FROM rpgdb.aliados
                 inner join rpgdb.ataques as ataques1
                 on ataques1.id = aliados.ataque1
@@ -125,7 +127,11 @@ class QueryBuilder
                 inner join rpgdb.ataques as ataques3
                 on ataques3.id = aliados.ataque3
                 inner join rpgdb.ataques as ataques4
-                on ataques4.id = aliados.ataque4";
+                on ataques4.id = aliados.ataque4
+                inner join rpgdb.ataques as ataques5
+                on ataques5.id = aliados.ataque5
+                inner join rpgdb.ataques as ataques6
+                on ataques6.id = aliados.ataque6";
 
         $s = $this->pdo->prepare($sql);
 

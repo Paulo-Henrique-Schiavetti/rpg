@@ -2,8 +2,7 @@ var ipv = 0;
 var ipvtotal = 0;
 var apv = 0;
 var apvtotal = 0;
-var x = 0;
-var y = 0;
+var x = 1;
 
 function start(i1, i2, a1, a2){
     setTimeout(function(){
@@ -44,66 +43,88 @@ function atacar(){
 }
 function mover(key) {
     if(key.keyCode == 87){
-        x += 1;
-    }
-    if(key.keyCode == 65){
-        y -= 1;
-    }
-    if(key.keyCode == 83){
         x -= 1;
     }
+    if(key.keyCode == 65){
+        x -= 3;
+    }
+    if(key.keyCode == 83){
+        x += 1;
+    }
     if(key.keyCode == 68){
-        y += 1;
+        x += 3;
     }
-    if(x>1){
-        x = 0;
-    }
-    if(x<0){
+    if(x>6){
         x = 1;
     }
-    if(y>1){
-        y = 0;
-    }
-    if(y<0){
-        y = 1;
+    if(x<1){
+        x = 6;
     }
 }
 function position() {
-    if (x == 0 && y == 0) {
+    if (x == 1) {
         document.getElementById('ataque1').style.backgroundColor = "#202020";
         document.getElementById('ataque2').style.background = "none";
         document.getElementById('ataque3').style.background = "none";
         document.getElementById('ataque4').style.background = "none";
-    } else if (x == 0 && y == 1) {
+        document.getElementById('ataque5').style.background = "none";
+        document.getElementById('ataque6').style.background = "none";
+    } else if (x == 2) {
         document.getElementById('ataque2').style.backgroundColor = "#202020";
         document.getElementById('ataque1').style.background = "none";
         document.getElementById('ataque3').style.background = "none";
         document.getElementById('ataque4').style.background = "none";
-    } else if (x == 1 && y == 0) {
+        document.getElementById('ataque5').style.background = "none";
+        document.getElementById('ataque6').style.background = "none";
+    } else if (x == 3) {
         document.getElementById('ataque3').style.backgroundColor = "#202020";
         document.getElementById('ataque2').style.background = "none";
         document.getElementById('ataque1').style.background = "none";
         document.getElementById('ataque4').style.background = "none";
-    } else if (x == 1 && y == 1) {
+        document.getElementById('ataque5').style.background = "none";
+        document.getElementById('ataque6').style.background = "none";
+    } else if (x == 4) {
         document.getElementById('ataque4').style.backgroundColor = "#202020";
         document.getElementById('ataque2').style.background = "none";
         document.getElementById('ataque3').style.background = "none";
+        document.getElementById('ataque5').style.background = "none";
+        document.getElementById('ataque6').style.background = "none";
+        document.getElementById('ataque1').style.background = "none";
+    } else if (x == 5) {
+        document.getElementById('ataque5').style.backgroundColor = "#202020";
+        document.getElementById('ataque2').style.background = "none";
+        document.getElementById('ataque3').style.background = "none";
+        document.getElementById('ataque4').style.background = "none";
+        document.getElementById('ataque6').style.background = "none";
+        document.getElementById('ataque1').style.background = "none";
+    } else if (x == 6) {
+        document.getElementById('ataque6').style.backgroundColor = "#202020";
+        document.getElementById('ataque2').style.background = "none";
+        document.getElementById('ataque3').style.background = "none";
+        document.getElementById('ataque4').style.background = "none";
+        document.getElementById('ataque5').style.background = "none";
         document.getElementById('ataque1').style.background = "none";
     }
 }
 function enter(key){
     if (key.keyCode == 13){
-        if (x == 0 && y == 0) {
+        if (x == 1) {
             document.getElementById('ataque1').onclick();    
             remove();
-        } else if (x == 0 && y == 1) {
-            document.getElementById('ataque1').onclick();  
+        } else if (x == 2) {
+            document.getElementById('ataque2').onclick();  
             remove();  
-        } else if (x == 1 && y == 0) {
-            document.getElementById('ataque1').onclick();  
+        } else if (x == 3) {
+            document.getElementById('ataque3').onclick();  
             remove();  
-        } else if (x == 1 && y == 1) {
-            document.getElementById('ataque1').onclick(); 
+        } else if (x == 4) {
+            document.getElementById('ataque4').onclick(); 
+            remove();   
+        } else if (x == 5) {
+            document.getElementById('ataque5').onclick(); 
+            remove();   
+        } else if (x == 6) {
+            document.getElementById('ataque6').onclick(); 
             remove();   
         }
     }

@@ -169,15 +169,15 @@ insert into ataques (id, nome, tipo, sucesso, danobase) values (49, 'Self-enabli
 insert into ataques (id, nome, tipo, sucesso, danobase) values (50, 'migration', 5, 4, 23);
 
 -- aliados --
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (1, 'Carr', 1, 29, 32, 88, 43, 11, 48, 67, 96, 32, 20, 4, 16, 17, 34);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (2, 'Warden', 2, 80, 14, 28, 23, 31, 40, 62, 44, 88, 18, 9, 42, 9, 8);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (3, 'Heywood', 7, 16, 42, 23, 84, 98, 59, 73, 93, 98, 84, 25, 22, 18, 49);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (4, 'Tory', 1, 43, 39, 46, 27, 21, 27, 99, 17, 8, 77, 32, 32, 10, 40);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (5, 'Debera', 2, 35, 19, 49, 20, 6, 71, 26, 61, 63, 33, 29, 3, 26, 32);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (6, 'Kira', 7, 87, 14, 16, 5, 100, 14, 4, 5, 48, 79, 30, 25, 41, 41);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (7, 'Banky', 5, 1, 8, 60, 25, 56, 50, 33, 98, 14, 23, 38, 22, 46, 31);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (8, 'Sloan', 3, 14, 41, 11, 95, 36, 53, 48, 86, 86, 86, 6, 19, 7, 10);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (9, 'Tibold', 8, 7, 34, 99, 56, 51, 12, 54, 78, 71, 75, 33, 45, 6, 6);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (10, 'Clara', 8, 47, 13, 96, 84, 93, 32, 39, 4, 99, 18, 3, 42, 50, 23);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (11, 'Homerus', 6, 59, 25, 76, 18, 25, 93, 75, 37, 59, 35, 16, 38, 5, 11);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4) values (12, 'Loren', 6, 41, 2, 61, 1, 73, 45, 77, 6, 90, 33, 28, 42, 47, 42);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (1, 'Carr', 1, 29, 32, 88, 43, 11, 48, 67, 96, 32, 20, 4, 16, 17, 34, 42, 29);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (2, 'Warden', 2, 80, 14, 28, 23, 31, 40, 62, 44, 88, 18, 9, 42, 9, 8, 33, 50);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (3, 'Heywood', 7, 16, 42, 23, 84, 98, 59, 73, 93, 98, 84, 25, 22, 18, 49, 22, 17);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (4, 'Tory', 1, 43, 39, 46, 27, 21, 27, 99, 17, 8, 77, 32, 32, 10, 40, 46, 44);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (5, 'Debera', 2, 35, 19, 49, 20, 6, 71, 26, 61, 63, 33, 29, 3, 26, 32, 11, 15);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (6, 'Kira', 7, 87, 14, 16, 5, 100, 14, 4, 5, 48, 79, 30, 25, 41, 41, 47, 10);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (7, 'Banky', 5, 1, 8, 60, 25, 56, 50, 33, 98, 14, 23, 38, 22, 46, 31, 19, 28);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (8, 'Sloan', 3, 14, 41, 11, 95, 36, 53, 48, 86, 86, 86, 6, 19, 7, 10, 36, 13);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (9, 'Tibold', 8, 7, 34, 99, 56, 51, 12, 54, 78, 71, 75, 33, 45, 6, 7, 8, 20);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (10, 'Clara', 8, 47, 13, 96, 84, 93, 32, 39, 4, 99, 18, 3, 42, 50, 23, 17, 21);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (11, 'Homerus', 6, 59, 25, 76, 18, 25, 93, 75, 37, 59, 35, 16, 38, 5, 11, 34, 37);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6) values (12, 'Loren', 6, 41, 2, 61, 1, 73, 45, 77, 6, 90, 33, 28, 42, 47, 42, 5, 1);

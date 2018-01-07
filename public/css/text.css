@@ -50,4 +50,8 @@ p, label, a, .item, .botao {
     .seta {
         font-size: 8pt;
     }
+    .item {
+        font-size: 12pt;
+        font-weight: 600;
+    }
 }
