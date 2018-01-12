@@ -5,6 +5,7 @@ var apvtotal = 0;
 var x = 1;
 
 function start(i1, i2, a1, a2){
+    resetmensagem();
     setTimeout(function(){
         document.getElementById("ibarra").innerHTML = "<div class='barra'><i id='pv' class='pv'></i><i class='notpv' id='notpv'></i></div><i id='pvEscrito'></i>";
         document.getElementById("abarra").innerHTML = "<div class='barra'><i id='aliadopv' class='pv'></i><i class='notpv' id='aliadonotpv'></i></div><i id='aliadopvEscrito'></i>";
@@ -109,22 +110,22 @@ function position() {
 function enter(key){
     if (key.keyCode == 13){
         if (x == 1) {
-            document.getElementById('ataque1').onclick();    
+            document.getElementById('ataque1').click();    
             remove();
         } else if (x == 2) {
-            document.getElementById('ataque2').onclick();  
+            document.getElementById('ataque2').click();  
             remove();  
         } else if (x == 3) {
-            document.getElementById('ataque3').onclick();  
+            document.getElementById('ataque3').click();  
             remove();  
         } else if (x == 4) {
-            document.getElementById('ataque4').onclick(); 
+            document.getElementById('ataque4').click(); 
             remove();   
         } else if (x == 5) {
-            document.getElementById('ataque5').onclick(); 
+            document.getElementById('ataque5').click(); 
             remove();   
         } else if (x == 6) {
-            document.getElementById('ataque6').onclick(); 
+            document.getElementById('ataque6').click(); 
             remove();   
         }
     }
@@ -137,120 +138,62 @@ function mensagem(mensagem){
     document.getElementById("ataques").className = "hidden";
     document.getElementById("mensagem").className = "caixa";
     document.getElementById("mensagem").innerHTML = mensagem;
+}
+function mensagem2(mensagem){
+    setTimeout(function() {
+        if (mensagem==1){        
+            document.getElementById("mensagem").innerHTML = "<p>Crítico!</p>";
+        } else if (mensagem==2){
+            document.getElementById("mensagem").innerHTML = "<p>O ataque acertou!</p>";        
+        } else if (mensagem==3){
+            document.getElementById("mensagem").innerHTML = "<p>O ataque falhou!</p>";
+        }        
+        resetmensagem();
+    },1400);
+}
+function resetmensagem(){
     setTimeout(function() {
         document.getElementById("mensagem").innerHTML = "<p>O que você vai fazer?</p>";
     },1400);
 }
-function ataque(tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
+function ataque(nome,tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
     if (tipo<=4){
-        ataquefisico(sucesso,danobase,af,df);
+        calcularataque(nome,sucesso,danobase,af,df);
     } else if (tipo<=6){
-        ataquemagico(sucesso,danobase,am,dm);
+        calcularataque(nome,sucesso,danobase,am,dm);
     } else if (tipo<=8){
-        ataquenatural(sucesso,danobase,an,dn);
+        calcularataque(nome,sucesso,danobase,an,dn);
     } else {
-        ataquedivino(sucesso,danobase,ad,dd);
+        calcularataque(nome,sucesso,danobase,ad,dd);
     } 
 }
-function ataquefisico(sucesso,danobase,af,df){
+function calcularataque(nome,sucesso,danobase,a,d){
 
     rolagem = rolar();
     mostrarrolagem(rolagem);
     if(rolagem == 20){
-        var dano = Math.round((danobase*af*3)/(df*0.5));
-        mensagem("<p>Crítico!</p>");
+        var dano = Math.round((danobase*a*3)/(d*0.5));
+        mensagem("<p>Aliado usou "+nome+":</p>");
+        mensagem2(1);
     } else if (rolagem>sucesso){
-        var dano = Math.round((danobase*af*3)/df);
-        mensagem("<p>O ataque acertou.</p>");
+        var dano = Math.round((danobase*a*3)/d);
+        mensagem("<p>Aliado usou "+nome+":</p>");
+        mensagem2(2);
     } else {
         var dano = 0;
-        mensagem("<p>O ataque falhou.</p>");
+        mensagem("<p>Aliado usou "+nome+":</p>");
+        mensagem2(3);
     }
-
-    ipv -= dano;
-
-    if(ipv>0){    
-            var barra = Math.round((ipv/ipvtotal)*100);
-    } else {
-    ipv = 0;
-    var barra = 0;
-    }
-    calcularvidainimigo(barra);
-}
-function ataquemagico(sucesso,danobase,am,dm){
-    
-    rolagem = rolar();
-    mostrarrolagem(rolagem);
-    if(rolagem == 20){
-        var dano = Math.round((danobase*am*3)/(dm*0.5));
-        mensagem("<p>Crítico!</p>");
-    } else if (rolagem>sucesso){
-        var dano = Math.round((danobase*am*3)/dm);
-        mensagem("<p>A magia acertou.</p>");
-    } else {
-        var dano = 0;
-        mensagem("<p>A magia falhou.</p>");
-    }
-
-    ipv -= dano;
-
-    if(ipv>0){    
-            var barra = Math.round((ipv/ipvtotal)*100);
-    } else {
-    ipv = 0;
-    var barra = 0;
-    }
-    calcularvidainimigo(barra);
-}
-function ataquenatural(sucesso,danobase,an,dn){
-    
-    rolagem = rolar();
-    mostrarrolagem(rolagem);
-    if(rolagem == 20){
-        var dano = Math.round((danobase*an*3)/(dn*0.5));
-        mensagem("<p>Crítico!</p>");
-    } else if (rolagem>sucesso){
-        var dano = Math.round((danobase*an*3)/dn);
-        mensagem("<p>O ataque acertou.</p>");
-    } else {
-        var dano = 0;
-        mensagem("<p>O ataque falhou.</p>");
-    }
-
-    ipv -= dano;
-
-    if(ipv>0){    
-            var barra = Math.round((ipv/ipvtotal)*100);
-    } else {
-    ipv = 0;
-    var barra = 0;
-    }
-    calcularvidainimigo(barra);
-}
-function ataquedivino(sucesso,danobase,ad,dd){
-    
-    rolagem = rolar();
-    mostrarrolagem(rolagem);
-    if(rolagem == 20){
-        var dano = Math.round((danobase*ad*3)/(dd*0.5));
-        mensagem("<p>Crítico!</p>");
-    } else if (rolagem>sucesso){
-        var dano = Math.round((danobase*ad*3)/dd);
-        mensagem("<p>O ataque acertou.</p>");
-    } else {
-        var dano = 0;
-        mensagem("<p>O ataque falhou.</p>");
-    }
-
-    ipv -= dano;
-
-    if(ipv>0){    
-            var barra = Math.round((ipv/ipvtotal)*100);
-    } else {
-    ipv = 0;
-    var barra = 0;
-    }
-    calcularvidainimigo(barra);
+    setTimeout(function() {
+        ipv -= dano;
+        if(ipv>0){    
+                var barra = Math.round((ipv/ipvtotal)*100);
+        } else {
+            ipv = 0;
+            var barra = 0;
+        }
+        calcularvidainimigo(barra);
+    },1400);
 }
 function calcularvidainimigo(barra){
     var BarraCheia = "";
