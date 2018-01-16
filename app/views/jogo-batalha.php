@@ -58,10 +58,10 @@
                     <img src="/public/img/aliado<?=$aliado1['id']?>.png">
                 </div>
                 <div class="faixa4 char l2">
-                    <img src="/public/img/aliado<?=$aliado1['id']?>.png">
+                    <img src="/public/img/aliado<?=$aliado3['id']?>.png">
                 </div>
                 <div class="faixa4 char l3">
-                    <img src="/public/img/aliado<?=$aliado1['id']?>.png">
+                    <img src="/public/img/aliado<?=$aliado5['id']?>.png">
                 </div>
             </div>
             <div class="menu">
@@ -77,7 +77,7 @@
                 </div>
                 <div class="caixa pequena">
                     <div class="item" id="rolagem">rolagem: __</div>
-                    <input class="item" type="submit" value="atacar" onclick="atacar();"/>
+                    <input class="item" type="submit" value="atacar" onclick="menuatacar();"/>
                     <input class="item" type="submit" value="item"/>
                     <input class="item" type="submit" value="fugir"/>
                 </div>

@@ -3,6 +3,7 @@ var ipvtotal = 0;
 var apv = 0;
 var apvtotal = 0;
 var x = 1;
+var mensagemativa = false;
 
 function start(i1, i2, a1, a2){
     resetmensagem();
@@ -24,23 +25,33 @@ function start(i1, i2, a1, a2){
 function rolar(){
     return(Math.trunc(Math.random()*20+1));
 }
-function mostrarrolagem(rolagem){
+function mostrarrolagem(rolagem,sucesso){
 
     if(rolagem>=20){
         document.getElementById("rolagem").innerHTML = "rolagem: <strong class='green'>"+rolagem+"</strong>";
-    } else if(rolagem>=10){
-        document.getElementById("rolagem").innerHTML = "rolagem: <strong>"+rolagem+"</strong>";
+    } else if(rolagem>=sucesso){
+        if(rolagem<10){
+            document.getElementById("rolagem").innerHTML = "rolagem: <strong>0"+rolagem+"</strong>";
+        } else {
+            document.getElementById("rolagem").innerHTML = "rolagem: <strong>"+rolagem+"</strong>";
+        }
     } else {
-        document.getElementById("rolagem").innerHTML = "rolagem: <strong class='red'>0"+rolagem+"</strong>";
+        if(rolagem<10){
+            document.getElementById("rolagem").innerHTML = "rolagem: <strong class='red'>0"+rolagem+"</strong>";
+        } else {
+            document.getElementById("rolagem").innerHTML = "rolagem: <strong class='red'>"+rolagem+"</strong>";
+        }        
     }    
 }
-function atacar(){
-    document.getElementById("mensagem").className = "hidden";
-    document.getElementById("ataques").className = "caixa";
-    document.addEventListener("keydown", mover, false);
-    document.addEventListener("keydown", position, false);
-    document.addEventListener("keydown", enter, false);
-    position();
+function menuatacar(){
+    if (mensagemativa == false){
+        document.getElementById("mensagem").className = "hidden";
+        document.getElementById("ataques").className = "caixa";
+        document.addEventListener("keydown", mover, false);
+        document.addEventListener("keydown", position, false);
+        document.addEventListener("keydown", enter, false);
+        position();
+    } 
 }
 function mover(key) {
     if(key.keyCode == 87){
@@ -55,11 +66,23 @@ function mover(key) {
     if(key.keyCode == 68){
         x += 3;
     }
-    if(x>6){
+    if(x==7){
         x = 1;
     }
-    if(x<1){
+    if(x==0){
         x = 6;
+    }
+    if(x==8){
+        x = 2;
+    }
+    if(x==-1){
+        x = 5;
+    }
+    if(x==9){
+        x = 3;
+    }
+    if(x==-2){
+        x = 4;
     }
 }
 function position() {
@@ -138,6 +161,7 @@ function mensagem(mensagem){
     document.getElementById("ataques").className = "hidden";
     document.getElementById("mensagem").className = "caixa";
     document.getElementById("mensagem").innerHTML = mensagem;
+    mensagemativa = true;
 }
 function mensagem2(mensagem){
     setTimeout(function() {
@@ -147,14 +171,16 @@ function mensagem2(mensagem){
             document.getElementById("mensagem").innerHTML = "<p>O ataque acertou!</p>";        
         } else if (mensagem==3){
             document.getElementById("mensagem").innerHTML = "<p>O ataque falhou!</p>";
-        }        
+        }
+        mensagemativa = true;   
         resetmensagem();
-    },1400);
+    },800);
 }
 function resetmensagem(){
     setTimeout(function() {
         document.getElementById("mensagem").innerHTML = "<p>O que você vai fazer?</p>";
-    },1400);
+        mensagemativa = false;
+    },1000);
 }
 function ataque(nome,tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
     if (tipo<=4){
@@ -170,7 +196,7 @@ function ataque(nome,tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
 function calcularataque(nome,sucesso,danobase,a,d){
 
     rolagem = rolar();
-    mostrarrolagem(rolagem);
+    mostrarrolagem(rolagem,sucesso);
     if(rolagem == 20){
         var dano = Math.round((danobase*a*3)/(d*0.5));
         mensagem("<p>Aliado usou "+nome+":</p>");
