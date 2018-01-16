@@ -11,13 +11,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/public/css/game.css" rel="stylesheet">
+        <link href="/public/css/tela.css" rel="stylesheet">
         <link href="/public/css/text.css" rel="stylesheet">
         <script type="text/javascript" src="/public/js/batalha.js"></script>
         <script type="text/javascript" src="/public/js/menus.js"></script>
     </head>
     <body onload="start(<?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>); mensagem('<p>Um <?=$inimigo['nome']?> selvagem apareceu.</p>'); menu3();">
         <div class="game">
-            <div class="tela" style="background: url(/public/img/back1.png);">
+            <div class="tela forest">
                 <div class="caixa pequena faixa1">
                     <p class="small"><?=$inimigo['nome']?></p>
                     <div id="ibarra">

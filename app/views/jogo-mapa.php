@@ -5,13 +5,14 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/public/css/game.css" rel="stylesheet">
+        <link href="/public/css/tela.css" rel="stylesheet">
+        <link href="/public/css/text.css" rel="stylesheet">
         <script type="text/javascript" src="/public/js/mapa.js"></script>
         <script type="text/javascript" src="/public/js/menus.js"></script>
-        <link href="/public/css/text.css" rel="stylesheet">
     </head>
     <body>
         <div class="game">
-            <div class="tela" id="char">
+            <div class="tela map" id="char">
                 <img src="/public/img/aliado1.png" style="position: absolute; bottom:40%; right:45%;"/>
             </div>
             <div class="menu">

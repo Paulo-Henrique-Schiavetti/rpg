@@ -8,9 +8,6 @@ body {
 .tela {
     height: 420px;
     position: relative;
-    background: url('/public/img/map.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     border: solid #202020 2px;
     border-radius: 2px;
 }
@@ -102,9 +99,6 @@ body {
     }
     .tela {
     height: 320px;
-    background: url('/public/img/mapmobile.png');
-    background-repeat: no-repeat;
-    background-size: cover;
     }
     .menu {
     height: 260px;

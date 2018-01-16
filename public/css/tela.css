@@ -1,0 +1,23 @@
+.tela.map {    
+    background: url('/public/img/map.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tela.forest {
+    background: url('/public/img/backForest.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+@media only screen and (max-width: 768px) {
+    .tela.map {
+        background: url('/public/img/mapmobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .tela.forest {
+        background: url('/public/img/backForestmobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
