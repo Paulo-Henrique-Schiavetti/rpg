@@ -13,8 +13,9 @@
         <link href="/public/css/game.css" rel="stylesheet">
         <link href="/public/css/text.css" rel="stylesheet">
         <script type="text/javascript" src="/public/js/batalha.js"></script>
+        <script type="text/javascript" src="/public/js/menus.js"></script>
     </head>
-    <body onload="start(<?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>); mensagem('<p>Um <?=$inimigo['nome']?> selvagem apareceu.</p>');">
+    <body onload="start(<?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>); mensagem('<p>Um <?=$inimigo['nome']?> selvagem apareceu.</p>'); menu3();">
         <div class="game">
             <div class="tela" style="background: url(/public/img/back1.png);">
                 <div class="caixa pequena faixa1">
@@ -77,9 +78,9 @@
                 </div>
                 <div class="caixa pequena">
                     <div class="item" id="rolagem">rolagem: __</div>
-                    <input class="item" type="submit" value="atacar" onclick="menuatacar();"/>
-                    <input class="item" type="submit" value="item"/>
-                    <input class="item" type="submit" value="fugir"/>
+                    <input class="item" id="item1" type="submit" value="atacar" onclick="menuatacar();"/>
+                    <input class="item" id="item2" type="submit" value="item"/>
+                    <input class="item" id="item3" type="submit" value="fugir"/>
                 </div>
             </div>
         </div>

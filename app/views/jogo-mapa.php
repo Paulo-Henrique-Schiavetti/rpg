@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="/public/css/game.css" rel="stylesheet">
         <script type="text/javascript" src="/public/js/mapa.js"></script>
+        <script type="text/javascript" src="/public/js/menus.js"></script>
         <link href="/public/css/text.css" rel="stylesheet">
     </head>
     <body>

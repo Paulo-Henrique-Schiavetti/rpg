@@ -156,6 +156,7 @@ function enter(key){
 function remove() {
     document.removeEventListener("keydown", mover, false);
     document.removeEventListener("keydown", position, false);
+    document.removeEventListener("keydown", enter, false);
 }
 function mensagem(mensagem){
     document.getElementById("ataques").className = "hidden";
@@ -180,6 +181,7 @@ function resetmensagem(){
     setTimeout(function() {
         document.getElementById("mensagem").innerHTML = "<p>O que você vai fazer?</p>";
         mensagemativa = false;
+        menu3();
     },1000);
 }
 function ataque(nome,tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
