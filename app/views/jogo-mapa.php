@@ -13,7 +13,7 @@
     <body>
         <div class="game">
             <div class="tela map" id="char">
-                <img src="/public/img/aliado1.png" style="position: absolute; bottom:40%; right:45%;"/>
+                <img src="/public/img/char.png" style="position: absolute; bottom:40%; right:45%;"/>
             </div>
             <div class="menu">
                 <div class="caixa">
