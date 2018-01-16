@@ -10,7 +10,7 @@
     </head>
     <body>
         <div class="game">
-            <div class="tela" id="char" style="background: url('/public/img/back1.png')">
+            <div class="tela" id="char">
                 <img src="/public/img/aliado1.png" style="position: absolute; bottom:40%; right:45%;"/>
             </div>
             <div class="menu">

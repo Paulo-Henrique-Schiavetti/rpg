@@ -1,3 +1,6 @@
+body {
+    background: url(/public/img/body.png);;
+}
 .game {
     width: 75%;
     margin-left: 12.5%;
@@ -5,7 +8,9 @@
 .tela {
     height: 420px;
     position: relative;
+    background: url('/public/img/map.png');
     background-repeat: no-repeat;
+    background-size: cover;
     border: solid #202020 2px;
     border-radius: 2px;
 }
@@ -97,7 +102,10 @@
     }
     .tela {
     height: 320px;
-}
+    background: url('/public/img/mapmobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
     .menu {
     height: 260px;
     }
