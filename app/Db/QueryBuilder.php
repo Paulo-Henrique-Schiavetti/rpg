@@ -107,7 +107,24 @@ class QueryBuilder
             die($e->getMessage());
         }
     }
-    public function aliados($fetch = \PDO::FETCH_ASSOC)
+    public function usuario($email,$fetch = \PDO::FETCH_ASSOC){
+
+        $sql = "SELECT * from rpgdb.usuario where email = :email";
+
+        $s = $this->pdo->prepare($sql);
+
+        $s->bindParam(':email', $email);
+
+        try{
+            $s->execute();
+
+            return $s->fetch($fetch);
+
+        }  catch(\PDOException $e){
+            die($e->getMessage());
+        }
+    }
+    public function aliados($id,$id2,$id3,$id4,$id5, $fetch = \PDO::FETCH_ASSOC)
     {
 
         $sql = "SELECT aliados.id, aliados.apelido, aliados.tipo, aliados.PV,
@@ -131,9 +148,16 @@ class QueryBuilder
                 inner join rpgdb.ataques as ataques5
                 on ataques5.id = aliados.ataque5
                 inner join rpgdb.ataques as ataques6
-                on ataques6.id = aliados.ataque6";
+                on ataques6.id = aliados.ataque6
+                where aliados.id in (:id,:id2,:id3,:id4,:id5)";
 
         $s = $this->pdo->prepare($sql);
+
+        $s->bindParam(':id', $id);
+        $s->bindParam(':id2', $id2);
+        $s->bindParam(':id3', $id3);
+        $s->bindParam(':id4', $id4);
+        $s->bindParam(':id5', $id5);
 
         try{
             $s->execute();

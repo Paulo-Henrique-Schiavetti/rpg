@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 //declaração dos namespaces dos controladores e instanciação dos objetos
 use Project\Controller\ TesteController;
 $testeController = new TesteController();
@@ -11,3 +14,5 @@ $_ENV['config'] = [
     'user' => 'root',
     'password' => ''
 ];
+
+

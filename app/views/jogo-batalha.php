@@ -60,10 +60,10 @@
                     <img src="/public/img/aliado<?=$aliado1['id']?>.png">
                 </div>
                 <div class="faixa4 char l2">
-                    <img src="/public/img/aliado<?=$aliado3['id']?>.png">
+                    <img src="/public/img/aliado<?=$aliado2['id']?>.png">
                 </div>
                 <div class="faixa4 char l3">
-                    <img src="/public/img/aliado<?=$aliado5['id']?>.png">
+                    <img src="/public/img/aliado<?=$aliado1['id']?>.png">
                 </div>
             </div>
             <div class="menu">
