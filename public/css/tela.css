@@ -6,12 +6,16 @@
 .inimigo {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-end;
 }
 .aliado {
+    z-index: 3;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
+}
+.char > .caixa {
+    background-color: #616161;
 }
 .tela.map {    
     background: url('/public/img/map.png');
@@ -35,4 +39,7 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+    .char > .caixa {
+    background-color: #616161;
+}
 }

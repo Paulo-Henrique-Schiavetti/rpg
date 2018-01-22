@@ -1,188 +1,72 @@
-var ipv = 0;
-var ipvtotal = 0;
-var apv = 0;
-var apvtotal = 0;
-var x = 1;
-var mensagemativa = false;
+var i1pv = 0;
+var i1pvtotal = 0;
+var a1pv = 0;
+var a1pvtotal = 0;
+var i3pv = 0;
+var i3pvtotal = 0;
+var a2pv = 0;
+var a2pvtotal = 0;
+var i3pv = 0;
+var i3pvtotal = 0;
+var a3pv = 0;
+var ap3vtotal = 0;
+var i4pv = 0;
+var i4pvtotal = 0;
+var a4pv = 0;
+var a4pvtotal = 0;
+var i5pv = 0;
+var i5pvtotal = 0;
+var a5pv = 0;
+var a5pvtotal = 0;
 
-function start(i1, i2, a1, a2){
+function start(i1p, i1t, i2p, i2t, i3p, i3t, i4p, i4t, i5p, i5t, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     resetmensagem();
     setTimeout(function(){
         document.getElementById("ibarra").innerHTML = "<div class='barra'><i id='pv' class='pv'></i><i class='notpv' id='notpv'></i></div><i id='pvEscrito'></i>";
         document.getElementById("abarra").innerHTML = "<div class='barra'><i id='aliadopv' class='pv'></i><i class='notpv' id='aliadonotpv'></i></div><i id='aliadopvEscrito'></i>";
+        document.getElementById("i2barra").innerHTML = "<div class='barra'><i id='pv2' class='pv'></i><i class='notpv' id='notpv2'></i></div><i id='pvEscrito2'></i>";
+        document.getElementById("a2barra").innerHTML = "<div class='barra'><i id='aliadopv2' class='pv'></i><i class='notpv' id='aliadonotpv2'></i></div><i id='aliadopvEscrito2'></i>";
+        document.getElementById("i3barra").innerHTML = "<div class='barra'><i id='pv3' class='pv'></i><i class='notpv' id='notpv3'></i></div><i id='pvEscrito3'></i>";
+        document.getElementById("a3barra").innerHTML = "<div class='barra'><i id='aliadopv3' class='pv'></i><i class='notpv' id='aliadonotpv3'></i></div><i id='aliadopvEscrito3'></i>";
+        document.getElementById("i4barra").innerHTML = "<div class='barra'><i id='pv4' class='pv'></i><i class='notpv' id='notpv4'></i></div><i id='pvEscrito4'></i>";
+        document.getElementById("a4barra").innerHTML = "<div class='barra'><i id='aliadopv4' class='pv'></i><i class='notpv' id='aliadonotpv4'></i></div><i id='aliadopvEscrito4'></i>";
+        document.getElementById("i5barra").innerHTML = "<div class='barra'><i id='pv5' class='pv'></i><i class='notpv' id='notpv5'></i></div><i id='pvEscrito5'></i>";
+        document.getElementById("a5barra").innerHTML = "<div class='barra'><i id='aliadopv5' class='pv'></i><i class='notpv' id='aliadonotpv5'></i></div><i id='aliadopvEscrito5'></i>";
+        
+        dano = 0;
 
-        ipv = i1;    
-        ipvtotal = i2;      
-        var barra = Math.round((ipv/ipvtotal)*100);
-        calcularvidainimigo(barra);
+        i1pv = i1p;    
+        i1pvtotal = i1t;
+        calcularvidainimigo1(dano);
+        i2pv = i2p;    
+        i2pvtotal = i2t;
+        calcularvidainimigo2(dano);
+        i3pv = i3p;    
+        i3pvtotal = i3t;
+        calcularvidainimigo3(dano);
+        i4pv = i4p;    
+        i4pvtotal = i4t;
+        calcularvidainimigo4(dano);
+        i5pv = i5p;    
+        i5pvtotal = i5t;
+        calcularvidainimigo5(dano);
 
-        apv = a1;    
-        apvtotal = a2;      
-        var barra = Math.round((apv/apvtotal)*100);
-        calcularvidaaliado(barra);  
+        a1pv = a1p;    
+        a1pvtotal = a1t;
+        calcularvidaaliado1(dano);
+        a2pv = a2p;    
+        a2pvtotal = a2t;
+        calcularvidaaliado2(dano); 
+        a3pv = a3p;    
+        a3pvtotal = a3t;
+        calcularvidaaliado3(dano); 
+        a4pv = a4p;    
+        a4pvtotal = a4t;
+        calcularvidaaliado4(dano); 
+        a5pv = a5p;    
+        a5pvtotal = a5t;
+        calcularvidaaliado5(dano); 
     },800);
-}
-function rolar(){
-    return(Math.trunc(Math.random()*20+1));
-}
-function mostrarrolagem(rolagem,sucesso){
-
-    if(rolagem>=20){
-        document.getElementById("rolagem").innerHTML = "rolagem: <strong class='green'>"+rolagem+"</strong>";
-    } else if(rolagem>=sucesso){
-        if(rolagem<10){
-            document.getElementById("rolagem").innerHTML = "rolagem: <strong>0"+rolagem+"</strong>";
-        } else {
-            document.getElementById("rolagem").innerHTML = "rolagem: <strong>"+rolagem+"</strong>";
-        }
-    } else {
-        if(rolagem<10){
-            document.getElementById("rolagem").innerHTML = "rolagem: <strong class='red'>0"+rolagem+"</strong>";
-        } else {
-            document.getElementById("rolagem").innerHTML = "rolagem: <strong class='red'>"+rolagem+"</strong>";
-        }        
-    }    
-}
-function menuatacar(){
-    if (mensagemativa == false){
-        document.getElementById("mensagem").className = "hidden";
-        document.getElementById("ataques").className = "caixa";
-        document.addEventListener("keydown", mover, false);
-        document.addEventListener("keydown", position, false);
-        document.addEventListener("keydown", enter, false);
-        position();
-    } 
-}
-function mover(key) {
-    if(key.keyCode == 87){
-        x -= 1;
-    }
-    if(key.keyCode == 65){
-        x -= 3;
-    }
-    if(key.keyCode == 83){
-        x += 1;
-    }
-    if(key.keyCode == 68){
-        x += 3;
-    }
-    if(x==7){
-        x = 1;
-    }
-    if(x==0){
-        x = 6;
-    }
-    if(x==8){
-        x = 2;
-    }
-    if(x==-1){
-        x = 5;
-    }
-    if(x==9){
-        x = 3;
-    }
-    if(x==-2){
-        x = 4;
-    }
-}
-function position() {
-    if (x == 1) {
-        document.getElementById('ataque1').style.backgroundColor = "#202020";
-        document.getElementById('ataque2').style.background = "none";
-        document.getElementById('ataque3').style.background = "none";
-        document.getElementById('ataque4').style.background = "none";
-        document.getElementById('ataque5').style.background = "none";
-        document.getElementById('ataque6').style.background = "none";
-    } else if (x == 2) {
-        document.getElementById('ataque2').style.backgroundColor = "#202020";
-        document.getElementById('ataque1').style.background = "none";
-        document.getElementById('ataque3').style.background = "none";
-        document.getElementById('ataque4').style.background = "none";
-        document.getElementById('ataque5').style.background = "none";
-        document.getElementById('ataque6').style.background = "none";
-    } else if (x == 3) {
-        document.getElementById('ataque3').style.backgroundColor = "#202020";
-        document.getElementById('ataque2').style.background = "none";
-        document.getElementById('ataque1').style.background = "none";
-        document.getElementById('ataque4').style.background = "none";
-        document.getElementById('ataque5').style.background = "none";
-        document.getElementById('ataque6').style.background = "none";
-    } else if (x == 4) {
-        document.getElementById('ataque4').style.backgroundColor = "#202020";
-        document.getElementById('ataque2').style.background = "none";
-        document.getElementById('ataque3').style.background = "none";
-        document.getElementById('ataque5').style.background = "none";
-        document.getElementById('ataque6').style.background = "none";
-        document.getElementById('ataque1').style.background = "none";
-    } else if (x == 5) {
-        document.getElementById('ataque5').style.backgroundColor = "#202020";
-        document.getElementById('ataque2').style.background = "none";
-        document.getElementById('ataque3').style.background = "none";
-        document.getElementById('ataque4').style.background = "none";
-        document.getElementById('ataque6').style.background = "none";
-        document.getElementById('ataque1').style.background = "none";
-    } else if (x == 6) {
-        document.getElementById('ataque6').style.backgroundColor = "#202020";
-        document.getElementById('ataque2').style.background = "none";
-        document.getElementById('ataque3').style.background = "none";
-        document.getElementById('ataque4').style.background = "none";
-        document.getElementById('ataque5').style.background = "none";
-        document.getElementById('ataque1').style.background = "none";
-    }
-}
-function enter(key){
-    if (key.keyCode == 13){
-        if (x == 1) {
-            document.getElementById('ataque1').click();    
-            remove();
-        } else if (x == 2) {
-            document.getElementById('ataque2').click();  
-            remove();  
-        } else if (x == 3) {
-            document.getElementById('ataque3').click();  
-            remove();  
-        } else if (x == 4) {
-            document.getElementById('ataque4').click(); 
-            remove();   
-        } else if (x == 5) {
-            document.getElementById('ataque5').click(); 
-            remove();   
-        } else if (x == 6) {
-            document.getElementById('ataque6').click(); 
-            remove();   
-        }
-    }
-}
-function remove() {
-    document.removeEventListener("keydown", mover, false);
-    document.removeEventListener("keydown", position, false);
-    document.removeEventListener("keydown", enter, false);
-}
-function mensagem(mensagem){
-    document.getElementById("ataques").className = "hidden";
-    document.getElementById("mensagem").className = "caixa";
-    document.getElementById("mensagem").innerHTML = mensagem;
-    mensagemativa = true;
-}
-function mensagem2(mensagem){
-    setTimeout(function() {
-        if (mensagem==1){        
-            document.getElementById("mensagem").innerHTML = "<p>Crítico!</p>";
-        } else if (mensagem==2){
-            document.getElementById("mensagem").innerHTML = "<p>O ataque acertou!</p>";        
-        } else if (mensagem==3){
-            document.getElementById("mensagem").innerHTML = "<p>O ataque falhou!</p>";
-        }
-        mensagemativa = true;   
-        resetmensagem();
-    },800);
-}
-function resetmensagem(){
-    setTimeout(function() {
-        document.getElementById("mensagem").innerHTML = "<p>O que você vai fazer?</p>";
-        mensagemativa = false;
-        menu3();
-    },1000);
 }
 function ataque(nome,tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
     if (tipo<=4){
@@ -213,17 +97,19 @@ function calcularataque(nome,sucesso,danobase,a,d){
         mensagem2(3);
     }
     setTimeout(function() {
-        ipv -= dano;
-        if(ipv>0){    
-                var barra = Math.round((ipv/ipvtotal)*100);
-        } else {
-            ipv = 0;
-            var barra = 0;
-        }
-        calcularvidainimigo(barra);
+        calcularvidainimigo1(dano);
     },1400);
 }
-function calcularvidainimigo(barra){
+function calcularvidainimigo1(dano){
+
+    i1pv -= dano;
+    if(i1pv>0){    
+            var barra = Math.round((i1pv/i1pvtotal)*100);
+    } else {
+        i1pv = 0;
+        var barra = 0;
+    }
+    
     var BarraCheia = "";
     var BarraVazia = "";
 
@@ -235,9 +121,110 @@ function calcularvidainimigo(barra){
     }
     document.getElementById("pv").innerHTML = BarraCheia;
     document.getElementById("notpv").innerHTML = BarraVazia;
-    document.getElementById("pvEscrito").innerHTML = ipv+"/"+ipvtotal;
+    document.getElementById("pvEscrito").innerHTML = i1pv+"/"+i1pvtotal;
 }
-function calcularvidaaliado(barra){
+function calcularvidainimigo2(dano){
+
+    i2pv -= dano;
+    if(i2pv>0){    
+            var barra = Math.round((i2pv/i2pvtotal)*100);
+    } else {
+        i2pv = 0;
+        var barra = 0;
+    }
+    
+    var BarraCheia = "";
+    var BarraVazia = "";
+
+    for(i = 1 ; i <= barra; i++){
+        BarraCheia += "&nbsp";
+    }
+    for(i = 1 ;i <= 100-barra;i++){ 
+       BarraVazia += "&nbsp";
+    }
+    document.getElementById("pv2").innerHTML = BarraCheia;
+    document.getElementById("notpv2").innerHTML = BarraVazia;
+    document.getElementById("pvEscrito2").innerHTML = i2pv+"/"+i2pvtotal;
+}
+function calcularvidainimigo3(dano){
+
+    i3pv -= dano;
+    if(i3pv>0){    
+            var barra = Math.round((i3pv/i3pvtotal)*100);
+    } else {
+        i3pv = 0;
+        var barra = 0;
+    }
+    
+    var BarraCheia = "";
+    var BarraVazia = "";
+
+    for(i = 1 ; i <= barra; i++){
+        BarraCheia += "&nbsp";
+    }
+    for(i = 1 ;i <= 100-barra;i++){ 
+       BarraVazia += "&nbsp";
+    }
+    document.getElementById("pv3").innerHTML = BarraCheia;
+    document.getElementById("notpv3").innerHTML = BarraVazia;
+    document.getElementById("pvEscrito3").innerHTML = i3pv+"/"+i3pvtotal;
+}
+function calcularvidainimigo4(dano){
+
+    i4pv -= dano;
+    if(i4pv>0){    
+            var barra = Math.round((i4pv/i4pvtotal)*100);
+    } else {
+        i4pv = 0;
+        var barra = 0;
+    }
+    
+    var BarraCheia = "";
+    var BarraVazia = "";
+
+    for(i = 1 ; i <= barra; i++){
+        BarraCheia += "&nbsp";
+    }
+    for(i = 1 ;i <= 100-barra;i++){ 
+       BarraVazia += "&nbsp";
+    }
+    document.getElementById("pv4").innerHTML = BarraCheia;
+    document.getElementById("notpv4").innerHTML = BarraVazia;
+    document.getElementById("pvEscrito4").innerHTML = i4pv+"/"+i4pvtotal;
+}
+function calcularvidainimigo5(dano){
+
+    i5pv -= dano;
+    if(i5pv>0){    
+            var barra = Math.round((i5pv/i5pvtotal)*100);
+    } else {
+        i5pv = 0;
+        var barra = 0;
+    }
+    
+    var BarraCheia = "";
+    var BarraVazia = "";
+
+    for(i = 1 ; i <= barra; i++){
+        BarraCheia += "&nbsp";
+    }
+    for(i = 1 ;i <= 100-barra;i++){ 
+       BarraVazia += "&nbsp";
+    }
+    document.getElementById("pv5").innerHTML = BarraCheia;
+    document.getElementById("notpv5").innerHTML = BarraVazia;
+    document.getElementById("pvEscrito5").innerHTML = i5pv+"/"+i5pvtotal;
+}
+function calcularvidaaliado1(dano){
+    
+    a1pv -= dano;
+    if(a1pv>0){    
+            var barra = Math.round((i1pv/i1pvtotal)*100);
+    } else {
+        a1pv = 0;
+        var barra = 0;
+    }
+
     var BarraCheia = "";
     var BarraVazia = "";
 
@@ -249,6 +236,98 @@ function calcularvidaaliado(barra){
     }
     document.getElementById("aliadopv").innerHTML = BarraCheia;
     document.getElementById("aliadonotpv").innerHTML = BarraVazia;
-    document.getElementById("aliadopvEscrito").innerHTML = apv+"/"+apvtotal;
+    document.getElementById("aliadopvEscrito").innerHTML = a1pv+"/"+a1pvtotal;
+}
+function calcularvidaaliado2(dano){
+    
+    a2pv -= dano;
+    if(a2pv>0){    
+            var barra = Math.round((i2pv/i2pvtotal)*100);
+    } else {
+        a2pv = 0;
+        var barra = 0;
+    }
+
+    var BarraCheia = "";
+    var BarraVazia = "";
+
+    for(i = 1 ; i <= barra; i++){
+        BarraCheia += "&nbsp";
+    }
+    for(i = 1 ;i <= 100-barra;i++){ 
+       BarraVazia += "&nbsp";
+    }
+    document.getElementById("aliadopv2").innerHTML = BarraCheia;
+    document.getElementById("aliadonotpv2").innerHTML = BarraVazia;
+    document.getElementById("aliadopvEscrito2").innerHTML = a2pv+"/"+a2pvtotal;
+}
+function calcularvidaaliado3(dano){
+    
+    a3pv -= dano;
+    if(a3pv>0){    
+            var barra = Math.round((i3pv/i3pvtotal)*100);
+    } else {
+        a3pv = 0;
+        var barra = 0;
+    }
+
+    var BarraCheia = "";
+    var BarraVazia = "";
+
+    for(i = 1 ; i <= barra; i++){
+        BarraCheia += "&nbsp";
+    }
+    for(i = 1 ;i <= 100-barra;i++){ 
+       BarraVazia += "&nbsp";
+    }
+    document.getElementById("aliadopv3").innerHTML = BarraCheia;
+    document.getElementById("aliadonotpv3").innerHTML = BarraVazia;
+    document.getElementById("aliadopvEscrito3").innerHTML = a3pv+"/"+a3pvtotal;
+}
+function calcularvidaaliado4(dano){
+    
+    a4pv -= dano;
+    if(a4pv>0){    
+            var barra = Math.round((i4pv/i4pvtotal)*100);
+    } else {
+        a4pv = 0;
+        var barra = 0;
+    }
+
+    var BarraCheia = "";
+    var BarraVazia = "";
+
+    for(i = 1 ; i <= barra; i++){
+        BarraCheia += "&nbsp";
+    }
+    for(i = 1 ;i <= 100-barra;i++){ 
+       BarraVazia += "&nbsp";
+    }
+    document.getElementById("aliadopv4").innerHTML = BarraCheia;
+    document.getElementById("aliadonotpv4").innerHTML = BarraVazia;
+    document.getElementById("aliadopvEscrito4").innerHTML = a4pv+"/"+a4pvtotal;
+}
+function calcularvidaaliado5(dano){
+    
+    a5pv -= dano;
+    if(a5pv>0){    
+            var barra = Math.round((i5pv/i5pvtotal)*100);
+    } else {
+        a5pv = 0;
+        var barra = 0;
+    }
+
+    var BarraCheia = "";
+    var BarraVazia = "";
+
+    for(i = 1 ; i <= barra; i++){
+        BarraCheia += "&nbsp";
+    }
+    for(i = 1 ;i <= 100-barra;i++){ 
+       BarraVazia += "&nbsp";
+    }
+    document.getElementById("aliadopv5").innerHTML = BarraCheia;
+    document.getElementById("aliadonotpv5").innerHTML = BarraVazia;
+    document.getElementById("aliadopvEscrito5").innerHTML = a5pv+"/"+a5pvtotal;
 }
 

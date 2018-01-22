@@ -41,6 +41,9 @@ p, label, a, .item, .botao {
     color: lightcoral;
 }
 @media only screen and (max-width: 768px) {
+    .small {
+        font-size: 9pt;
+    }
     .pv {
         font-size: 2pt;
     }
