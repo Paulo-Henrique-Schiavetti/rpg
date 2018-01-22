@@ -9,7 +9,7 @@ function mostrarrolagem(rolagem,sucesso){
 
     if(rolagem>=20){
         document.getElementById("rolagem").innerHTML = "rolagem: <strong class='green'>"+rolagem+"</strong>";
-    } else if(rolagem>=sucesso){
+    } else if(rolagem>sucesso){
         if(rolagem<10){
             document.getElementById("rolagem").innerHTML = "rolagem: <strong>0"+rolagem+"</strong>";
         } else {
