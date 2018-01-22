@@ -7,49 +7,17 @@ body {
 }
 .tela {
     height: 420px;
-    position: relative;
     border: solid #202020 2px;
     border-radius: 2px;
+    position: relative;
 }
 #char > img{
     width: 80px;
     height: 75px;
 }
-.faixa1 {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.faixa2 {
-    position: absolute;
-    top: 1%;
-    right: 1%;
-}
-.faixa3 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-}
-.faixa4 {
-    position: absolute;
-    bottom: 1%;
-    left: 1%;
-}
 .char > img {
     width: 180px;
     height: 234px;
-}
-.char.r2 {
-    right: 19%;
-}
-.char.r3 {
-    right: 37%;
-}
-.char.l2 {
-    left: 19%;
-}
-.char.l3 {
-    left: 37%;
 }
 .menu {
     height: 200px;
@@ -58,6 +26,7 @@ body {
     justify-content: space-between;
 }
 .caixa {
+    z-index: 2;
     background-color: #303030;
     border: solid black 2px;
     border-radius: 6px;
@@ -104,7 +73,7 @@ body {
     height: 260px;
     }
     .char > img {
-    width: 129px;
-    height: 156px;
+    width: 64px;
+    height: 78px;
     }
 }

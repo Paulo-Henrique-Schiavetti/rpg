@@ -1,3 +1,18 @@
+.tela {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.inimigo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.aliado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 .tela.map {    
     background: url('/public/img/map.png');
     background-repeat: no-repeat;

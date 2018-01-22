@@ -22,17 +22,17 @@ p, label, a, .item, .botao {
     cursor: pointer;
 }
 .seta {
-    font-size: 26pt;
+    font-size: 24pt;
     font-weight: 500;
     margin: 0;
 }
 .pv {
     background-color: greenyellow;
-    font-size: 6pt;
+    font-size: 4pt;
     border-radius: 6px;
 }
 .notpv{
-        font-size: 6pt;
+        font-size: 4pt;
     }
 .green {
     color:greenyellow;

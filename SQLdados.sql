@@ -1,10 +1,10 @@
 use rpgdb;
 
 -- areas --
-insert into areas (id, nome) values (1, 'Cate');
-insert into areas (id, nome) values (2, 'Lorine');
-insert into areas (id, nome) values (3, 'Brita');
-insert into areas (id, nome) values (4, 'Liz');
+insert into areas (id, nome) values (1, 'Gaesland');
+insert into areas (id, nome) values (2, 'Greatport');
+insert into areas (id, nome) values (3, 'Sharpbay');
+insert into areas (id, nome) values (4, 'hominiland');
 insert into areas (id, nome) values (5, 'Cullie');
 insert into areas (id, nome) values (6, 'Gayelord');
 insert into areas (id, nome) values (7, 'Siegfried');
@@ -13,9 +13,9 @@ insert into areas (id, nome) values (9, 'Johannah');
 insert into areas (id, nome) values (10, 'Inglis');
 
 -- inimigos --
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (1, 'Napoleon', 7, 91, 24, 93, 65, 32, 94, 16, 73, 63, 34);
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (2, 'Robinet', 2, 80, 27, 30, 92, 97, 4, 60, 12, 70, 59);
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (3, 'Vaughn', 10, 46, 34, 90, 87, 63, 33, 91, 26, 96, 11);
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (1, 'Giant', 7, 91, 24, 93, 65, 32, 94, 16, 73, 63, 34);
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (2, 'Human', 2, 80, 27, 30, 92, 97, 4, 60, 12, 70, 59);
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (3, 'Lamia', 10, 46, 34, 90, 87, 63, 33, 91, 26, 96, 11);
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (4, 'Malena', 3, 44, 17, 61, 82, 12, 45, 37, 51, 75, 62);
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (5, 'Zonnya', 4, 53, 41, 58, 78, 5, 31, 11, 49, 72, 92);
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (6, 'Nelle', 10, 6, 26, 36, 55, 28, 13, 72, 80, 12, 4);
@@ -23,7 +23,7 @@ insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM,
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (8, 'Kerrin', 4, 76, 41, 15, 88, 17, 10, 73, 19, 69, 19);
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (9, 'Twyla', 1, 91, 45, 90, 19, 3, 36, 5, 97, 68, 46);
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (10, 'Mano', 6, 41, 23, 32, 44, 5, 21, 86, 78, 78, 56);
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (11, 'Fernanda', 7, 77, 3, 24, 4, 1, 49, 6, 80, 28, 92);
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (11, 'nop', 7, 77, 3, 24, 4, 1, 49, 6, 80, 28, 92);
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (12, 'Starr', 1, 73, 40, 28, 51, 29, 90, 25, 31, 77, 19);
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (13, 'Amber', 6, 79, 32, 7, 61, 15, 83, 90, 81, 83, 28);
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (14, 'Roselia', 9, 86, 22, 44, 92, 12, 6, 19, 48, 68, 68);
@@ -66,13 +66,13 @@ insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM,
 
 -- inimigos-areas --
 insert into `inimigos-areas` (inimigos_id, areas_id) values (1, 1);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 7);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (1, 2);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 1);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 2);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 3);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 4);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (3, 2);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (4, 1);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (5, 6);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (6, 2);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (7, 7);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (8, 6);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (3, 3);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (9, 6);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (10, 1);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (11, 2);
@@ -197,7 +197,7 @@ insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, A
 insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (12, 'Loren', 6, 41, 2, 61, 1, 73, 45, 77, 6, 90, 33, 28, 42, 47, 42, 5, 1, 12);
 
 -- usuarios --
-insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (1, 'paulo@paulo.com', 'qualserá', 7, 3, 10, 8, 6);
+insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (1, 'paulo@paulo.com', 'qualserá', 1, 2, 3, 4, 5);
 insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (2, 'hhounsom1@usnews.com', 'Harmonie', 10, 9, 8, 12, 5);
 insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (3, 'pbridgens2@lulu.com', 'Petronella', 9, 2, 6, 7, 11);
 insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (4, 'dleving3@amazon.com', 'Deanna', 11, 12, 11, 6, 4);
