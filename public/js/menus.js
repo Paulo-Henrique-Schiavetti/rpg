@@ -1,5 +1,5 @@
 var p = 1;
-var x = 1;
+var p2 = 1;
 var mensagemativa = false;
 
 function rolar(){
@@ -35,73 +35,73 @@ function menuatacar(){
 }
 function mover(key) {
     if(key.keyCode == 87){
-        x -= 1;
+        p2 -= 1;
     }
     if(key.keyCode == 65){
-        x -= 3;
+        p2 -= 3;
     }
     if(key.keyCode == 83){
-        x += 1;
+        p2 += 1;
     }
     if(key.keyCode == 68){
-        x += 3;
+        p2 += 3;
     }
-    if(x==7){
-        x = 1;
+    if(p2==7){
+        p2 = 1;
     }
-    if(x==0){
-        x = 6;
+    if(p2==0){
+        p2 = 6;
     }
-    if(x==8){
-        x = 2;
+    if(p2==8){
+        p2 = 2;
     }
-    if(x==-1){
-        x = 5;
+    if(p2==-1){
+        p2 = 5;
     }
-    if(x==9){
-        x = 3;
+    if(p2==9){
+        p2 = 3;
     }
-    if(x==-2){
-        x = 4;
+    if(p2==-2){
+        p2 = 4;
     }
 }
 function position() {
-    if (x == 1) {
+    if (p2 == 1) {
         document.getElementById('ataque1').style.backgroundColor = "#202020";
         document.getElementById('ataque2').style.background = "none";
         document.getElementById('ataque3').style.background = "none";
         document.getElementById('ataque4').style.background = "none";
         document.getElementById('ataque5').style.background = "none";
         document.getElementById('ataque6').style.background = "none";
-    } else if (x == 2) {
+    } else if (p2 == 2) {
         document.getElementById('ataque2').style.backgroundColor = "#202020";
         document.getElementById('ataque1').style.background = "none";
         document.getElementById('ataque3').style.background = "none";
         document.getElementById('ataque4').style.background = "none";
         document.getElementById('ataque5').style.background = "none";
         document.getElementById('ataque6').style.background = "none";
-    } else if (x == 3) {
+    } else if (p2 == 3) {
         document.getElementById('ataque3').style.backgroundColor = "#202020";
         document.getElementById('ataque2').style.background = "none";
         document.getElementById('ataque1').style.background = "none";
         document.getElementById('ataque4').style.background = "none";
         document.getElementById('ataque5').style.background = "none";
         document.getElementById('ataque6').style.background = "none";
-    } else if (x == 4) {
+    } else if (p2 == 4) {
         document.getElementById('ataque4').style.backgroundColor = "#202020";
         document.getElementById('ataque2').style.background = "none";
         document.getElementById('ataque3').style.background = "none";
         document.getElementById('ataque5').style.background = "none";
         document.getElementById('ataque6').style.background = "none";
         document.getElementById('ataque1').style.background = "none";
-    } else if (x == 5) {
+    } else if (p2 == 5) {
         document.getElementById('ataque5').style.backgroundColor = "#202020";
         document.getElementById('ataque2').style.background = "none";
         document.getElementById('ataque3').style.background = "none";
         document.getElementById('ataque4').style.background = "none";
         document.getElementById('ataque6').style.background = "none";
         document.getElementById('ataque1').style.background = "none";
-    } else if (x == 6) {
+    } else if (p2 == 6) {
         document.getElementById('ataque6').style.backgroundColor = "#202020";
         document.getElementById('ataque2').style.background = "none";
         document.getElementById('ataque3').style.background = "none";
@@ -112,22 +112,22 @@ function position() {
 }
 function enter(key){
     if (key.keyCode == 13){
-        if (x == 1) {
+        if (p2 == 1) {
             document.getElementById('ataque1').click();    
             remove();
-        } else if (x == 2) {
+        } else if (p2 == 2) {
             document.getElementById('ataque2').click();  
             remove();  
-        } else if (x == 3) {
+        } else if (p2 == 3) {
             document.getElementById('ataque3').click();  
             remove();  
-        } else if (x == 4) {
+        } else if (p2 == 4) {
             document.getElementById('ataque4').click(); 
             remove();   
-        } else if (x == 5) {
+        } else if (p2 == 5) {
             document.getElementById('ataque5').click(); 
             remove();   
-        } else if (x == 6) {
+        } else if (p2 == 6) {
             document.getElementById('ataque6').click(); 
             remove();   
         }

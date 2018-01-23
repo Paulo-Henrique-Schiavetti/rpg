@@ -1,16 +1,16 @@
 use rpgdb;
 
 -- areas --
-insert into areas (id, nome) values (1, 'Gaesland');
-insert into areas (id, nome) values (2, 'Greatport');
-insert into areas (id, nome) values (3, 'Sharpbay');
-insert into areas (id, nome) values (4, 'hominiland');
-insert into areas (id, nome) values (5, 'Cullie');
-insert into areas (id, nome) values (6, 'Gayelord');
-insert into areas (id, nome) values (7, 'Siegfried');
-insert into areas (id, nome) values (8, 'Hallie');
-insert into areas (id, nome) values (9, 'Johannah');
-insert into areas (id, nome) values (10, 'Inglis');
+insert into areas (id, nome, posicao) values (1, 'Gaesland', '84,19');
+insert into areas (id, nome, posicao) values (2, 'Greatport', '56,20');
+insert into areas (id, nome, posicao) values (3, 'Sharpbay', '54,25');
+insert into areas (id, nome, posicao) values (4, 'hominiland', '36,24');
+insert into areas (id, nome, posicao) values (5, 'Cullie', '50,50');
+insert into areas (id, nome, posicao) values (6, 'Gayelord', '50,50');
+insert into areas (id, nome, posicao) values (7, 'Siegfried', '50,50');
+insert into areas (id, nome, posicao) values (8, 'Hallie', '50,50');
+insert into areas (id, nome, posicao) values (9, 'Johannah', '50,50');
+insert into areas (id, nome, posicao) values (10, 'Inglis', '50,50');
 
 -- inimigos --
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD) values (1, 'Giant', 7, 91, 24, 93, 65, 32, 94, 16, 73, 63, 34);

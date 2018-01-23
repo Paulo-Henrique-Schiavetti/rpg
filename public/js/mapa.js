@@ -43,3 +43,6 @@ function limit() {
 function position() {
     document.getElementById('char').innerHTML = '<img src="/public/img/char.png" style="position: absolute; bottom:'+(x-10)+'%; right:'+(y-5)+'%;"/>';
 }
+function point(a,b) {
+    document.getElementById('char').innerHTML = '<img src="/public/img/char.png" style="position: absolute; bottom:'+a+'%; right:'+b+'%;"/>';
+}

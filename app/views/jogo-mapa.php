@@ -19,7 +19,7 @@
                 <div class="caixa">
                     <form action="/batalhar">
                         <?php foreach($dados as $d) { ?>
-                            <input type="submit" class="item" name="area" value="<?=$d['nome']?>"/>
+                            <input type="submit" class="item" name="area" value="<?=$d['nome']?>" onmouseover="point(<?=$d['posicao']?>);"/>
                         <?php } ?>
                     </form>
                 </div>
