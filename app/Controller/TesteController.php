@@ -23,14 +23,22 @@ class TesteController
         $area = $_GET['area'];
         $q = new QueryBuilder();
         $dados = $q->chamarinimigos($area);
-        $inimigo = [];
-        while(empty($inimigo)){
-            foreach($dados as $d){
-                if($d['id']==rand(1,50)){
-                    $inimigo = $d;
+        $inimigo = $dados[rand(0,count($dados)-1)]; 
+        $inimigo2 = $dados[rand(0,count($dados)-1)];
+        $inimigo3 = $dados[rand(0,count($dados)-1)];
+        $inimigo4 = $dados[rand(0,count($dados)-1)];
+        $inimigo5 = $dados[rand(0,count($dados)-1)];
+        /*
+        if ($inimigo['size'] + $inimigo2['size'] + $inimigo3['size'] + $inimigo4['size'] + $inimigo5['size']>10){
+            $inimigo5 = ["nome"=>"","id"=>"1","PVbase"=>0];
+            if ($inimigo['size'] + $inimigo2['size'] + $inimigo3['size'] + $inimigo4['size']>10){
+                $inimigo4 = ["nome"=>"","id"=>"1","PVbase"=>0];
+                if ($inimigo['size'] + $inimigo2['size'] + $inimigo3['size']>10){
+                    $inimigo3 = ["nome"=>"","id"=>"1","PVbase"=>0];
                 }
             }
         }
+        */
         $usuario = $_SESSION['usuario'];
         $aliados = $q->aliados($usuario['aliado1'],$usuario['aliado2'],$usuario['aliado3'],$usuario['aliado4'],$usuario['aliado5']);
         $aliado1 = $aliados[0];

@@ -19,7 +19,7 @@ var i5pvtotal = 0;
 var a5pv = 0;
 var a5pvtotal = 0;
 
-function start(i1p, i1t, i2p, i2t, i3p, i3t, i4p, i4t, i5p, i5t, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
+function start(i1p, i2p, i3p, i4p, i5p, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     resetmensagem();
     setTimeout(function(){
         document.getElementById("ibarra").innerHTML = "<div class='barra'><i id='pv' class='pv'></i><i class='notpv' id='notpv'></i></div><i id='pvEscrito'></i>";
@@ -36,19 +36,19 @@ function start(i1p, i1t, i2p, i2t, i3p, i3t, i4p, i4t, i5p, i5t, a1p, a1t, a2p, 
         dano = 0;
 
         i1pv = i1p;    
-        i1pvtotal = i1t;
+        i1pvtotal = i1p;
         calcularvidainimigo1(dano);
         i2pv = i2p;    
-        i2pvtotal = i2t;
+        i2pvtotal = i2p;
         calcularvidainimigo2(dano);
         i3pv = i3p;    
-        i3pvtotal = i3t;
+        i3pvtotal = i3p;
         calcularvidainimigo3(dano);
         i4pv = i4p;    
-        i4pvtotal = i4t;
+        i4pvtotal = i4p;
         calcularvidainimigo4(dano);
         i5pv = i5p;    
-        i5pvtotal = i5t;
+        i5pvtotal = i5p;
         calcularvidainimigo5(dano);
 
         a1pv = a1p;    

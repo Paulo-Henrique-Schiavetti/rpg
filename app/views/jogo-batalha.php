@@ -1,6 +1,15 @@
 <?php
     $inimigopvtotal = $inimigo['PVbase']*10;
     $inimigopv = $inimigo['PVbase']*10;
+    $inimigo2pvtotal = $inimigo2['PVbase']*10;
+    $inimigo2pv = $inimigo2['PVbase']*10;
+    $inimigo3pvtotal = $inimigo3['PVbase']*10;
+    $inimigo3pv = $inimigo3['PVbase']*10;
+    $inimigo4pvtotal = $inimigo4['PVbase']*10;
+    $inimigo4pv = $inimigo4['PVbase']*10;
+    $inimigo5pvtotal = $inimigo5['PVbase']*10;
+    $inimigo5pv = $inimigo5['PVbase']*10;
+
     $aliado1pvtotal = $aliado1['PV']*10;
     $aliado1pv = $aliado1['PV']*10; 
     $aliado2pvtotal = $aliado2['PV']*10;
@@ -24,7 +33,7 @@
         <script type="text/javascript" src="/public/js/batalha.js"></script>
         <script type="text/javascript" src="/public/js/menus.js"></script>
     </head>
-    <body onload="start(<?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um <?=$inimigo['nome']?> selvagem apareceu.</p>'); menu3();">
+    <body onload="start(<?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$inimigo2pv?>, <?=$inimigo2pvtotal?>, <?=$inimigo3pv?>, <?=$inimigo3pvtotal?>, <?=$inimigo4pv?>, <?=$inimigo4pvtotal?>, <?=$inimigo5pv?>, <?=$inimigo5pvtotal?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
         <div class="game">
             <div class="tela forest">
                 <div class="inimigo">
@@ -39,39 +48,39 @@
                     </div>
                     <div class="char">
                         <div class="caixa pequena">
-                            <p class="small"><?=$inimigo['nome']?></p>
+                            <p class="small"><?=$inimigo2['nome']?></p>
                             <div id="i2barra">
                                 <p class="seta">↼-------⇀</p>
                             </div>
                         </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo['id']?>.png">
+                        <img src="/public/img/inimigos/inimigo_<?=$inimigo2['id']?>.png">
                     </div>
                     <div class="char">
                         <div class="caixa pequena">
-                            <p class="small"><?=$inimigo['nome']?></p>
+                            <p class="small"><?=$inimigo3['nome']?></p>
                             <div id="i3barra">
                                 <p class="seta">↼-------⇀</p>
                             </div>
                         </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo['id']?>.png">
+                        <img src="/public/img/inimigos/inimigo_<?=$inimigo3['id']?>.png">
                     </div>
                     <div class="char">
                         <div class="caixa pequena">
-                            <p class="small"><?=$inimigo['nome']?></p>
+                            <p class="small"><?=$inimigo4['nome']?></p>
                             <div id="i4barra">
                                 <p class="seta">↼-------⇀</p>
                             </div>
                         </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo['id']?>.png">
+                        <img src="/public/img/inimigos/inimigo_<?=$inimigo4['id']?>.png">
                     </div>
                     <div class="char">
                         <div class="caixa pequena">
-                            <p class="small"><?=$inimigo['nome']?></p>
+                            <p class="small"><?=$inimigo5['nome']?></p>
                             <div id="i5barra">
                                 <p class="seta">↼-------⇀</p>
                             </div>
                         </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo['id']?>.png">
+                        <img src="/public/img/inimigos/inimigo_<?=$inimigo5['id']?>.png">
                     </div>
                 </div>    
                 <div class="aliado">
