@@ -15,14 +15,6 @@ body {
     width: 80px;
     height: 75px;
 }
-.inimigo > .char > img {
-    width: 180px;
-    height: 234px;
-}
-.aliado > .char > img {
-    width: 180px;
-    height: 80px;
-}
 .menu {
     height: 200px;
     display: flex;
@@ -75,13 +67,5 @@ body {
     }
     .menu {
     height: 260px;
-    }
-    .inimigo > .char > img {
-    width: 64px;
-    height: 78px;
-    }
-    .aliado > .char > img {
-    width: 64px;
-    height: 30px;
     }
 }

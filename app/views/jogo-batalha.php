@@ -26,13 +26,14 @@
         <link href="/public/css/tela.css" rel="stylesheet">
         <link href="/public/css/text.css" rel="stylesheet">
         <script type="text/javascript" src="/public/js/batalha.js"></script>
+        <script type="text/javascript" src="/public/js/aliados.js"></script>
         <script type="text/javascript" src="/public/js/menus.js"></script>
     </head>
     <body onload="start(<?=$inimigopv?>, <?=$inimigo2pv?>, <?=$inimigo3pv?>, <?=$inimigo4pv?>,  <?=$inimigo5pv?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
         <div class="game">
             <div class="tela forest">
                 <div class="inimigo">
-                    <div class="char">
+                    <div class="char size<?=$inimigo['size']?>">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo['nome']?></p>
                             <div id="ibarra">
@@ -41,7 +42,7 @@
                         </div>
                         <img src="/public/img/inimigos/inimigo_<?=$inimigo['id']?>.png">
                     </div>
-                    <div class="char">
+                    <div class="char size<?=$inimigo2['size']?>">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo2['nome']?></p>
                             <div id="i2barra">
@@ -50,7 +51,7 @@
                         </div>
                         <img src="/public/img/inimigos/inimigo_<?=$inimigo2['id']?>.png">
                     </div>
-                    <div class="char">
+                    <div class="char size<?=$inimigo3['size']?>">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo3['nome']?></p>
                             <div id="i3barra">
@@ -59,7 +60,7 @@
                         </div>
                         <img src="/public/img/inimigos/inimigo_<?=$inimigo3['id']?>.png">
                     </div>
-                    <div class="char">
+                    <div class="char size<?=$inimigo4['size']?>">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo4['nome']?></p>
                             <div id="i4barra">
@@ -68,7 +69,7 @@
                         </div>
                         <img src="/public/img/inimigos/inimigo_<?=$inimigo4['id']?>.png">
                     </div>
-                    <div class="char">
+                    <div class="char size<?=$inimigo5['size']?>">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo5['nome']?></p>
                             <div id="i5barra">
