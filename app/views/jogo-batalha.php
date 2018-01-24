@@ -1,13 +1,8 @@
 <?php
-    $inimigopvtotal = $inimigo['PVbase']*10;
     $inimigopv = $inimigo['PVbase']*10;
-    $inimigo2pvtotal = $inimigo2['PVbase']*10;
     $inimigo2pv = $inimigo2['PVbase']*10;
-    $inimigo3pvtotal = $inimigo3['PVbase']*10;
     $inimigo3pv = $inimigo3['PVbase']*10;
-    $inimigo4pvtotal = $inimigo4['PVbase']*10;
     $inimigo4pv = $inimigo4['PVbase']*10;
-    $inimigo5pvtotal = $inimigo5['PVbase']*10;
     $inimigo5pv = $inimigo5['PVbase']*10;
 
     $aliado1pvtotal = $aliado1['PV']*10;
@@ -33,7 +28,7 @@
         <script type="text/javascript" src="/public/js/batalha.js"></script>
         <script type="text/javascript" src="/public/js/menus.js"></script>
     </head>
-    <body onload="start(<?=$inimigopv?>, <?=$inimigopvtotal?>, <?=$inimigo2pv?>, <?=$inimigo2pvtotal?>, <?=$inimigo3pv?>, <?=$inimigo3pvtotal?>, <?=$inimigo4pv?>, <?=$inimigo4pvtotal?>, <?=$inimigo5pv?>, <?=$inimigo5pvtotal?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
+    <body onload="start(<?=$inimigopv?>, <?=$inimigo2pv?>, <?=$inimigo3pv?>, <?=$inimigo4pv?>,  <?=$inimigo5pv?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
         <div class="game">
             <div class="tela forest">
                 <div class="inimigo">
