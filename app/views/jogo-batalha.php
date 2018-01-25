@@ -1,20 +1,20 @@
 <?php
-    $inimigopv = $inimigo['PVbase']*10;
-    $inimigo2pv = $inimigo2['PVbase']*10;
-    $inimigo3pv = $inimigo3['PVbase']*10;
-    $inimigo4pv = $inimigo4['PVbase']*10;
-    $inimigo5pv = $inimigo5['PVbase']*10;
+    $inimigopv = $inimigo['PVbase']*2;
+    $inimigo2pv = $inimigo2['PVbase']*2;
+    $inimigo3pv = $inimigo3['PVbase']*2;
+    $inimigo4pv = $inimigo4['PVbase']*2;
+    $inimigo5pv = $inimigo5['PVbase']*2;
 
-    $aliado1pvtotal = $aliado1['PV']*10;
-    $aliado1pv = $aliado1['PV']*10; 
-    $aliado2pvtotal = $aliado2['PV']*10;
-    $aliado2pv = $aliado2['PV']*10;    
-    $aliado3pvtotal = $aliado3['PV']*10;
-    $aliado3pv = $aliado3['PV']*10;
-    $aliado4pvtotal = $aliado4['PV']*10;
-    $aliado4pv = $aliado4['PV']*10;
-    $aliado5pvtotal = $aliado5['PV']*10;
-    $aliado5pv = $aliado5['PV']*10;
+    $aliado1pvtotal = $aliado1['PV']*2;
+    $aliado1pv = $aliado1['PV']*2; 
+    $aliado2pvtotal = $aliado2['PV']*2;
+    $aliado2pv = $aliado2['PV']*2;    
+    $aliado3pvtotal = $aliado3['PV']*2;
+    $aliado3pv = $aliado3['PV']*2;
+    $aliado4pvtotal = $aliado4['PV']*2;
+    $aliado4pv = $aliado4['PV']*2;
+    $aliado5pvtotal = $aliado5['PV']*2;
+    $aliado5pv = $aliado5['PV']*2;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +33,7 @@
         <div class="game">
             <div class="tela forest">
                 <div class="inimigo">
-                    <div class="char size<?=$inimigo['size']?>">
+                    <div class="char size<?=$inimigo['size']?>" id="inimigo" onclick="ataque2(1,<?=$inimigo['DF']?>,<?=$inimigo['DM']?>,<?=$inimigo['DN']?>,<?=$inimigo['DD']?>);">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo['nome']?></p>
                             <div id="ibarra">
@@ -42,7 +42,7 @@
                         </div>
                         <img src="/public/img/inimigos/inimigo_<?=$inimigo['id']?>.png">
                     </div>
-                    <div class="char size<?=$inimigo2['size']?>">
+                    <div class="char size<?=$inimigo2['size']?>" id="inimigo2" onclick="ataque2(2,<?=$inimigo2['DF']?>,<?=$inimigo2['DM']?>,<?=$inimigo2['DN']?>,<?=$inimigo2['DD']?>);">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo2['nome']?></p>
                             <div id="i2barra">
@@ -51,7 +51,7 @@
                         </div>
                         <img src="/public/img/inimigos/inimigo_<?=$inimigo2['id']?>.png">
                     </div>
-                    <div class="char size<?=$inimigo3['size']?>">
+                    <div class="char size<?=$inimigo3['size']?>" id="inimigo3" onclick="ataque2(3,<?=$inimigo3['DF']?>,<?=$inimigo3['DM']?>,<?=$inimigo3['DN']?>,<?=$inimigo3['DD']?>);">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo3['nome']?></p>
                             <div id="i3barra">
@@ -60,7 +60,7 @@
                         </div>
                         <img src="/public/img/inimigos/inimigo_<?=$inimigo3['id']?>.png">
                     </div>
-                    <div class="char size<?=$inimigo4['size']?>">
+                    <div class="char size<?=$inimigo4['size']?>" id="inimigo4" onclick="ataque2(4,<?=$inimigo4['DF']?>,<?=$inimigo4['DM']?>,<?=$inimigo4['DN']?>,<?=$inimigo4['DD']?>);">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo4['nome']?></p>
                             <div id="i4barra">
@@ -69,7 +69,7 @@
                         </div>
                         <img src="/public/img/inimigos/inimigo_<?=$inimigo4['id']?>.png">
                     </div>
-                    <div class="char size<?=$inimigo5['size']?>">
+                    <div class="char size<?=$inimigo5['size']?>" id="inimigo5" onclick="ataque2(5,<?=$inimigo5['DF']?>,<?=$inimigo5['DM']?>,<?=$inimigo5['DN']?>,<?=$inimigo5['DD']?>);">
                         <div class="caixa pequena">
                             <p class="small"><?=$inimigo5['nome']?></p>
                             <div id="i5barra">
@@ -129,12 +129,12 @@
             </div>
             <div class="menu">
                 <div class="hidden" id="ataques">
-                    <input class="item" id="ataque1" type="submit" value="<?=$aliado1['ataque1nome']?>" onclick="ataque('<?=$aliado1['ataque1nome']?>',<?=$aliado1['ataque1tipo']?>,<?=$aliado1['ataque1sucesso']?>,<?=$aliado1['ataque1danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>,<?=$inimigo['DF']?>,<?=$inimigo['DM']?>,<?=$inimigo['DN']?>,<?=$inimigo['DD']?>)"/>
-                    <input class="item" id="ataque2" type="submit" value="<?=$aliado1['ataque2nome']?>" onclick="ataque('<?=$aliado1['ataque2nome']?>',<?=$aliado1['ataque2tipo']?>,<?=$aliado1['ataque2sucesso']?>,<?=$aliado1['ataque2danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>,<?=$inimigo['DF']?>,<?=$inimigo['DM']?>,<?=$inimigo['DN']?>,<?=$inimigo['DD']?>)"/>
-                    <input class="item" id="ataque3" type="submit" value="<?=$aliado1['ataque3nome']?>" onclick="ataque('<?=$aliado1['ataque3nome']?>',<?=$aliado1['ataque3tipo']?>,<?=$aliado1['ataque3sucesso']?>,<?=$aliado1['ataque3danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>,<?=$inimigo['DF']?>,<?=$inimigo['DM']?>,<?=$inimigo['DN']?>,<?=$inimigo['DD']?>)"/>
-                    <input class="item" id="ataque4" type="submit" value="<?=$aliado1['ataque4nome']?>" onclick="ataque('<?=$aliado1['ataque4nome']?>',<?=$aliado1['ataque4tipo']?>,<?=$aliado1['ataque4sucesso']?>,<?=$aliado1['ataque4danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>,<?=$inimigo['DF']?>,<?=$inimigo['DM']?>,<?=$inimigo['DN']?>,<?=$inimigo['DD']?>)"/>
-                    <input class="item" id="ataque5" type="submit" value="<?=$aliado1['ataque5nome']?>" onclick="ataque('<?=$aliado1['ataque5nome']?>',<?=$aliado1['ataque5tipo']?>,<?=$aliado1['ataque5sucesso']?>,<?=$aliado1['ataque5danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>,<?=$inimigo['DF']?>,<?=$inimigo['DM']?>,<?=$inimigo['DN']?>,<?=$inimigo['DD']?>)"/>
-                    <input class="item" id="ataque6" type="submit" value="<?=$aliado1['ataque6nome']?>" onclick="ataque('<?=$aliado1['ataque6nome']?>',<?=$aliado1['ataque6tipo']?>,<?=$aliado1['ataque6sucesso']?>,<?=$aliado1['ataque6danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>,<?=$inimigo['DF']?>,<?=$inimigo['DM']?>,<?=$inimigo['DN']?>,<?=$inimigo['DD']?>)"/>
+                    <input class="item" id="ataque1" type="submit" value="<?=$aliado1['ataque1nome']?>" onclick="ataque('<?=$aliado1['ataque1nome']?>',<?=$aliado1['ataque1tipo']?>,<?=$aliado1['ataque1sucesso']?>,<?=$aliado1['ataque1danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>)"/>
+                    <input class="item" id="ataque2" type="submit" value="<?=$aliado1['ataque2nome']?>" onclick="ataque('<?=$aliado1['ataque2nome']?>',<?=$aliado1['ataque2tipo']?>,<?=$aliado1['ataque2sucesso']?>,<?=$aliado1['ataque2danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>)"/>
+                    <input class="item" id="ataque3" type="submit" value="<?=$aliado1['ataque3nome']?>" onclick="ataque('<?=$aliado1['ataque3nome']?>',<?=$aliado1['ataque3tipo']?>,<?=$aliado1['ataque3sucesso']?>,<?=$aliado1['ataque3danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>)"/>
+                    <input class="item" id="ataque4" type="submit" value="<?=$aliado1['ataque4nome']?>" onclick="ataque('<?=$aliado1['ataque4nome']?>',<?=$aliado1['ataque4tipo']?>,<?=$aliado1['ataque4sucesso']?>,<?=$aliado1['ataque4danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>)"/>
+                    <input class="item" id="ataque5" type="submit" value="<?=$aliado1['ataque5nome']?>" onclick="ataque('<?=$aliado1['ataque5nome']?>',<?=$aliado1['ataque5tipo']?>,<?=$aliado1['ataque5sucesso']?>,<?=$aliado1['ataque5danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>)"/>
+                    <input class="item" id="ataque6" type="submit" value="<?=$aliado1['ataque6nome']?>" onclick="ataque('<?=$aliado1['ataque6nome']?>',<?=$aliado1['ataque6tipo']?>,<?=$aliado1['ataque6sucesso']?>,<?=$aliado1['ataque6danobase']?>,<?=$aliado1['AF']?>,<?=$aliado1['AM']?>,<?=$aliado1['AN']?>,<?=$aliado1['AD']?>)"/>
                 </div>
                 <div class="caixa" id="mensagem" >                  
                 </div>

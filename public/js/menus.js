@@ -1,5 +1,6 @@
 var p = 1;
 var p2 = 1;
+var p3 = 1;
 var mensagemativa = false;
 
 function rolar(){
@@ -138,32 +139,6 @@ function remove() {
     document.removeEventListener("keydown", position, false);
     document.removeEventListener("keydown", enter, false);
 }
-function mensagem(mensagem){
-    document.getElementById("ataques").className = "hidden";
-    document.getElementById("mensagem").className = "caixa";
-    document.getElementById("mensagem").innerHTML = mensagem;
-    mensagemativa = true;
-}
-function mensagem2(mensagem){
-    setTimeout(function() {
-        if (mensagem==1){        
-            document.getElementById("mensagem").innerHTML = "<p>Crítico!</p>";
-        } else if (mensagem==2){
-            document.getElementById("mensagem").innerHTML = "<p>O ataque acertou!</p>";        
-        } else if (mensagem==3){
-            document.getElementById("mensagem").innerHTML = "<p>O ataque falhou!</p>";
-        }
-        mensagemativa = true;   
-        resetmensagem();
-    },800);
-}
-function resetmensagem(){
-    setTimeout(function() {
-        document.getElementById("mensagem").innerHTML = "<p>O que você vai fazer?</p>";
-        mensagemativa = false;
-        menu3();
-    },1000);
-}
 function menu3(){
         document.addEventListener("keydown", menu3mover, false);
         document.addEventListener("keydown", menu3position, false);
@@ -223,4 +198,114 @@ function remove3() {
     document.removeEventListener("keydown", menu3mover, false);
     document.removeEventListener("keydown", menu3position, false);
     document.removeEventListener("keydown", menu3enter, false);
+}
+function menu5(){
+        document.addEventListener("keydown", menu5mover, false);
+        document.addEventListener("keydown", menu5position, false);
+        document.addEventListener("keydown", menu5enter, false);
+        menu5position();
+}
+function menu5mover(key) {
+    if(key.keyCode == 65){
+        p3 -= 1;
+    }
+    if(key.keyCode == 68){
+        p3 += 1;
+    }
+    if (p3>5){
+        p3=1;
+    }
+    if (p3<1){
+        p3=5;
+    }
+}
+function menu5position() {
+    if (p3 == 1) {
+        document.getElementById('inimigo').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+        document.getElementById('inimigo2').style.background = "none";
+        document.getElementById('inimigo3').style.background = "none";
+        document.getElementById('inimigo4').style.background = "none";        
+        document.getElementById('inimigo5').style.background = "none";
+
+    } else if (p3 == 2) {
+        document.getElementById('inimigo2').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+        document.getElementById('inimigo').style.background = "none";
+        document.getElementById('inimigo3').style.background = "none";
+        document.getElementById('inimigo4').style.background = "none";        
+        document.getElementById('inimigo5').style.background = "none";
+    } else if (p3 == 3) {
+        document.getElementById('inimigo3').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+        document.getElementById('inimigo2').style.background = "none";
+        document.getElementById('inimigo').style.background = "none";
+        document.getElementById('inimigo4').style.background = "none";        
+        document.getElementById('inimigo5').style.background = "none";
+    } else if (p3 == 4) {
+        document.getElementById('inimigo4').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+        document.getElementById('inimigo2').style.background = "none";
+        document.getElementById('inimigo').style.background = "none";
+        document.getElementById('inimigo3').style.background = "none";        
+        document.getElementById('inimigo5').style.background = "none";
+    } else if (p3 == 5) {
+        document.getElementById('inimigo5').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+        document.getElementById('inimigo2').style.background = "none";
+        document.getElementById('inimigo').style.background = "none";
+        document.getElementById('inimigo3').style.background = "none";        
+        document.getElementById('inimigo4').style.background = "none";
+    }
+}
+function menu5enter(key){
+    if (key.keyCode == 13){
+        if (p3 == 1) {
+            document.getElementById('inimigo').click();    
+            remove5();
+        } else if (p3 == 2) {
+            document.getElementById('inimigo2').click();  
+            remove5();  
+        } else if (p3 == 3) {
+            document.getElementById('inimigo3').click();  
+            remove5();  
+        } else if (p3 == 4) {
+            document.getElementById('inimigo4').click();  
+            remove5();  
+        } else if (p3 == 5) {
+            document.getElementById('inimigo5').click();  
+            remove5();  
+        }
+    }
+}
+function remove5() {
+    document.removeEventListener("keydown", menu5mover, false);
+    document.removeEventListener("keydown", menu5position, false);
+    document.removeEventListener("keydown", menu5enter, false);
+    document.getElementById('inimigo').style.background = "none";
+    document.getElementById('inimigo2').style.background = "none";
+    document.getElementById('inimigo3').style.background = "none";
+    document.getElementById('inimigo4').style.background = "none";        
+    document.getElementById('inimigo5').style.background = "none";
+}
+function mensagem(mensagem){
+    document.getElementById("ataques").className = "hidden";
+    document.getElementById("mensagem").className = "caixa";
+    document.getElementById("mensagem").innerHTML = mensagem;
+    mensagemativa = true;
+}
+function mensagem2(mensagem){
+    setTimeout(function() {
+        if (mensagem==1){        
+            document.getElementById("mensagem").innerHTML = "<p>Crítico!</p>";
+        } else if (mensagem==2){
+            document.getElementById("mensagem").innerHTML = "<p>O ataque acertou!</p>";        
+        } else if (mensagem==3){
+            document.getElementById("mensagem").innerHTML = "<p>O ataque falhou!</p>";
+        }
+        mensagemativa = true;   
+        resetmensagem();
+    },800);
+}
+function resetmensagem(){
+    setTimeout(function() {
+        document.getElementById("mensagem").innerHTML = "<p>O que você vai fazer?</p>";
+        mensagemativa = false;
+        menu3();
+    },1000);
 }

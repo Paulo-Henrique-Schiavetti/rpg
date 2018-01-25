@@ -9,6 +9,15 @@ var i4pvtotal = 0;
 var i5pv = 0;
 var i5pvtotal = 0;
 
+var nome = "";
+var tipo = 0;
+var sucesso = 0;
+var danobase = 0;
+var af = 0;
+var am = 0;
+var an = 0;
+var ad = 0;
+
 function start(i1p, i2p, i3p, i4p, i5p, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     resetmensagem();
     setTimeout(function(){
@@ -58,18 +67,29 @@ function start(i1p, i2p, i3p, i4p, i5p, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, 
         calcularvidaaliado5(dano); 
     },800);
 }
-function ataque(nome,tipo,sucesso,danobase,af,am,an,ad,df,dm,dn,dd){
+function ataque(n,t,s,db,a1,a2,a3,a4){
+    nome = n;
+    sucesso = s;
+    tipo = t;
+    danobase = db;
+    af = a1;
+    am = a2;
+    an = a3;
+    ad = a4;
+    menu5();
+}
+function ataque2(inimigo,df,dm,dn,dd){
     if (tipo<=4){
-        calcularataque(nome,sucesso,danobase,af,df);
+        calcularataque(inimigo,af,df);
     } else if (tipo<=6){
-        calcularataque(nome,sucesso,danobase,am,dm);
+        calcularataque(inimigo,am,dm);
     } else if (tipo<=8){
-        calcularataque(nome,sucesso,danobase,an,dn);
+        calcularataque(inimigo,an,dn);
     } else {
-        calcularataque(nome,sucesso,danobase,ad,dd);
+        calcularataque(inimigo,ad,dd);
     } 
 }
-function calcularataque(nome,sucesso,danobase,a,d){
+function calcularataque(inimigo,a,d){
 
     rolagem = rolar();
     mostrarrolagem(rolagem,sucesso);
@@ -87,7 +107,17 @@ function calcularataque(nome,sucesso,danobase,a,d){
         mensagem2(3);
     }
     setTimeout(function() {
-        calcularvidainimigo1(dano);
+        if (inimigo == 1){
+            calcularvidainimigo1(dano);
+        } else if (inimigo == 2){
+            calcularvidainimigo2(dano);
+        } else if (inimigo == 3){
+            calcularvidainimigo3(dano);  
+        } else if (inimigo == 4){
+            calcularvidainimigo4(dano);   
+        } else if (inimigo == 5){
+            calcularvidainimigo5(dano);  
+        }        
     },1400);
 }
 function calcularvidainimigo1(dano){
