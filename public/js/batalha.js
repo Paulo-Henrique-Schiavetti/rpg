@@ -21,15 +21,19 @@ var ad = 0;
 function start(i1p, i2p, i3p, i4p, i5p, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     resetmensagem();
     setTimeout(function(){
-        document.getElementById("ibarra").innerHTML = "<div class='barra'><i id='pv' class='pv'></i><i class='notpv' id='notpv'></i></div><i id='pvEscrito'></i>";
+        document.getElementById("i1barra").innerHTML = "<div class='barra'><i id='pv' class='pv'></i><i class='notpv' id='notpv'></i></div><i id='pvEscrito'></i>";
         document.getElementById("abarra").innerHTML = "<div class='barra'><i id='aliadopv' class='pv'></i><i class='notpv' id='aliadonotpv'></i></div><i id='aliadopvEscrito'></i>";
         document.getElementById("i2barra").innerHTML = "<div class='barra'><i id='pv2' class='pv'></i><i class='notpv' id='notpv2'></i></div><i id='pvEscrito2'></i>";
         document.getElementById("a2barra").innerHTML = "<div class='barra'><i id='aliadopv2' class='pv'></i><i class='notpv' id='aliadonotpv2'></i></div><i id='aliadopvEscrito2'></i>";
         document.getElementById("i3barra").innerHTML = "<div class='barra'><i id='pv3' class='pv'></i><i class='notpv' id='notpv3'></i></div><i id='pvEscrito3'></i>";
         document.getElementById("a3barra").innerHTML = "<div class='barra'><i id='aliadopv3' class='pv'></i><i class='notpv' id='aliadonotpv3'></i></div><i id='aliadopvEscrito3'></i>";
+        if (i4p != 0) {
         document.getElementById("i4barra").innerHTML = "<div class='barra'><i id='pv4' class='pv'></i><i class='notpv' id='notpv4'></i></div><i id='pvEscrito4'></i>";
+        }
         document.getElementById("a4barra").innerHTML = "<div class='barra'><i id='aliadopv4' class='pv'></i><i class='notpv' id='aliadonotpv4'></i></div><i id='aliadopvEscrito4'></i>";
+        if (i5p != 0) {
         document.getElementById("i5barra").innerHTML = "<div class='barra'><i id='pv5' class='pv'></i><i class='notpv' id='notpv5'></i></div><i id='pvEscrito5'></i>";
+        }
         document.getElementById("a5barra").innerHTML = "<div class='barra'><i id='aliadopv5' class='pv'></i><i class='notpv' id='aliadonotpv5'></i></div><i id='aliadopvEscrito5'></i>";
         
         dano = 0;
@@ -43,13 +47,17 @@ function start(i1p, i2p, i3p, i4p, i5p, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, 
         i3pv = i3p;    
         i3pvtotal = i3p;
         calcularvidainimigo3(dano);
-        i4pv = i4p;    
-        i4pvtotal = i4p;
-        calcularvidainimigo4(dano);
-        i5pv = i5p;    
-        i5pvtotal = i5p;
-        calcularvidainimigo5(dano);
-
+        if (i4p != 0) {
+            i4pv = i4p;    
+            i4pvtotal = i4p;
+            calcularvidainimigo4(dano);
+        } 
+        if (i5p != 0) {
+            i5pv = i5p;    
+            i5pvtotal = i5p;                
+            calcularvidainimigo5(dano);
+        }
+    
         a1pv = a1p;    
         a1pvtotal = a1t;
         calcularvidaaliado1(dano);

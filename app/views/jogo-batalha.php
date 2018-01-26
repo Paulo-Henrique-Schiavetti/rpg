@@ -1,9 +1,21 @@
 <?php
-    $inimigopv = $inimigo['PVbase'];
+    $inimigo1pv = $inimigo1['PVbase'];
     $inimigo2pv = $inimigo2['PVbase'];
     $inimigo3pv = $inimigo3['PVbase'];
-    $inimigo4pv = $inimigo4['PVbase'];
-    $inimigo5pv = $inimigo5['PVbase'];
+    if ($inimigo4 == ""){
+        $inimigo4pv = 0;
+        $inimigo5pv = 0;
+        $inimigos = [$inimigo1,$inimigo2,$inimigo3];
+    } else if ($inimigo5 == ""){
+        $inimigo4pv = $inimigo4['PVbase'];
+        $inimigo5pv = 0;
+        $inimigos = [$inimigo1,$inimigo2,$inimigo3,$inimigo4];
+    } else {
+        $inimigo4pv = $inimigo4['PVbase'];
+        $inimigo5pv = $inimigo5['PVbase'];
+        $inimigos = [$inimigo1,$inimigo2,$inimigo3,$inimigo4,$inimigo5];
+    }
+    $p = 1;
 
     $aliado1pvtotal = $aliado1['PV'];
     $aliado1pv = $aliado1['PV']; 
@@ -29,55 +41,23 @@
         <script type="text/javascript" src="/public/js/aliados.js"></script>
         <script type="text/javascript" src="/public/js/menus.js"></script>
     </head>
-    <body onload="start(<?=$inimigopv?>, <?=$inimigo2pv?>, <?=$inimigo3pv?>, <?=$inimigo4pv?>,  <?=$inimigo5pv?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
+    <body onload="start(<?=$inimigo1pv?>, <?=$inimigo2pv?>, <?=$inimigo3pv?>, <?=$inimigo4pv?>,  <?=$inimigo5pv?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
         <div class="game">
             <div class="tela forest">
                 <div class="inimigo">
-                    <div class="char size<?=$inimigo['size']?>" id="inimigo" onclick="ataque2(1,<?=$inimigo['DF']?>,<?=$inimigo['DM']?>,<?=$inimigo['DN']?>,<?=$inimigo['DD']?>);">
-                        <div class="caixa pequena">
-                            <p class="small"><?=$inimigo['nome']?></p>
-                            <div id="ibarra">
-                                <p class="seta">↼-------⇀</p>
+                    <?php foreach ($inimigos as $i) { 
+                    if ($i <> "") { echo "
+                    <div class='char size".$i['size']."' id='inimigo".$p."' onclick='ataque2(".$p.",".$i['DF'].",".$i['DM'].",".$i['DN'].",".$i['DD'].");'>
+                        <div class='caixa pequena'>
+                            <p class='small'>".$i['nome']."</p>
+                            <div id='i".$p."barra'>
+                                <p class='seta'>↼-------⇀</p>
                             </div>
                         </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo['id']?>.png">
+                        <img src='/public/img/inimigos/inimigo_".$i['id'].".png'>
                     </div>
-                    <div class="char size<?=$inimigo2['size']?>" id="inimigo2" onclick="ataque2(2,<?=$inimigo2['DF']?>,<?=$inimigo2['DM']?>,<?=$inimigo2['DN']?>,<?=$inimigo2['DD']?>);">
-                        <div class="caixa pequena">
-                            <p class="small"><?=$inimigo2['nome']?></p>
-                            <div id="i2barra">
-                                <p class="seta">↼-------⇀</p>
-                            </div>
-                        </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo2['id']?>.png">
-                    </div>
-                    <div class="char size<?=$inimigo3['size']?>" id="inimigo3" onclick="ataque2(3,<?=$inimigo3['DF']?>,<?=$inimigo3['DM']?>,<?=$inimigo3['DN']?>,<?=$inimigo3['DD']?>);">
-                        <div class="caixa pequena">
-                            <p class="small"><?=$inimigo3['nome']?></p>
-                            <div id="i3barra">
-                                <p class="seta">↼-------⇀</p>
-                            </div>
-                        </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo3['id']?>.png">
-                    </div>
-                    <div class="char size<?=$inimigo4['size']?>" id="inimigo4" onclick="ataque2(4,<?=$inimigo4['DF']?>,<?=$inimigo4['DM']?>,<?=$inimigo4['DN']?>,<?=$inimigo4['DD']?>);">
-                        <div class="caixa pequena">
-                            <p class="small"><?=$inimigo4['nome']?></p>
-                            <div id="i4barra">
-                                <p class="seta">↼-------⇀</p>
-                            </div>
-                        </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo4['id']?>.png">
-                    </div>
-                    <div class="char size<?=$inimigo5['size']?>" id="inimigo5" onclick="ataque2(5,<?=$inimigo5['DF']?>,<?=$inimigo5['DM']?>,<?=$inimigo5['DN']?>,<?=$inimigo5['DD']?>);">
-                        <div class="caixa pequena">
-                            <p class="small"><?=$inimigo5['nome']?></p>
-                            <div id="i5barra">
-                                <p class="seta">↼-------⇀</p>
-                            </div>
-                        </div>
-                        <img src="/public/img/inimigos/inimigo_<?=$inimigo5['id']?>.png">
-                    </div>
+                    ";} $p++;
+                    }?>
                 </div>    
                 <div class="aliado">
                     <div class="char">

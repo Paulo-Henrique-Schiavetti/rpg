@@ -24,7 +24,7 @@ insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM,
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (9, 'Twyla', 1, 91, 45, 90, 19, 3, 36, 5, 97, 68, 46, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (10, 'Mano', 6, 41, 23, 32, 44, 5, 21, 86, 78, 78, 56, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (11, 'nop', 7, 77, 3, 24, 4, 1, 49, 6, 80, 28, 92, 2, '1');
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (12, 'Starr', 1, 73, 40, 28, 51, 29, 90, 25, 31, 77, 19, 2, '1');
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (12, 'prrran', 1, 100, 26, 100, 60, 100, 40, 100, 10, 100, 10, 4, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (13, 'Amber', 6, 79, 32, 7, 61, 15, 83, 90, 81, 83, 28, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (14, 'Roselia', 9, 86, 22, 44, 92, 12, 6, 19, 48, 68, 68, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (15, 'Wolfy', 7, 85, 44, 70, 93, 72, 91, 44, 96, 87, 58, 2, '1');
@@ -72,7 +72,7 @@ insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 2);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 3);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 4);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (3, 2);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (3, 3);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (12, 1);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (9, 6);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (10, 2);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (11, 2);

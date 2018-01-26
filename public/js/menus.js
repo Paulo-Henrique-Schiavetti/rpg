@@ -221,7 +221,7 @@ function menu5mover(key) {
 }
 function menu5position() {
     if (p3 == 1) {
-        document.getElementById('inimigo').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
+        document.getElementById('inimigo1').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
         document.getElementById('inimigo2').style.background = "none";
         document.getElementById('inimigo3').style.background = "none";
         document.getElementById('inimigo4').style.background = "none";        
@@ -229,26 +229,26 @@ function menu5position() {
 
     } else if (p3 == 2) {
         document.getElementById('inimigo2').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
-        document.getElementById('inimigo').style.background = "none";
+        document.getElementById('inimigo1').style.background = "none";
         document.getElementById('inimigo3').style.background = "none";
         document.getElementById('inimigo4').style.background = "none";        
         document.getElementById('inimigo5').style.background = "none";
     } else if (p3 == 3) {
         document.getElementById('inimigo3').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
         document.getElementById('inimigo2').style.background = "none";
-        document.getElementById('inimigo').style.background = "none";
+        document.getElementById('inimigo1').style.background = "none";
         document.getElementById('inimigo4').style.background = "none";        
         document.getElementById('inimigo5').style.background = "none";
     } else if (p3 == 4) {
         document.getElementById('inimigo4').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
         document.getElementById('inimigo2').style.background = "none";
-        document.getElementById('inimigo').style.background = "none";
+        document.getElementById('inimigo1').style.background = "none";
         document.getElementById('inimigo3').style.background = "none";        
         document.getElementById('inimigo5').style.background = "none";
     } else if (p3 == 5) {
         document.getElementById('inimigo5').style.backgroundColor = "rgba(100, 100, 100, 0.5)";
         document.getElementById('inimigo2').style.background = "none";
-        document.getElementById('inimigo').style.background = "none";
+        document.getElementById('inimigo1').style.background = "none";
         document.getElementById('inimigo3').style.background = "none";        
         document.getElementById('inimigo4').style.background = "none";
     }
@@ -256,7 +256,7 @@ function menu5position() {
 function menu5enter(key){
     if (key.keyCode == 13){
         if (p3 == 1) {
-            document.getElementById('inimigo').click();    
+            document.getElementById('inimigo1').click();    
             remove5();
         } else if (p3 == 2) {
             document.getElementById('inimigo2').click();  
@@ -277,7 +277,7 @@ function remove5() {
     document.removeEventListener("keydown", menu5mover, false);
     document.removeEventListener("keydown", menu5position, false);
     document.removeEventListener("keydown", menu5enter, false);
-    document.getElementById('inimigo').style.background = "none";
+    document.getElementById('inimigo1').style.background = "none";
     document.getElementById('inimigo2').style.background = "none";
     document.getElementById('inimigo3').style.background = "none";
     document.getElementById('inimigo4').style.background = "none";        
