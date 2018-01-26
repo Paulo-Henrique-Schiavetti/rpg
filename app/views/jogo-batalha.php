@@ -1,20 +1,20 @@
 <?php
-    $inimigopv = $inimigo['PVbase']*2;
-    $inimigo2pv = $inimigo2['PVbase']*2;
-    $inimigo3pv = $inimigo3['PVbase']*2;
-    $inimigo4pv = $inimigo4['PVbase']*2;
-    $inimigo5pv = $inimigo5['PVbase']*2;
+    $inimigopv = $inimigo['PVbase'];
+    $inimigo2pv = $inimigo2['PVbase'];
+    $inimigo3pv = $inimigo3['PVbase'];
+    $inimigo4pv = $inimigo4['PVbase'];
+    $inimigo5pv = $inimigo5['PVbase'];
 
-    $aliado1pvtotal = $aliado1['PV']*2;
-    $aliado1pv = $aliado1['PV']*2; 
-    $aliado2pvtotal = $aliado2['PV']*2;
-    $aliado2pv = $aliado2['PV']*2;    
-    $aliado3pvtotal = $aliado3['PV']*2;
-    $aliado3pv = $aliado3['PV']*2;
-    $aliado4pvtotal = $aliado4['PV']*2;
-    $aliado4pv = $aliado4['PV']*2;
-    $aliado5pvtotal = $aliado5['PV']*2;
-    $aliado5pv = $aliado5['PV']*2;
+    $aliado1pvtotal = $aliado1['PV'];
+    $aliado1pv = $aliado1['PV']; 
+    $aliado2pvtotal = $aliado2['PV'];
+    $aliado2pv = $aliado2['PV'];    
+    $aliado3pvtotal = $aliado3['PV'];
+    $aliado3pv = $aliado3['PV'];
+    $aliado4pvtotal = $aliado4['PV'];
+    $aliado4pv = $aliado4['PV'];
+    $aliado5pvtotal = $aliado5['PV'];
+    $aliado5pv = $aliado5['PV'];
 ?>
 <!DOCTYPE html>
 <html lang="en">

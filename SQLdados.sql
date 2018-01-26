@@ -13,9 +13,9 @@ insert into areas (id, nome, posicao) values (9, 'Johannah', '50,50');
 insert into areas (id, nome, posicao) values (10, 'Inglis', '50,50');
 
 -- inimigos --
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (1, 'Giant', 7, 91, 24, 93, 65, 32, 94, 16, 73, 63, 34, 3, '1');
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (2, 'Human', 2, 80, 27, 30, 92, 97, 4, 60, 12, 70, 59, 2, '1');
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (3, 'Lamia', 10, 46, 34, 90, 87, 63, 33, 91, 26, 96, 11, 3, '1');
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (1, 'Giant', 1, 200, 6, 50, 40, 50, 40, 70, 40, 50, 50, 3, '1');
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (2, 'Human', 2, 140, 6, 40, 60, 40, 80, 50, 70, 20, 60, 2, '1');
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (3, 'Lamia', 3, 150, 6, 70, 60, 60, 20, 70, 60, 60, 10, 3, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (4, 'Malena', 3, 44, 17, 61, 82, 12, 45, 37, 51, 75, 62, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (5, 'Zonnya', 4, 53, 41, 58, 78, 5, 31, 11, 49, 72, 92, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (6, 'Nelle', 10, 6, 26, 36, 55, 28, 13, 72, 80, 12, 4, 2, '1');
@@ -74,7 +74,7 @@ insert into `inimigos-areas` (inimigos_id, areas_id) values (2, 4);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (3, 2);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (3, 3);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (9, 6);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (10, 1);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (10, 2);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (11, 2);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (12, 7);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (13, 3);
@@ -84,16 +84,16 @@ insert into `inimigos-areas` (inimigos_id, areas_id) values (16, 3);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (17, 7);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (18, 6);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (19, 2);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (20, 1);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (20, 3);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (21, 6);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (22, 1);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (22, 4);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (23, 4);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (24, 3);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (25, 2);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (26, 6);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (27, 3);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (28, 7);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (29, 1);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (29, 5);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (30, 7);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (31, 3);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (32, 10);
@@ -103,9 +103,9 @@ insert into `inimigos-areas` (inimigos_id, areas_id) values (35, 9);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (36, 8);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (37, 5);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (38, 4);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (39, 1);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (39, 6);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (40, 7);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (41, 1);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (41, 7);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (42, 9);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (43, 10);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (44, 2);
@@ -117,12 +117,12 @@ insert into `inimigos-areas` (inimigos_id, areas_id) values (49, 5);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (50, 7);
 
 -- ataques --
-insert into ataques (id, nome, tipo, sucesso, danobase) values (1, 'Persevering', 4, 4, 13);
-insert into ataques (id, nome, tipo, sucesso, danobase) values (2, 'client-server', 10, 5, 95);
-insert into ataques (id, nome, tipo, sucesso, danobase) values (3, 'discrete', 5, 7, 13);
-insert into ataques (id, nome, tipo, sucesso, danobase) values (4, 'web-enabled', 9, 12, 59);
-insert into ataques (id, nome, tipo, sucesso, danobase) values (5, 'groupware', 9, 20, 74);
-insert into ataques (id, nome, tipo, sucesso, danobase) values (6, 'optimizing', 9, 19, 77);
+insert into ataques (id, nome, tipo, sucesso, danobase) values (1, 'Soco', 1, 5, 20);
+insert into ataques (id, nome, tipo, sucesso, danobase) values (2, 'corte', 2, 6, 40);
+insert into ataques (id, nome, tipo, sucesso, danobase) values (3, 'explosion', 5, 8, 50);
+insert into ataques (id, nome, tipo, sucesso, danobase) values (4, 'faíscas', 7, 5, 20);
+insert into ataques (id, nome, tipo, sucesso, danobase) values (5, 'jato-venenoso', 8, 10, 40);
+insert into ataques (id, nome, tipo, sucesso, danobase) values (6, 'Preçe', 9, 6, 40);
 insert into ataques (id, nome, tipo, sucesso, danobase) values (7, 'service-desk', 10, 10, 27);
 insert into ataques (id, nome, tipo, sucesso, danobase) values (8, 'holistic', 10, 2, 57);
 insert into ataques (id, nome, tipo, sucesso, danobase) values (9, 'Persevering', 8, 9, 46);
@@ -183,7 +183,7 @@ insert into mochila (id, nome, espaço, items) values (11, 'Chrysler', 52, '5');
 insert into mochila (id, nome, espaço, items) values (12, 'Chrysler', 52, '5');
 
 -- aliados --
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (1, 'Carr', 1, 29, 32, 88, 43, 11, 48, 67, 96, 32, 20, 4, 16, 17, 34, 42, 29, 1);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (1, 'Caer', 1, 160, 10, 60, 75, 20, 60, 80, 60, 40, 40, 1, 2, 3, 4, 5, 6, 1);
 insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (2, 'Warden', 2, 80, 14, 28, 23, 31, 40, 62, 44, 88, 18, 9, 42, 9, 8, 33, 50, 2);
 insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (3, 'Heywood', 7, 16, 42, 23, 84, 98, 59, 73, 93, 98, 84, 25, 22, 18, 49, 22, 17, 3);
 insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (4, 'Tory', 1, 43, 39, 46, 27, 21, 27, 99, 17, 8, 77, 32, 32, 10, 40, 46, 44, 4);
@@ -198,6 +198,6 @@ insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, A
 
 -- usuarios --
 insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (1, 'paulo@paulo.com', 'qualserá', 1, 2, 3, 4, 5);
-insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (2, 'hhounsom1@usnews.com', 'Harmonie', 10, 9, 8, 12, 5);
-insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (3, 'pbridgens2@lulu.com', 'Petronella', 9, 2, 6, 7, 11);
-insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (4, 'dleving3@amazon.com', 'Deanna', 11, 12, 11, 6, 4);
+insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (2, 'ola@oi.com', 'Harmonie', 10, 9, 8, 12, 5);
+insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (3, 'futamaniac@john.com', 'Petronella', 9, 2, 6, 7, 11);
+insert into usuario (id, email, nome, aliado1, aliado2, aliado3, aliado4, aliado5) values (4, 'cu@buceta.com', 'Deanna', 11, 12, 11, 6, 4);
