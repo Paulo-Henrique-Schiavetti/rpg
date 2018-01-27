@@ -57,7 +57,13 @@
                         <img src='/public/img/inimigos/inimigo_".$i['id'].".png'>
                     </div>
                     ";} $p++;
-                    }?>
+                    }
+                    if ($p == 5) {
+                    echo "<div class='hidden' id='i5barra'></div>";
+                    } else if ($p == 4) {
+                    echo "<div class='hidden' id='i4barra'></div>";
+                    }
+                    ?>
                 </div>    
                 <div class="aliado">
                     <div class="char">

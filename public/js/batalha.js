@@ -21,21 +21,21 @@ var ad = 0;
 function start(i1p, i2p, i3p, i4p, i5p, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     resetmensagem();
     setTimeout(function(){
-        document.getElementById("i1barra").innerHTML = "<div class='barra'><i id='pv' class='pv'></i><i class='notpv' id='notpv'></i></div><i id='pvEscrito'></i>";
-        document.getElementById("abarra").innerHTML = "<div class='barra'><i id='aliadopv' class='pv'></i><i class='notpv' id='aliadonotpv'></i></div><i id='aliadopvEscrito'></i>";
-        document.getElementById("i2barra").innerHTML = "<div class='barra'><i id='pv2' class='pv'></i><i class='notpv' id='notpv2'></i></div><i id='pvEscrito2'></i>";
-        document.getElementById("a2barra").innerHTML = "<div class='barra'><i id='aliadopv2' class='pv'></i><i class='notpv' id='aliadonotpv2'></i></div><i id='aliadopvEscrito2'></i>";
-        document.getElementById("i3barra").innerHTML = "<div class='barra'><i id='pv3' class='pv'></i><i class='notpv' id='notpv3'></i></div><i id='pvEscrito3'></i>";
-        document.getElementById("a3barra").innerHTML = "<div class='barra'><i id='aliadopv3' class='pv'></i><i class='notpv' id='aliadonotpv3'></i></div><i id='aliadopvEscrito3'></i>";
+        istart(i1p,i2p,i3p,i4p,i5p);
+        astart(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t);        
+    },800);
+}
+function istart(i1p,i2p,i3p,i4p,i5p){
+        document.getElementById("i1barra").innerHTML = "<div class='barra'><i id='inimigopv' class='pv'></i><i class='notpv' id='inimigonotpv'></i></div><i id='inimigopvEscrito'></i>";
+        document.getElementById("i2barra").innerHTML = "<div class='barra'><i id='inimigopv2' class='pv'></i><i class='notpv' id='inimigonotpv2'></i></div><i id='inimigopvEscrito2'></i>";
+        document.getElementById("i3barra").innerHTML = "<div class='barra'><i id='inimigopv3' class='pv'></i><i class='notpv' id='inimigonotpv3'></i></div><i id='inimigopvEscrito3'></i>";
         if (i4p != 0) {
-        document.getElementById("i4barra").innerHTML = "<div class='barra'><i id='pv4' class='pv'></i><i class='notpv' id='notpv4'></i></div><i id='pvEscrito4'></i>";
+            document.getElementById("i4barra").innerHTML = "<div class='barra'><i id='inimigopv4' class='pv'></i><i class='notpv' id='inimigonotpv4'></i></div><i id='inimigopvEscrito4'></i>";
         }
-        document.getElementById("a4barra").innerHTML = "<div class='barra'><i id='aliadopv4' class='pv'></i><i class='notpv' id='aliadonotpv4'></i></div><i id='aliadopvEscrito4'></i>";
         if (i5p != 0) {
-        document.getElementById("i5barra").innerHTML = "<div class='barra'><i id='pv5' class='pv'></i><i class='notpv' id='notpv5'></i></div><i id='pvEscrito5'></i>";
+            document.getElementById("i5barra").innerHTML = "<div class='barra'><i id='inimigopv5' class='pv'></i><i class='notpv' id='inimigonotpv5'></i></div><i id='inimigopvEscrito5'></i>";
         }
-        document.getElementById("a5barra").innerHTML = "<div class='barra'><i id='aliadopv5' class='pv'></i><i class='notpv' id='aliadonotpv5'></i></div><i id='aliadopvEscrito5'></i>";
-        
+
         dano = 0;
 
         i1pv = i1p;    
@@ -57,23 +57,31 @@ function start(i1p, i2p, i3p, i4p, i5p, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, 
             i5pvtotal = i5p;                
             calcularvidainimigo5(dano);
         }
+}
+function astart(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
+    document.getElementById("abarra").innerHTML = "<div class='barra'><i id='aliadopv' class='pv'></i><i class='notpv' id='aliadonotpv'></i></div><i id='aliadopvEscrito'></i>";
+    document.getElementById("a2barra").innerHTML = "<div class='barra'><i id='aliadopv2' class='pv'></i><i class='notpv' id='aliadonotpv2'></i></div><i id='aliadopvEscrito2'></i>";
+    document.getElementById("a3barra").innerHTML = "<div class='barra'><i id='aliadopv3' class='pv'></i><i class='notpv' id='aliadonotpv3'></i></div><i id='aliadopvEscrito3'></i>";        
+    document.getElementById("a4barra").innerHTML = "<div class='barra'><i id='aliadopv4' class='pv'></i><i class='notpv' id='aliadonotpv4'></i></div><i id='aliadopvEscrito4'></i>";        
+    document.getElementById("a5barra").innerHTML = "<div class='barra'><i id='aliadopv5' class='pv'></i><i class='notpv' id='aliadonotpv5'></i></div><i id='aliadopvEscrito5'></i>";
     
-        a1pv = a1p;    
-        a1pvtotal = a1t;
-        calcularvidaaliado1(dano);
-        a2pv = a2p;    
-        a2pvtotal = a2t;
-        calcularvidaaliado2(dano); 
-        a3pv = a3p;    
-        a3pvtotal = a3t;
-        calcularvidaaliado3(dano); 
-        a4pv = a4p;    
-        a4pvtotal = a4t;
-        calcularvidaaliado4(dano); 
-        a5pv = a5p;    
-        a5pvtotal = a5t;
-        calcularvidaaliado5(dano); 
-    },800);
+    dano = 0;
+
+    a1pv = a1p;    
+    a1pvtotal = a1t;
+    calcularvidaaliado1(dano);
+    a2pv = a2p;    
+    a2pvtotal = a2t;
+    calcularvidaaliado2(dano); 
+    a3pv = a3p;    
+    a3pvtotal = a3t;
+    calcularvidaaliado3(dano); 
+    a4pv = a4p;    
+    a4pvtotal = a4t;
+    calcularvidaaliado4(dano); 
+    a5pv = a5p;    
+    a5pvtotal = a5t;
+    calcularvidaaliado5(dano); 
 }
 function ataque(n,t,s,db,a1,a2,a3,a4){
     nome = n;
@@ -147,9 +155,9 @@ function calcularvidainimigo1(dano){
     for(i = 1 ;i <= 100-barra;i++){ 
        BarraVazia += "&nbsp";
     }
-    document.getElementById("pv").innerHTML = BarraCheia;
-    document.getElementById("notpv").innerHTML = BarraVazia;
-    document.getElementById("pvEscrito").innerHTML = i1pv+"/"+i1pvtotal;
+    document.getElementById("inimigopv").innerHTML = BarraCheia;
+    document.getElementById("inimigonotpv").innerHTML = BarraVazia;
+    document.getElementById("inimigopvEscrito").innerHTML = i1pv+"/"+i1pvtotal;
 }
 function calcularvidainimigo2(dano){
 
@@ -170,9 +178,9 @@ function calcularvidainimigo2(dano){
     for(i = 1 ;i <= 100-barra;i++){ 
        BarraVazia += "&nbsp";
     }
-    document.getElementById("pv2").innerHTML = BarraCheia;
-    document.getElementById("notpv2").innerHTML = BarraVazia;
-    document.getElementById("pvEscrito2").innerHTML = i2pv+"/"+i2pvtotal;
+    document.getElementById("inimigopv2").innerHTML = BarraCheia;
+    document.getElementById("inimigonotpv2").innerHTML = BarraVazia;
+    document.getElementById("inimigopvEscrito2").innerHTML = i2pv+"/"+i2pvtotal;
 }
 function calcularvidainimigo3(dano){
 
@@ -193,9 +201,9 @@ function calcularvidainimigo3(dano){
     for(i = 1 ;i <= 100-barra;i++){ 
        BarraVazia += "&nbsp";
     }
-    document.getElementById("pv3").innerHTML = BarraCheia;
-    document.getElementById("notpv3").innerHTML = BarraVazia;
-    document.getElementById("pvEscrito3").innerHTML = i3pv+"/"+i3pvtotal;
+    document.getElementById("inimigopv3").innerHTML = BarraCheia;
+    document.getElementById("inimigonotpv3").innerHTML = BarraVazia;
+    document.getElementById("inimigopvEscrito3").innerHTML = i3pv+"/"+i3pvtotal;
 }
 function calcularvidainimigo4(dano){
 
@@ -216,9 +224,9 @@ function calcularvidainimigo4(dano){
     for(i = 1 ;i <= 100-barra;i++){ 
        BarraVazia += "&nbsp";
     }
-    document.getElementById("pv4").innerHTML = BarraCheia;
-    document.getElementById("notpv4").innerHTML = BarraVazia;
-    document.getElementById("pvEscrito4").innerHTML = i4pv+"/"+i4pvtotal;
+    document.getElementById("inimigopv4").innerHTML = BarraCheia;
+    document.getElementById("inimigonotpv4").innerHTML = BarraVazia;
+    document.getElementById("inimigopvEscrito4").innerHTML = i4pv+"/"+i4pvtotal;
 }
 function calcularvidainimigo5(dano){
 
@@ -239,7 +247,7 @@ function calcularvidainimigo5(dano){
     for(i = 1 ;i <= 100-barra;i++){ 
        BarraVazia += "&nbsp";
     }
-    document.getElementById("pv5").innerHTML = BarraCheia;
-    document.getElementById("notpv5").innerHTML = BarraVazia;
-    document.getElementById("pvEscrito5").innerHTML = i5pv+"/"+i5pvtotal;
+    document.getElementById("inimigopv5").innerHTML = BarraCheia;
+    document.getElementById("inimigonotpv5").innerHTML = BarraVazia;
+    document.getElementById("inimigopvEscrito5").innerHTML = i5pv+"/"+i5pvtotal;
 }
