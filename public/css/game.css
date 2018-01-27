@@ -1,9 +1,9 @@
 body {
-    background: url(/public/img/body.png);;
+    background: url(/public/img/body.png);
 }
 .game {
-    width: 75%;
     margin-left: 12.5%;
+    width: 75%;
 }
 .tela {
     height: 420px;
