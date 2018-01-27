@@ -3,12 +3,12 @@
     $inimigo2pv = $inimigo2['PVbase'];
     $inimigo3pv = $inimigo3['PVbase'];
     if ($inimigo4 == ""){
-        $inimigo4pv = 0;
-        $inimigo5pv = 0;
+        $inimigo4pv = 1;
+        $inimigo5pv = 1;
         $inimigos = [$inimigo1,$inimigo2,$inimigo3];
     } else if ($inimigo5 == ""){
         $inimigo4pv = $inimigo4['PVbase'];
-        $inimigo5pv = 0;
+        $inimigo5pv = 1;
         $inimigos = [$inimigo1,$inimigo2,$inimigo3,$inimigo4];
     } else {
         $inimigo4pv = $inimigo4['PVbase'];
@@ -62,6 +62,7 @@
                     echo "<div class='hidden' id='i5barra'></div>";
                     } else if ($p == 4) {
                     echo "<div class='hidden' id='i4barra'></div>";
+                    echo "<div class='hidden' id='i5barra'></div>";
                     }
                     ?>
                 </div>    

@@ -29,12 +29,8 @@ function istart(i1p,i2p,i3p,i4p,i5p){
         document.getElementById("i1barra").innerHTML = "<div class='barra'><i id='inimigopv' class='pv'></i><i class='notpv' id='inimigonotpv'></i></div><i id='inimigopvEscrito'></i>";
         document.getElementById("i2barra").innerHTML = "<div class='barra'><i id='inimigopv2' class='pv'></i><i class='notpv' id='inimigonotpv2'></i></div><i id='inimigopvEscrito2'></i>";
         document.getElementById("i3barra").innerHTML = "<div class='barra'><i id='inimigopv3' class='pv'></i><i class='notpv' id='inimigonotpv3'></i></div><i id='inimigopvEscrito3'></i>";
-        if (i4p != 0) {
-            document.getElementById("i4barra").innerHTML = "<div class='barra'><i id='inimigopv4' class='pv'></i><i class='notpv' id='inimigonotpv4'></i></div><i id='inimigopvEscrito4'></i>";
-        }
-        if (i5p != 0) {
-            document.getElementById("i5barra").innerHTML = "<div class='barra'><i id='inimigopv5' class='pv'></i><i class='notpv' id='inimigonotpv5'></i></div><i id='inimigopvEscrito5'></i>";
-        }
+        document.getElementById("i4barra").innerHTML = "<div class='barra'><i id='inimigopv4' class='pv'></i><i class='notpv' id='inimigonotpv4'></i></div><i id='inimigopvEscrito4'></i>";
+        document.getElementById("i5barra").innerHTML = "<div class='barra'><i id='inimigopv5' class='pv'></i><i class='notpv' id='inimigonotpv5'></i></div><i id='inimigopvEscrito5'></i>";
 
         dano = 0;
 
@@ -47,16 +43,12 @@ function istart(i1p,i2p,i3p,i4p,i5p){
         i3pv = i3p;    
         i3pvtotal = i3p;
         calcularvidainimigo3(dano);
-        if (i4p != 0) {
-            i4pv = i4p;    
-            i4pvtotal = i4p;
-            calcularvidainimigo4(dano);
-        } 
-        if (i5p != 0) {
-            i5pv = i5p;    
-            i5pvtotal = i5p;                
-            calcularvidainimigo5(dano);
-        }
+        i4pv = i4p;    
+        i4pvtotal = i4p;
+        calcularvidainimigo4(dano);
+        i5pv = i5p;    
+        i5pvtotal = i5p;                
+        calcularvidainimigo5(dano);
 }
 function astart(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     document.getElementById("abarra").innerHTML = "<div class='barra'><i id='aliadopv' class='pv'></i><i class='notpv' id='aliadonotpv'></i></div><i id='aliadopvEscrito'></i>";
