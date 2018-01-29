@@ -21,52 +21,53 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
 
 
     i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-    if (i1[14] != 4){
+    if (i1[13] != 4){
         i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-        if (i2[14] != 4){
+        if (i2[13] != 4){
             i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            if (i3[14] != 4){                
+            if (i3[13] != 4){                
                 i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                if (i4[14] != 4){
+                if (i4[13] != 4){
                     do {
                         i5 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                    } while (i5[14] == 4);                    
+                    } while (i5[13] == 4);                    
                 } else {
-                    i5[1] = "vazio"; i5[3] = 1;
+                    i5[1] = "vazio";
                 }
             } else {
-                i5[1] = "vazio"; i5[3] = 1;
+                i5[1] = "vazio";
                 i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
                 do {
                     i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                } while (i4[14] == 4); 
+                } while (i4[13] == 4); 
             }
         } else {
             i5[1] = "vazio"; i5[3] = 1;
             i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            if (i3[14] != 4){
+            if (i3[13] != 4){
                 do {
                     i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                } while (i4[14] == 4);  
+                } while (i4[13] == 4);  
             } else {
-                i4[1] = "vazio"; i4[3] = 1;
+                i4[1] = "vazio";
+                i5[1] = "vazio";
             }
         }
     } else {
-        i5[1] = "vazio"; i5[3] = 1;
+        i5[1] = "vazio";
         i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-        if (i2[14] != 4){
+        if (i2[13] != 4){
             i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            if (i3[14] != 4){                
+            if (i3[13] != 4){                
                 do {
                     i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                } while (i4[14] == 4);                
+                } while (i4[13] == 4);                
             } else {
-                i4[1] = "vazio"; i4[3] = 1;
+                i4[1] = "vazio";
             }
         } else {
             i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            i4[1] = "vazio"; i4[3] = 1;
+            i4[1] = "vazio";
         }
     }
     i1p = i1[3];
@@ -78,9 +79,9 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     inimigotext = "<div class='char size"+i1[13]+"' id='inimigo1' onclick='ataque2(1);'><div class='caixa pequena'><p class='small'>"+i1[1]+"</p><div id='i1barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i1[0]+".png'></div>";
     inimigotext += "<div class='char size"+i2[13]+"' id='inimigo2' onclick='ataque2(2);'><div class='caixa pequena'><p class='small'>"+i2[1]+"</p><div id='i2barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i2[0]+".png'></div>";
     inimigotext += "<div class='char size"+i3[13]+"' id='inimigo3' onclick='ataque2(3);'><div class='caixa pequena'><p class='small'>"+i3[1]+"</p><div id='i3barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i3[0]+".png'></div>";
-    if (i4p != 1){
+    if (i4[1] != "vazio"){
         inimigotext += "<div class='char size"+i4[13]+"' id='inimigo4' onclick='ataque2(4);'><div class='caixa pequena'><p class='small'>"+i4[1]+"</p><div id='i4barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i4[0]+".png'></div>";
-        if (i5p != 1){
+        if (i5[1] != "vazio"){
             inimigotext += "<div class='char size"+i5[13]+"' id='inimigo5' onclick='ataque2(5);'><div class='caixa pequena'><p class='small'>"+i5[1]+"</p><div id='i5barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i5[0]+".png'></div>";
         } else {
             inimigotext += "<div class='hidden' id='i5barra'></div>";
