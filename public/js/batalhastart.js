@@ -75,28 +75,29 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     i4p = i1[3];
     i5p = i1[3];
 
+    inimigotext = "<div class='char size"+i1[13]+"' id='inimigo1' onclick='ataque2(1);'><div class='caixa pequena'><p class='small'>"+i1[1]+"</p><div id='i1barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i1[0]+".png'></div>";
+    inimigotext += "<div class='char size"+i2[13]+"' id='inimigo2' onclick='ataque2(2);'><div class='caixa pequena'><p class='small'>"+i2[1]+"</p><div id='i2barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i2[0]+".png'></div>";
+    inimigotext += "<div class='char size"+i3[13]+"' id='inimigo3' onclick='ataque2(3);'><div class='caixa pequena'><p class='small'>"+i3[1]+"</p><div id='i3barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i3[0]+".png'></div>";
+    if (i4p != 1){
+        inimigotext += "<div class='char size"+i4[13]+"' id='inimigo4' onclick='ataque2(4);'><div class='caixa pequena'><p class='small'>"+i4[1]+"</p><div id='i4barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i4[0]+".png'></div>";
+        if (i5p != 1){
+            inimigotext += "<div class='char size"+i5[13]+"' id='inimigo5' onclick='ataque2(5);'><div class='caixa pequena'><p class='small'>"+i5[1]+"</p><div id='i5barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i5[0]+".png'></div>";
+        } else {
+            inimigotext += "<div class='hidden' id='i5barra'></div>";
+        }
+    } else {
+        inimigotext += "<div class='hidden' id='i4barra'></div>";
+        inimigotext += "<div class='hidden' id='i5barra'></div>";
+    }
+    document.getElementById("campoinimigo").innerHTML = inimigotext;
+
     resetmensagem();
     setTimeout(function(){
         istart(i1p,i2p,i3p,i4p,i5p);
         astart(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t);        
     },800);
 }
-function istart(i1p,i2p,i3p,i4p,i5p){
-        inimigotext = "<div class='char size"+i1[13]+"' id='inimigo1' onclick='ataque2(1);'><div class='caixa pequena'><p class='small'>"+i1[1]+"</p><div id='i1barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i1[0]+".png'></div>";
-        inimigotext += "<div class='char size"+i2[13]+"' id='inimigo2' onclick='ataque2(2);'><div class='caixa pequena'><p class='small'>"+i2[1]+"</p><div id='i2barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i2[0]+".png'></div>";
-        inimigotext += "<div class='char size"+i3[13]+"' id='inimigo3' onclick='ataque2(3);'><div class='caixa pequena'><p class='small'>"+i3[1]+"</p><div id='i3barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i3[0]+".png'></div>";
-        if (i4p != 1){
-            inimigotext += "<div class='char size"+i4[13]+"' id='inimigo4' onclick='ataque2(4);'><div class='caixa pequena'><p class='small'>"+i4[1]+"</p><div id='i4barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i4[0]+".png'></div>";
-            if (i5p != 1){
-                inimigotext += "<div class='char size"+i5[13]+"' id='inimigo5' onclick='ataque2(5);'><div class='caixa pequena'><p class='small'>"+i5[1]+"</p><div id='i5barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i5[0]+".png'></div>";
-            } else {
-                inimigotext += "<div class='hidden' id='i5barra'></div>";
-            }
-        } else {
-            inimigotext += "<div class='hidden' id='i4barra'></div>";
-            inimigotext += "<div class='hidden' id='i5barra'></div>";
-        }
-        document.getElementById("campoinimigo").innerHTML = inimigotext;
+function istart(i1p,i2p,i3p,i4p,i5p){        
         document.getElementById("i1barra").innerHTML = "<div class='barra'><i id='inimigopv' class='pv'></i><i class='notpv' id='inimigonotpv'></i></div><i id='inimigopvEscrito'></i>";
         document.getElementById("i2barra").innerHTML = "<div class='barra'><i id='inimigopv2' class='pv'></i><i class='notpv' id='inimigonotpv2'></i></div><i id='inimigopvEscrito2'></i>";
         document.getElementById("i3barra").innerHTML = "<div class='barra'><i id='inimigopv3' class='pv'></i><i class='notpv' id='inimigonotpv3'></i></div><i id='inimigopvEscrito3'></i>";
