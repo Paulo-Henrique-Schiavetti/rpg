@@ -71,10 +71,10 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
         }
     }
     i1p = i1[3];
-    i2p = i1[3];
-    i3p = i1[3];
-    i4p = i1[3];
-    i5p = i1[3];
+    i2p = i2[3];
+    i3p = i3[3];
+    i4p = i4[3];
+    i5p = i5[3];
 
     inimigotext = "<div class='char size"+i1[13]+"' id='inimigo1' onclick='ataque2(1);'><div class='caixa pequena'><p class='small'>"+i1[1]+"</p><div id='i1barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i1[0]+".png'></div>";
     inimigotext += "<div class='char size"+i2[13]+"' id='inimigo2' onclick='ataque2(2);'><div class='caixa pequena'><p class='small'>"+i2[1]+"</p><div id='i2barra'><p class='seta'>↼-------⇀</p></div></div><img src='/public/img/inimigos/inimigo_"+i2[0]+".png'></div>";
