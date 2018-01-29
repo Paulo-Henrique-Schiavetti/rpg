@@ -84,7 +84,7 @@ class QueryBuilder
     public function chamarinimigos($area, $fetch = \PDO::FETCH_ASSOC)
     {
 
-        $sql = "SELECT inimigos.id, inimigos.nome, inimigos.tipo, inimigos.PVbase,
+        $sql = "SELECT inimigos.id, inimigos.nome, inimigos.tipo, inimigos.PVbase, inimigos.nivelbase,
                 inimigos.DF, inimigos.DM, inimigos.DN, inimigos.DD,
                 inimigos.AF, inimigos.AM, inimigos.AN, inimigos.AD,
                 inimigos.size, inimigos.drop

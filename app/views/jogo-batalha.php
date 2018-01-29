@@ -1,22 +1,4 @@
 <?php
-    $inimigo1pv = $inimigo1['PVbase'];
-    $inimigo2pv = $inimigo2['PVbase'];
-    $inimigo3pv = $inimigo3['PVbase'];
-    if ($inimigo4 == ""){
-        $inimigo4pv = 1;
-        $inimigo5pv = 1;
-        $inimigos = [$inimigo1,$inimigo2,$inimigo3];
-    } else if ($inimigo5 == ""){
-        $inimigo4pv = $inimigo4['PVbase'];
-        $inimigo5pv = 1;
-        $inimigos = [$inimigo1,$inimigo2,$inimigo3,$inimigo4];
-    } else {
-        $inimigo4pv = $inimigo4['PVbase'];
-        $inimigo5pv = $inimigo5['PVbase'];
-        $inimigos = [$inimigo1,$inimigo2,$inimigo3,$inimigo4,$inimigo5];
-    }
-    $p = 1;
-
     $aliado1pvtotal = $aliado1['PV'];
     $aliado1pv = $aliado1['PV']; 
     $aliado2pvtotal = $aliado2['PV'];
@@ -27,6 +9,13 @@
     $aliado4pv = $aliado4['PV'];
     $aliado5pvtotal = $aliado5['PV'];
     $aliado5pv = $aliado5['PV'];
+
+    $p = 0;
+    foreach ($inimigos as $i) {
+        $string_inimigos[$p] = implode("|", $i);        
+        $p++;
+    }
+    $string_inimigos = implode("||", $string_inimigos);    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,34 +26,20 @@
         <link href="/public/css/game.css" rel="stylesheet">
         <link href="/public/css/tela.css" rel="stylesheet">
         <link href="/public/css/text.css" rel="stylesheet">
+        <script type="text/javascript">
+            var inimigos = [];
+            var string_inimigos = '<?=$string_inimigos?>';
+            var inimigos = string_inimigos.split("||");
+        </script>
         <script type="text/javascript" src="/public/js/batalha.js"></script>
+        <script type="text/javascript" src="/public/js/batalhastart.js"></script>
         <script type="text/javascript" src="/public/js/aliados.js"></script>
         <script type="text/javascript" src="/public/js/menus.js"></script>
     </head>
-    <body onload="start(<?=$inimigo1pv?>, <?=$inimigo2pv?>, <?=$inimigo3pv?>, <?=$inimigo4pv?>,  <?=$inimigo5pv?>, <?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
+    <body onload="start(<?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
         <div class="game">
             <div class="tela forest">
-                <div class="inimigo">
-                    <?php foreach ($inimigos as $i) { 
-                    if ($i <> "") { echo "
-                    <div class='char size".$i['size']."' id='inimigo".$p."' onclick='ataque2(".$p.",".$i['DF'].",".$i['DM'].",".$i['DN'].",".$i['DD'].");'>
-                        <div class='caixa pequena'>
-                            <p class='small'>".$i['nome']."</p>
-                            <div id='i".$p."barra'>
-                                <p class='seta'>↼-------⇀</p>
-                            </div>
-                        </div>
-                        <img src='/public/img/inimigos/inimigo_".$i['id'].".png'>
-                    </div>
-                    ";} $p++;
-                    }
-                    if ($p == 5) {
-                    echo "<div class='hidden' id='i5barra'></div>";
-                    } else if ($p == 4) {
-                    echo "<div class='hidden' id='i4barra'></div>";
-                    echo "<div class='hidden' id='i5barra'></div>";
-                    }
-                    ?>
+                <div class="inimigo" id="campoinimigo">          
                 </div>    
                 <div class="aliado">
                     <div class="char">

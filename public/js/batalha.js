@@ -1,14 +1,3 @@
-var i1pv = 0;
-var i1pvtotal = 0;
-var i2pv = 0;
-var i2pvtotal = 0;
-var i3pv = 0;
-var i3pvtotal = 0;
-var i4pv = 0;
-var i4pvtotal = 0;
-var i5pv = 0;
-var i5pvtotal = 0;
-
 var nome = "";
 var tipo = 0;
 var sucesso = 0;
@@ -18,63 +7,6 @@ var am = 0;
 var an = 0;
 var ad = 0;
 
-function start(i1p, i2p, i3p, i4p, i5p, a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
-    resetmensagem();
-    setTimeout(function(){
-        istart(i1p,i2p,i3p,i4p,i5p);
-        astart(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t);        
-    },800);
-}
-function istart(i1p,i2p,i3p,i4p,i5p){
-        document.getElementById("i1barra").innerHTML = "<div class='barra'><i id='inimigopv' class='pv'></i><i class='notpv' id='inimigonotpv'></i></div><i id='inimigopvEscrito'></i>";
-        document.getElementById("i2barra").innerHTML = "<div class='barra'><i id='inimigopv2' class='pv'></i><i class='notpv' id='inimigonotpv2'></i></div><i id='inimigopvEscrito2'></i>";
-        document.getElementById("i3barra").innerHTML = "<div class='barra'><i id='inimigopv3' class='pv'></i><i class='notpv' id='inimigonotpv3'></i></div><i id='inimigopvEscrito3'></i>";
-        document.getElementById("i4barra").innerHTML = "<div class='barra'><i id='inimigopv4' class='pv'></i><i class='notpv' id='inimigonotpv4'></i></div><i id='inimigopvEscrito4'></i>";
-        document.getElementById("i5barra").innerHTML = "<div class='barra'><i id='inimigopv5' class='pv'></i><i class='notpv' id='inimigonotpv5'></i></div><i id='inimigopvEscrito5'></i>";
-
-        dano = 0;
-
-        i1pv = i1p;    
-        i1pvtotal = i1p;
-        calcularvidainimigo1(dano);
-        i2pv = i2p;    
-        i2pvtotal = i2p;
-        calcularvidainimigo2(dano);
-        i3pv = i3p;    
-        i3pvtotal = i3p;
-        calcularvidainimigo3(dano);
-        i4pv = i4p;    
-        i4pvtotal = i4p;
-        calcularvidainimigo4(dano);
-        i5pv = i5p;    
-        i5pvtotal = i5p;                
-        calcularvidainimigo5(dano);
-}
-function astart(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
-    document.getElementById("abarra").innerHTML = "<div class='barra'><i id='aliadopv' class='pv'></i><i class='notpv' id='aliadonotpv'></i></div><i id='aliadopvEscrito'></i>";
-    document.getElementById("a2barra").innerHTML = "<div class='barra'><i id='aliadopv2' class='pv'></i><i class='notpv' id='aliadonotpv2'></i></div><i id='aliadopvEscrito2'></i>";
-    document.getElementById("a3barra").innerHTML = "<div class='barra'><i id='aliadopv3' class='pv'></i><i class='notpv' id='aliadonotpv3'></i></div><i id='aliadopvEscrito3'></i>";        
-    document.getElementById("a4barra").innerHTML = "<div class='barra'><i id='aliadopv4' class='pv'></i><i class='notpv' id='aliadonotpv4'></i></div><i id='aliadopvEscrito4'></i>";        
-    document.getElementById("a5barra").innerHTML = "<div class='barra'><i id='aliadopv5' class='pv'></i><i class='notpv' id='aliadonotpv5'></i></div><i id='aliadopvEscrito5'></i>";
-    
-    dano = 0;
-
-    a1pv = a1p;    
-    a1pvtotal = a1t;
-    calcularvidaaliado1(dano);
-    a2pv = a2p;    
-    a2pvtotal = a2t;
-    calcularvidaaliado2(dano); 
-    a3pv = a3p;    
-    a3pvtotal = a3t;
-    calcularvidaaliado3(dano); 
-    a4pv = a4p;    
-    a4pvtotal = a4t;
-    calcularvidaaliado4(dano); 
-    a5pv = a5p;    
-    a5pvtotal = a5t;
-    calcularvidaaliado5(dano); 
-}
 function ataque(n,t,s,db,a1,a2,a3,a4){
     nome = n;
     sucesso = s;
@@ -86,7 +18,33 @@ function ataque(n,t,s,db,a1,a2,a3,a4){
     ad = a4;
     menu5();
 }
-function ataque2(inimigo,df,dm,dn,dd){
+function ataque2(inimigo){
+    if (inimigo==1){
+        df = i1[9];
+        dm = i1[10];
+        dn = i1[11];
+        dd = i1[12];
+    } else if (inimigo==2){
+        df = i2[9];
+        dm = i2[10];
+        dn = i2[11];
+        dd = i2[12];
+    } else if (inimigo==3){
+        df = i3[9];
+        dm = i3[10];
+        dn = i3[11];
+        dd = i3[12];
+    } else if (inimigo==4){
+        df = i4[9];
+        dm = i4[10];
+        dn = i4[11];
+        dd = i4[12];
+    } else {
+        df = i5[9];
+        dm = i5[10];
+        dn = i5[11];
+        dd = i5[12];
+    }
     if (tipo<=4){
         calcularataque(inimigo,af,df);
     } else if (tipo<=6){
