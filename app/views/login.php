@@ -4,6 +4,7 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script type="text/javascript" src="/public/js/login.js"></script>
         <link href="/public/css/game.css" rel="stylesheet">
         <link href="/public/css/text.css" rel="stylesheet">
     </head>
@@ -11,11 +12,11 @@
         <div class="game">
             <div class="tela caixa">
                 <h1>Acesse sua conta:</h1>
-                <form action="/jogar" method="post">
+                <form action="/jogar" method="post" onSubmit="return(login());">
                     <div><label>email:</label></div>
-                    <div><input type="email" name="email"/></div>
+                    <div><input type="email" name="email" id="email"/></div>
                     <div><label>senha:</label></div>
-                    <div><input type="password" name="senha"/></div>
+                    <div><input type="password" name="senha" id="senha"/></div>
                     <input type="submit" class="botao" value="login"/>
                 </form>                
                 <p>é sua primeira vez aqui: <a href="/">cadastre-se</a></p>
