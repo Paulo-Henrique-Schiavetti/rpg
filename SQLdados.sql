@@ -24,8 +24,8 @@ insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM,
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (9, 'Twyla', 1, 91, 45, 90, 19, 3, 36, 5, 97, 68, 46, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (10, 'Mano', 6, 41, 23, 32, 44, 5, 21, 86, 78, 78, 56, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (11, 'nop', 7, 77, 3, 24, 4, 1, 49, 6, 80, 28, 92, 2, '1');
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (12, 'praan', 1, 320, 26, 100, 60, 100, 40, 100, 10, 100, 10, 4, '1');
-insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (13, 'Amber', 6, 79, 32, 7, 61, 15, 83, 90, 81, 83, 28, 2, '1');
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (12, 'praan', 1, 360, 24, 100, 60, 100, 40, 100, 10, 100, 10, 4, '1');
+insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (13, 'nyarp', 6, 630, 42, 200, 120, 200, 400, 120, 100, 120, 200, 5, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (14, 'Roselia', 9, 86, 22, 44, 92, 12, 6, 19, 48, 68, 68, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (15, 'Wolfy', 7, 85, 44, 70, 93, 72, 91, 44, 96, 87, 58, 2, '1');
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (16, 'Brand', 6, 78, 20, 59, 49, 87, 51, 15, 80, 45, 11, 2, '1');
@@ -77,7 +77,7 @@ insert into `inimigos-areas` (inimigos_id, areas_id) values (9, 4);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (10, 2);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (11, 2);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (12, 6);
-insert into `inimigos-areas` (inimigos_id, areas_id) values (13, 3);
+insert into `inimigos-areas` (inimigos_id, areas_id) values (13, 6);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (14, 5);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (15, 4);
 insert into `inimigos-areas` (inimigos_id, areas_id) values (16, 3);
@@ -184,11 +184,11 @@ insert into mochila (id, nome, espaço, items) values (12, 'Chrysler', 52, '5');
 
 -- aliados --
 insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (1, 'Caer', 1, 160, 10, 60, 75, 20, 60, 80, 60, 40, 40, 1, 2, 3, 4, 5, 6, 1);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (2, 'Warden', 2, 80, 14, 28, 23, 31, 40, 62, 44, 88, 18, 9, 42, 9, 8, 33, 50, 2);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (3, 'Heywood', 7, 16, 42, 23, 84, 98, 59, 73, 93, 98, 84, 25, 22, 18, 49, 22, 17, 3);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (4, 'Tory', 1, 43, 39, 46, 27, 21, 27, 99, 17, 8, 77, 32, 32, 10, 40, 46, 44, 4);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (5, 'Debera', 2, 35, 19, 49, 20, 6, 71, 26, 61, 63, 33, 29, 3, 26, 32, 11, 15, 5);
-insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (6, 'Kira', 7, 87, 14, 16, 5, 100, 14, 4, 5, 48, 79, 30, 25, 41, 41, 47, 10, 6);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (2, 'Warden', 2, 100, 14, 28, 23, 31, 40, 62, 44, 88, 18, 9, 42, 9, 8, 33, 50, 2);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (3, 'Heywood', 7, 120, 42, 23, 84, 98, 59, 73, 93, 98, 84, 25, 22, 18, 49, 22, 17, 3);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (4, 'Tory', 1, 43, 80, 46, 27, 21, 27, 99, 17, 8, 77, 32, 32, 10, 40, 46, 44, 4);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (5, 'Debera', 2, 35, 100, 49, 20, 6, 71, 26, 61, 63, 33, 29, 3, 26, 32, 11, 15, 5);
+insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (6, 'Kira', 7, 87, 14, 180, 5, 100, 14, 4, 5, 48, 79, 30, 25, 41, 41, 47, 10, 6);
 insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (7, 'Banky', 5, 1, 8, 60, 25, 56, 50, 33, 98, 14, 23, 38, 22, 46, 31, 19, 28, 7);
 insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (8, 'Sloan', 3, 14, 41, 11, 95, 36, 53, 48, 86, 86, 86, 6, 19, 7, 10, 36, 13, 8);
 insert into aliados (id, apelido, tipo, PV, nivel, DF, DM, DN, DD, AF, AM, AN, AD, ataque1, ataque2, ataque3, ataque4, ataque5, ataque6, mochila) values (9, 'Tibold', 8, 7, 34, 99, 56, 51, 12, 54, 78, 71, 75, 33, 45, 6, 7, 8, 20, 9);
