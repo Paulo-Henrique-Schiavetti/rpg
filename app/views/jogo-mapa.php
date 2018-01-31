@@ -7,13 +7,12 @@
         <link href="/public/css/game.css" rel="stylesheet">
         <link href="/public/css/tela.css" rel="stylesheet">
         <link href="/public/css/text.css" rel="stylesheet">
-        <script type="text/javascript" src="/public/js/mapa.js"></script>
-        <script type="text/javascript" src="/public/js/menus.js"></script>
+        <script type="text/javascript" src="/public/js/mover.js"></script>
     </head>
     <body>
         <div class="game">
-            <div class="tela map" id="char">
-                <img src="/public/img/char.png" style="position: absolute; bottom:40%; right:45%;"/>
+            <div class="tela map" id='tela'>
+                <img src="/public/img/char.png" style="bottom:40%; right:45%;" id="char"/>
             </div>
             <div class="menu">
                 <div class="caixa">

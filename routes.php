@@ -19,6 +19,11 @@ switch ($uri) {
         $testeController->batalhar();
         break;
 
+    case '/pew':
+        
+        require './app/views/pew.php'; 
+        break;
+
     default:
         require './app/views/error.html'; 
         break;
