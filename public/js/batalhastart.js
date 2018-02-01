@@ -16,9 +16,10 @@ var i5pv = 0;
 var i5pvtotal = 0;
 
 function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
-
+    i0 = inimigos[0].split("|");;
+    bosschance = i0[15];
     boss = Math.random()*100;
-    if (boss > 80){
+    if (boss < bosschance){
         do {
             i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
         } while (i1[13] != 5);

@@ -1,16 +1,16 @@
 use rpgdb;
 
 -- areas --
-insert into areas (id, nome, posicao) values (1, 'Gaesland', '84,19');
-insert into areas (id, nome, posicao) values (2, 'Greatport', '56,20');
-insert into areas (id, nome, posicao) values (3, 'Sharpbay', '54,25');
-insert into areas (id, nome, posicao) values (4, 'hominiland', '36,24');
-insert into areas (id, nome, posicao) values (5, 'Cullie', '50,50');
-insert into areas (id, nome, posicao) values (6, 'BlarnCave', '64,41');
-insert into areas (id, nome, posicao) values (7, 'Siegfried', '50,50');
-insert into areas (id, nome, posicao) values (8, 'Hallie', '50,50');
-insert into areas (id, nome, posicao) values (9, 'Johannah', '50,50');
-insert into areas (id, nome, posicao) values (10, 'Inglis', '50,50');
+insert into areas (id, nome, bosschance, posicao) values (1, 'Gaesland', 0, '90,20');
+insert into areas (id, nome, bosschance, posicao) values (2, 'Greatport', 0, '60,20');
+insert into areas (id, nome, bosschance, posicao) values (3, 'Sharpbay', 0,'50,30');
+insert into areas (id, nome, bosschance, posicao) values (4, 'hominiland', 0, '30,25');
+insert into areas (id, nome, bosschance, posicao) values (5, 'pewland', 0, '50,50');
+insert into areas (id, nome, bosschance, posicao) values (6, 'BlarnCave', 20, '60,40');
+insert into areas (id, nome, bosschance, posicao) values (7, 'Siegfried', 0, '50,50');
+insert into areas (id, nome, bosschance, posicao) values (8, 'Hallie', 0, '50,50');
+insert into areas (id, nome, bosschance, posicao) values (9, 'Johannah', 0, '50,50');
+insert into areas (id, nome, bosschance, posicao) values (10, 'Inglis', 0, '50,50');
 
 -- inimigos --
 insert into inimigos (id, nome, tipo, PVbase, nivelbase, DF, DM, DN, DD, AF, AM, AN, AD, size, `drop`) values (1, 'Giant', 1, 200, 6, 50, 40, 50, 40, 70, 40, 50, 50, 3, '1');

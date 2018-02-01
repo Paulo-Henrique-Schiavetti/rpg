@@ -10,7 +10,7 @@ eventoi2y = 45;
 function eventoi1() {
     if(eventoi1ativo==false){
         if (mirax == 40 && miray == 30) {
-            mensagem('_oi!');
+            mensagem('Airien:<br/>"oi!"');
             resetmensagem(1500);
             eventoi1ativo = true;          
         }
@@ -22,7 +22,7 @@ function eventoi1() {
 function eventoi2() {
     if(eventoi2ativo==false){
         if (mirax == 20 && miray == 45) {
-            mensagem('_oi!');
+            mensagem('Airien:<br/>"oi!"');
             resetmensagem(1500);
             eventoi2ativo = true;          
         }        

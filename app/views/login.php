@@ -18,12 +18,12 @@
                     <div><label>senha:</label></div>
                     <div><input type="password" name="senha" id="senha"/></div>
                     <input type="submit" class="botao" value="login"/>
-                </form>                
-                <p>é sua primeira vez aqui: <a href="/">cadastre-se</a></p>
+                </form> 
             </div>
             <div class="menu">
                 <div class="caixa">
-                <p>Bem-vindo ao JoJo's bizarre adventures online!</p>
+                <p>Bem-vindo ao JoJo's bizarre adventures online!<br/>
+                É sua primeira vez aqui: <a href="/">cadastre-se</a></p>
                 </div>
                 <div class="caixa pequena">
                     <a href="/">como jogar</a>

@@ -10,6 +10,9 @@ p, label, h1, a, .item, .botao {
 p, label, a, .item, .botao {
     font-size: 18pt;
 }
+p {
+    text-align: left;
+}
 .small {
     font-size: 12pt;
 }

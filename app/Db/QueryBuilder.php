@@ -87,7 +87,7 @@ class QueryBuilder
         $sql = "SELECT inimigos.id, inimigos.nome, inimigos.tipo, inimigos.PVbase, inimigos.nivelbase,
                 inimigos.DF, inimigos.DM, inimigos.DN, inimigos.DD,
                 inimigos.AF, inimigos.AM, inimigos.AN, inimigos.AD,
-                inimigos.size, inimigos.drop
+                inimigos.size, inimigos.drop, areas.bosschance
                 FROM rpgdb.inimigos
                 inner join `inimigos-areas`
                 on inimigos.id = `inimigos-areas`.inimigos_id

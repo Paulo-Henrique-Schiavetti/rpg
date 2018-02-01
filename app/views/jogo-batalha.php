@@ -43,7 +43,7 @@
                 </div>    
                 <div class="aliado">
                     <div class="char">
-                        <img src="/public/img/aliados/aliados/aliado<?=$aliado1['id']?>.png">
+                        <img src="/public/img/aliados/aliado<?=$aliado1['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado1['apelido']?></p>
                             <div id="abarra">
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="char">
-                        <img src="/public/img/aliados/aliados/aliado<?=$aliado2['id']?>.png">
+                        <img src="/public/img/aliados/aliado<?=$aliado2['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado2['apelido']?></p>
                             <div id="a2barra">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="char">
-                        <img src="/public/img/aliados/aliados/aliado<?=$aliado3['id']?>.png">
+                        <img src="/public/img/aliados/aliado<?=$aliado3['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado3['apelido']?></p>
                             <div id="a3barra">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="char">
-                        <img src="/public/img/aliados/aliados/aliado<?=$aliado4['id']?>.png">
+                        <img src="/public/img/aliados/aliado<?=$aliado4['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado4['apelido']?></p>
                             <div id="a4barra">
