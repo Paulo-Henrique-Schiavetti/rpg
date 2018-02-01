@@ -1,11 +1,15 @@
 eventoa1ativo = false;
 eventoa2ativo = false;
 eventoi1ativo = false;
+eventoi1x = 40;
+eventoi1y = 30;
 eventoi2ativo = false;
+eventoi2x = 20;
+eventoi2y = 45;
 
 function eventoi1() {
     if(eventoi1ativo==false){
-        if (x == 40 && y == 30) {
+        if (mirax == 40 && miray == 30) {
             mensagem('_oi!');
             resetmensagem(1500);
             eventoi1ativo = true;          
@@ -17,11 +21,11 @@ function eventoi1() {
 }
 function eventoi2() {
     if(eventoi2ativo==false){
-        if (x == 20 && y == 45) {
+        if (mirax == 20 && miray == 45) {
             mensagem('_oi!');
             resetmensagem(1500);
             eventoi2ativo = true;          
-        }
+        }        
         setTimeout(function(){
             eventoi2ativo = false;
         },1500);                  
