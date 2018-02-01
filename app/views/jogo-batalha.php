@@ -34,7 +34,7 @@
         <script type="text/javascript" src="/public/js/batalha.js"></script>
         <script type="text/javascript" src="/public/js/batalhastart.js"></script>
         <script type="text/javascript" src="/public/js/aliados.js"></script>
-        <script type="text/javascript" src="/public/js/menus.js"></script>
+        <script type="text/javascript" src="/public/js/menubatalha.js"></script>
     </head>
     <body onload="start(<?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
         <div class="game">
@@ -43,7 +43,7 @@
                 </div>    
                 <div class="aliado">
                     <div class="char">
-                        <img src="/public/img/aliado<?=$aliado1['id']?>.png">
+                        <img src="/public/img/aliados/aliados/aliado<?=$aliado1['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado1['apelido']?></p>
                             <div id="abarra">
@@ -52,7 +52,7 @@
                         </div>
                     </div>
                     <div class="char">
-                        <img src="/public/img/aliado<?=$aliado2['id']?>.png">
+                        <img src="/public/img/aliados/aliados/aliado<?=$aliado2['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado2['apelido']?></p>
                             <div id="a2barra">
@@ -61,7 +61,7 @@
                         </div>
                     </div>
                     <div class="char">
-                        <img src="/public/img/aliado<?=$aliado3['id']?>.png">
+                        <img src="/public/img/aliados/aliados/aliado<?=$aliado3['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado3['apelido']?></p>
                             <div id="a3barra">
@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="char">
-                        <img src="/public/img/aliado<?=$aliado4['id']?>.png">
+                        <img src="/public/img/aliados/aliados/aliado<?=$aliado4['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado4['apelido']?></p>
                             <div id="a4barra">
@@ -79,7 +79,7 @@
                         </div>
                     </div>          
                     <div class="char">
-                        <img src="/public/img/aliado<?=$aliado5['id']?>.png">
+                        <img src="/public/img/aliados/aliado<?=$aliado5['id']?>.png">
                         <div class="caixa pequena">
                             <p class="small"><?=$aliado5['apelido']?></p>
                             <div id="a5barra">

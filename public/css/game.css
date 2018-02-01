@@ -1,5 +1,6 @@
 body {
-    background: url(/public/img/body.png);
+    background: url(/public/img/body.jpg);
+    background-size: cover;
 }
 .game {
     margin-left: 12.5%;
@@ -15,6 +16,13 @@ body {
     position: absolute;
     width: 80px;
     height: 75px;
+    z-index: 5;
+}
+#objeto {
+    position: absolute;
+    width: 80px;
+    height: 75px;
+    z-index: 4;
 }
 .menu {
     height: 200px;

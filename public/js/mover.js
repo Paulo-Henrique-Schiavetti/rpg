@@ -1,8 +1,6 @@
 x = 40;
 y = 45;
 parado = true;
-objx = 60;
-objy = 60;
 
 window.addEventListener("keydown", movimento, false);
 
@@ -45,16 +43,8 @@ function movimento(key) {
 function position() {
     document.getElementById('char').style = 'bottom:'+x+'%; right:'+y+'%;';
 }
-function point(a,b) {
+function teletransporte(a,b) {
     x = a;
     y = b;
     position();
 }
-
-var obj = setInterval(function(){
-    if (parado){
-        if (x == objx && y == objy) {
-            point(10,10);
-        }
-    }    
-}, 10);
