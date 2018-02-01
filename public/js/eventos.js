@@ -16,20 +16,34 @@ var eventosautomaticos = setInterval(function(){
     }    
 }, 1);
 
-var colisao = setInterval(function(){
-    if (parado){
-        if (x == eventoi1x && eventoi1y == y || x == eventoi2x && eventoi2y == y) {
-            parado = false;
-            if (direcao == "right") {
-                direcao = "left";
-            } else if (direcao == "left") {
-                direcao = "right";
-            } else if (direcao == "up") {
-                direcao = "down";
-            } else if (direcao == "down") {
-                direcao = "up";
-            }
-            animar();
+function colisao() {
+    if (direcao == "up") {
+        if (x+10 == eventoi1x && eventoi1y == y || x+10 == eventoi2x && eventoi2y == y) {
+            return(false);
+        } else {
+            return(true);
         }
-    }        
-}, 1);
+    }
+    if (direcao == "left") {
+        if (x == eventoi1x && eventoi1y == y+5 || x == eventoi2x && eventoi2y == y+5) {
+            return(false);
+        } else {
+            return(true);
+        }
+    }
+    if (direcao == "down") {
+        if (x-10 == eventoi1x && eventoi1y == y || x-10 == eventoi2x && eventoi2y == y) {
+            return(false);
+        } else {
+            return(true);
+        }
+    }
+    if (direcao == "right") {
+        if (x == eventoi1x && eventoi1y == y-5 || x == eventoi2x && eventoi2y == y-5) {
+            return(false);
+        } else {
+            return(true);
+        }
+    }
+    
+}

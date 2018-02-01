@@ -14,15 +14,14 @@ body {
 }
 #char {
     position: absolute;
-    width: 80px;
-    height: 75px;
-    z-index: 5;
+    width: 70px;
+    height: 56px;
+    z-index: 6;
 }
 #evento {
     position: absolute;
-    width: 80px;
-    height: 75px;
-    z-index: 4;
+    width: 70px;
+    height: 56px;
 }
 .menu {
     height: 200px;
