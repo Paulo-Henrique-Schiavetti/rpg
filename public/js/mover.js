@@ -14,7 +14,9 @@ function wasd(key) {
             if (direcao == "up"){
                 movimento();
             } else {
-                direcao = "up";
+                direcao = "up";             
+                mirax = x+10;
+                miray = y;  
                 parado = true;
             }
                         
@@ -22,21 +24,27 @@ function wasd(key) {
             if (direcao == "left"){
                 movimento();
             } else {
-                direcao = "left";
+                direcao = "left";             
+                mirax = x;
+                miray = y+5;  
                 parado = true;
             }
         } else if(key.keyCode == 83){
             if (direcao == "down"){
                 movimento();
             } else {
-                direcao = "down";
+                direcao = "down";             
+                mirax = x-10;
+                miray = y;  
                 parado = true;
             }
         } else if(key.keyCode == 68){
             if (direcao == "right"){
                 movimento();
             }else {
-                direcao = "right";
+                direcao = "right";             
+                mirax = x;
+                miray = y-5;  
                 parado = true;
             }
         } else {

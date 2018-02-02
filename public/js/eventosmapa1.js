@@ -10,25 +10,23 @@ eventoi2y = 45;
 function eventoi1() {
     if(eventoi1ativo==false){
         if (mirax == 40 && miray == 30) {
-            mensagem('Airien:<br/>"oi!"');
-            resetmensagem(1500);
+            multmensagens('Airien:<br/>oi!|Airien:<br/>Meu nome é Airien.|Airien:<br/>e o seu?|Airien:<br/>prazer em te conhecer!|Airien:<br/>tchau!', 5);
             eventoi1ativo = true;          
         }
         setTimeout(function(){
             eventoi1ativo = false;
-        },1500);                  
+        },2000);                  
     }
 }
 function eventoi2() {
     if(eventoi2ativo==false){
         if (mirax == 20 && miray == 45) {
-            mensagem('Airien:<br/>"oi!"');
-            resetmensagem(1500);
+            mensagem('Airien:<br/>oi!');
             eventoi2ativo = true;          
         }        
         setTimeout(function(){
             eventoi2ativo = false;
-        },1500);                  
+        },1000);                  
     }
 }
 

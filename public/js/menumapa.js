@@ -1,5 +1,7 @@
 var p = 1;
 var mensagemativa = false;
+var multmensagem = [];
+var contadormensagem = 0;
 
 function menu3(){
         document.addEventListener("keydown", menu3mover, false);
@@ -67,11 +69,51 @@ function mensagem(mensagem){
     document.getElementById("mensagem").className = "caixa";
     document.getElementById("mensagem").innerHTML = mensagem;
     mensagemativa = true;
+    parado = false;
+    document.addEventListener("keydown", resetmensagem, false);
 }
-function resetmensagem(delay){
-    setTimeout(function() {
+function multmensagens(mensagem, qtd) {
+    mensagem = mensagem.split("|");
+    multmensagem[0] = "<p>"+mensagem[0]+"</p>";
+    multmensagem[1] = "<p>"+mensagem[1]+"</p>";
+    if (qtd == 3) {
+        multmensagem[2] = "<p>"+mensagem[2]+"</p>";
+    }
+    if (qtd == 4) {
+        multmensagem[2] = "<p>"+mensagem[2]+"</p>";
+        multmensagem[3] = "<p>"+mensagem[3]+"</p>";
+    }
+    if (qtd == 5) {
+        multmensagem[2] = "<p>"+mensagem[2]+"</p>";
+        multmensagem[3] = "<p>"+mensagem[3]+"</p>";
+        multmensagem[4] = "<p>"+mensagem[4]+"</p>";                          
+    }
+    document.getElementById("menu").className = "hidden";
+    document.getElementById("mensagem").className = "caixa";
+    document.getElementById("mensagem").innerHTML = multmensagem[0];
+    mensagemativa = true;
+    parado = false;
+    document.addEventListener("keydown", continuarmensagem, false);
+}
+function continuarmensagem(key) {
+    if (key.keyCode == 90) {
+        contadormensagem += 1;
+        document.getElementById("mensagem").innerHTML = multmensagem[contadormensagem];
+        multmensagem[contadormensagem-1] = "";
+        if (contadormensagem == 4) {
+            multmensagem[contadormensagem] = "";
+            contadormensagem = 0;
+            document.addEventListener("keydown", resetmensagem, false);
+            document.removeEventListener("keydown", continuarmensagem, false);
+        }
+    }
+}
+function resetmensagem(key){
+    if (key.keyCode == 90) {
         document.getElementById("menu").className = "caixa";
-    document.getElementById("mensagem").className = "hidden";
-    mensagemativa = false;
-    }, delay);
+        document.getElementById("mensagem").className = "hidden";
+        mensagemativa = false;
+        parado = true;
+        document.removeEventListener("keydown", resetmensagem, false);
+    }
 }
