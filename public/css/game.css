@@ -14,13 +14,13 @@ body {
 }
 #char {
     position: absolute;
-    width: 70px;
+    width: 56px;
     height: 56px;
-    z-index: 6;
+    z-index: 5;
 }
 #evento {
     position: absolute;
-    width: 70px;
+    width: 56px;
     height: 56px;
 }
 .menu {
@@ -71,9 +71,17 @@ body {
         margin-left:1%;
     }
     .tela {
-    height: 320px;
+    height: 324px;
     }
     .menu {
     height: 260px;
+    }
+    #char {
+        width: 36px;
+        height: 36px;
+    }
+    #evento {
+        width: 36px;
+        height: 36px;
     }
 }

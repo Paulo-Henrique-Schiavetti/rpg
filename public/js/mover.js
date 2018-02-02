@@ -82,7 +82,7 @@ function movimento(){
             if(y < 0){
                 y += 1;
             }
-            if(x > 90){
+            if(x > 80){
                 x -= 2;
             }
             if(y > 90){
@@ -100,7 +100,7 @@ function movimento(){
 }
 function position() {
     document.getElementById('char').style = 'bottom:'+x+'%; right:'+y+'%;';
-    document.getElementById('char').style.zIndex = 10-(x/10);
+    document.getElementById('char').style.zIndex = 9-(x/10);
 }
 function teletransporte(a,b) {
     x = a;
