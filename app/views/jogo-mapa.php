@@ -18,7 +18,7 @@
             <div class="tela mapa1" id='tela'>
                 <img src="/public/img/characters/char.png" style="z-index: 0;" id="char"/>
                 <img src="/public/img/characters/buracoentrada.png" style="position: absolute; bottom:48%; right:55%; z-index: 1;" class="evento"/>
-                <img src="/public/img/characters/buracosaida.png" style="position: absolute; bottom:84%; right:70%; z-index: 1;" class="evento"/>
+                <img src="/public/img/characters/buracosaida.png" style="position: absolute; bottom:70%; right:70%; z-index: 1;" class="evento"/>
                 <img src="/public/img/characters/Airien.png" style="z-index: 0;" id="eventoi1" class="evento" />
                 <img src="/public/img/characters/Airien.png" style="z-index: 0;" id="eventoi2" class="evento" />
             </div>

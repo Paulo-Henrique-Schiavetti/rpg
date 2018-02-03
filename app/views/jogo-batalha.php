@@ -39,7 +39,7 @@
     </head>
     <body onload="start(<?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
         <div class="game">
-            <div class="tela menor forest">
+            <div class="tela forest">
                 <div class="inimigo" id="campoinimigo">          
                 </div>    
                 <div class="aliado">

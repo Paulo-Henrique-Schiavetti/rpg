@@ -1,5 +1,5 @@
-x = 40;
-y = 45;
+x = 30;
+y = 10;
 parado = true;
 direcao = "down";
 mirax = x-5;
@@ -82,7 +82,7 @@ function movimento(){
             if(y < 0){
                 y += 1;
             }
-            if(x > 70){
+            if(x > 60){
                 x -= 1;
             }
             if(y > 90){
@@ -99,7 +99,7 @@ function movimento(){
     }
 }
 function position() {
-    document.getElementById('char').style = 'bottom:'+(x*1.2)+'%; right:'+y+'%;';
+    document.getElementById('char').style = 'bottom:'+(x*1.4)+'%; right:'+y+'%;';
     document.getElementById('char').style.zIndex = 99-x;
 }
 function teletransporte(a,b) {
