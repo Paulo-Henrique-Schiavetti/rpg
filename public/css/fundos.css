@@ -1,0 +1,28 @@
+.tela.map {    
+    background: url('/public/img/backgrounds/map.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.tela.mapa1 {    
+    background: url('/public/img/backgrounds/mapa1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.forest {
+    background: url('/public/img/backgrounds/backForest.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+
+@media only screen and (max-width: 768px) {
+    .tela.map {
+        background: url('/public/img/backgrounds/mapmobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .forest {
+        background: url('/public/img/backgrounds/backForestmobile.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

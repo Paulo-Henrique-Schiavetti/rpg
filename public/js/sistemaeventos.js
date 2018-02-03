@@ -24,7 +24,7 @@ var eventosautomaticos = setInterval(function(){
 
 function colisao() {
     if (direcao == "up") {
-        if (x+10 == eventoi1x && eventoi1y == y || x+10 == eventoi2x && eventoi2y == y || x+10 == eventoi3x && eventoi3y == y || x+10 == eventoi4x && eventoi4y == y || x+10 == eventoi5x && eventoi5y == y) {
+        if (x+5 == eventoi1x && eventoi1y == y || x+5 == eventoi2x && eventoi2y == y || x+5 == eventoi3x && eventoi3y == y || x+5 == eventoi4x && eventoi4y == y || x+5 == eventoi5x && eventoi5y == y) {
             return(false);
         } else {
             return(true);
@@ -38,7 +38,7 @@ function colisao() {
         }
     }
     if (direcao == "down") {
-        if (x-10 == eventoi1x && eventoi1y == y || x-10 == eventoi2x && eventoi2y == y || x-10 == eventoi3x && eventoi3y == y || x-10 == eventoi4x && eventoi4y == y || x-10 == eventoi5x && eventoi5y == y) {
+        if (x-5 == eventoi1x && eventoi1y == y || x-5 == eventoi2x && eventoi2y == y || x-5 == eventoi3x && eventoi3y == y || x-5 == eventoi4x && eventoi4y == y || x-5 == eventoi5x && eventoi5y == y) {
             return(false);
         } else {
             return(true);

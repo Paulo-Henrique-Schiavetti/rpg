@@ -23,8 +23,9 @@
         <title></title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/public/css/game.css" rel="stylesheet">
-        <link href="/public/css/tela.css" rel="stylesheet">
+        <link href="/public/css/main.css" rel="stylesheet">
+        <link href="/public/css/batalha.css" rel="stylesheet">
+        <link href="/public/css/fundos.css" rel="stylesheet">
         <link href="/public/css/text.css" rel="stylesheet">
         <script type="text/javascript">
             var inimigos = [];
@@ -38,7 +39,7 @@
     </head>
     <body onload="start(<?=$aliado1pv?>, <?=$aliado1pvtotal?>, <?=$aliado2pv?>, <?=$aliado2pvtotal?>, <?=$aliado3pv?>, <?=$aliado3pvtotal?>, <?=$aliado4pv?>, <?=$aliado4pvtotal?>, <?=$aliado5pv?>, <?=$aliado5pvtotal?>); mensagem('<p>Um bando selvagem aparece.</p>'); menu3();">
         <div class="game">
-            <div class="tela forest">
+            <div class="tela menor forest">
                 <div class="inimigo" id="campoinimigo">          
                 </div>    
                 <div class="aliado">

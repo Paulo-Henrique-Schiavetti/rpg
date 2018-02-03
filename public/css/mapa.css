@@ -1,0 +1,44 @@
+.tela {
+    height: 520px;
+}
+
+.menu {
+    height: 126px;
+}
+#char {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+    z-index: 60;
+}
+#eventoi1{
+    z-index: 0;
+}
+#eventoi2{
+    z-index: 0;
+}
+.evento {
+    position: absolute;
+    width: 56px;
+    height: 56px;
+}
+.hidden { 
+    display: none;
+    visibility: hidden;
+}
+@media only screen and (max-width: 768px) {
+    .tela {
+    height: 360px;
+    }
+    .menu {
+    height: 120px;
+    }
+    #char {
+        width: 36px;
+        height: 36px;
+    }
+    #evento {
+        width: 36px;
+        height: 36px;
+    }
+}

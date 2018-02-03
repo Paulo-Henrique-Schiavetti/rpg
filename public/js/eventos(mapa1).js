@@ -21,6 +21,23 @@ eventoi4y = 0;
 eventoi5x = 0;
 eventoi5y = 0;
 
+var posicionareventos = setTimeout(function(){
+    document.getElementById('char').style = 'bottom:'+(x*1.2)+'%; right:'+y+'%;';
+    document.getElementById('char').style.zIndex = 99-x;
+    document.getElementById('eventoi1').style = 'bottom:'+(eventoi1x*1.2)+'%; right:'+eventoi1y+'%;';
+    document.getElementById('eventoi1').style.zIndex = 99-eventoi1x;
+    document.getElementById('eventoi2').style = 'bottom:'+(eventoi2x*1.2)+'%; right:'+eventoi2y+'%;';
+    document.getElementById('eventoi2').style.zIndex = 99-eventoi2x;
+    /*
+    document.getElementById('eventoi3').style = 'bottom:'+(eventoi3x*1.2)+'%; right:'+eventoi3y+'%;';
+    document.getElementById('eventoi3').style.zIndex = 99-eventoi3x;
+    document.getElementById('eventoi4').style = 'bottom:'+(eventoi4x*1.2)+'%; right:'+eventoi4y+'%;';
+    document.getElementById('eventoi4').style.zIndex = 99-eventoi4x;
+    document.getElementById('eventoi5').style = 'bottom:'+(eventoi5x*1.2)+'%; right:'+eventoi5y+'%;';
+    document.getElementById('eventoi5').style.zIndex = 99-eventoi5x;
+    */
+}, 1);
+
 function eventoi1() {
     if(eventoi1ativo==false){
         if (mirax == 40 && miray == 30) {

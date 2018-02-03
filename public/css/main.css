@@ -1,0 +1,40 @@
+body {
+    background: url(/public/img/body.jpg);
+    background-size: cover;
+}
+.game {
+    margin-left: 12.5%;
+    width: 75%;
+}
+.tela {
+    border: solid #202020 2px;
+    border-radius: 2px;
+    position: relative;
+    z-index: 1;
+}
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.menu > .caixa {
+    width: 100%;
+}
+.hidden { 
+    display: none;
+    visibility: hidden;
+}
+.caixa {
+    z-index: 2;
+    background-color: #303030;
+    border: solid black 2px;
+    border-radius: 6px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .game {
+        width: 98%;
+        margin-left:1%;
+    }
+}

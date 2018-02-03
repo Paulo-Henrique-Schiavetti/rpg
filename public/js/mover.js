@@ -2,7 +2,7 @@ x = 40;
 y = 45;
 parado = true;
 direcao = "down";
-mirax = x-10;
+mirax = x-5;
 miray = y;
 
 window.addEventListener("keydown", wasd, false);
@@ -15,7 +15,7 @@ function wasd(key) {
                 movimento();
             } else {
                 direcao = "up";             
-                mirax = x+10;
+                mirax = x+5;
                 miray = y;  
                 parado = true;
             }
@@ -34,7 +34,7 @@ function wasd(key) {
                 movimento();
             } else {
                 direcao = "down";             
-                mirax = x-10;
+                mirax = x-5;
                 miray = y;  
                 parado = true;
             }
@@ -57,8 +57,8 @@ function movimento(){
         if (colisao()){
         var movimentacao = setInterval(function(){ 
             if(direcao == "up"){
-                x += 2;             
-                mirax = x+10;
+                x += 1;             
+                mirax = x+5;
                 miray = y;       
             }
             if(direcao == "left"){
@@ -67,8 +67,8 @@ function movimento(){
                 miray = y+5;   
             }
             if(direcao == "down"){
-                x -= 2;
-                mirax = x-10;
+                x -= 1;
+                mirax = x-5;
                 miray = y;   
             }
             if(direcao == "right"){
@@ -77,13 +77,13 @@ function movimento(){
                 miray = y-5;   
             }
             if(x < 0){
-                x += 2;
+                x += 1;
             }
             if(y < 0){
                 y += 1;
             }
-            if(x > 80){
-                x -= 2;
+            if(x > 70){
+                x -= 1;
             }
             if(y > 90){
                 y -= 1;
@@ -99,8 +99,8 @@ function movimento(){
     }
 }
 function position() {
-    document.getElementById('char').style = 'bottom:'+x+'%; right:'+y+'%;';
-    document.getElementById('char').style.zIndex = 9-(x/10);
+    document.getElementById('char').style = 'bottom:'+(x*1.2)+'%; right:'+y+'%;';
+    document.getElementById('char').style.zIndex = 99-x;
 }
 function teletransporte(a,b) {
     x = a;
