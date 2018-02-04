@@ -16,6 +16,7 @@ var i5pv = 0;
 var i5pvtotal = 0;
 
 function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
+
     i0 = inimigos[0].split("|");;
     bosschance = i0[15];
     boss = Math.random()*100;
@@ -28,84 +29,66 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
         i4[1] = "vazio"; i4[3] = 1; 
         i5[1] = "vazio"; i5[3] = 1;
     } else {
-        i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-        if (i1[13] != 4){
-            i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            if (i2[13] != 4){
-                i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                if (i3[13] != 4){                
-                    i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                    if (i4[13] != 4){
-                        do {
-                            i5 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                        } while (i5[13] == 4);                    
-                    } else {
-                        i5[1] = "vazio"; i5[3] = 1;
-                    }
-                } else {
-                    i5[1] = "vazio"; i5[3] = 1;
-                    do {
-                        i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                    } while (i4[13] == 4); 
-                }
-            } else {
-                i5[1] = "vazio"; i5[3] = 1;
-                i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                if (i3[13] != 4){
-                    do {
-                        i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                    } while (i4[13] == 4);  
-                } else {
-                    i4[1] = "vazio"; i4[3] = 1;
-                    i5[1] = "vazio"; i5[3] = 1;
-                }
-            }
-        } else {
-            i5[1] = "vazio"; i5[3] = 1;
-            i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            if (i2[13] != 4){
-                i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                if (i3[13] != 4){                
-                    do {
-                        i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                    } while (i4[13] == 4);                
-                } else {
-                    i4[1] = "vazio"; i4[3] = 1;
-                }
-            } else {
-                i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-                i4[1] = "vazio"; i4[3] = 1;
-            }
-        }
-        if (i1[1] != 'vazio' && i1[13] == 5) {
+        qtdi = Math.trunc((Math.random()*5)+1);
+        if (qtdi == 5){
             do {
                 i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            } while (i1[13] > 3);    
-        }
-        if (i2[1] != 'vazio' && i2[13] == 5) {
-            do {
                 i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            } while (i2[13] > 3);    
-        }
-        if (i3[1] != 'vazio' && i3[13] == 5) {
-            do {
                 i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            } while (i3[13] > 3);    
-        }
-        if (i4[1] != 'vazio' && i4[13] == 5) {
-            do {
                 i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            } while (i4[13] > 3);    
-        }
-        if (i5[1] != 'vazio' && i5[13] == 5) {
-            do {
                 i5 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
-            } while (i5[13] > 3);    
+            } while (i1[13] > 3 || i2[13] > 3 || i3[13] > 3 || i4[13] > 3 || i5[13] > 3);
+        } else if (qtdi == 4) {
+            do {
+                do {
+                    i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                } while (i1[13] == 5);
+                do {
+                    i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                } while (i2[13] == 5);
+                do {
+                    i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                } while (i3[13] == 5);
+                do {
+                    i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                } while (i4[13] == 5);
+                i5[1] = "vazio"; i5[3] = 1;
+                size = parseInt(i1['13']) + parseInt(i2['13']) + parseInt(i3['13']) + parseInt(i4['13']);
+            } while (size > 13 );
+        } else if (qtdi == 3) {
+            do {
+                do {
+                    i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                } while (i1[13] == 5);
+                do {
+                    i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                } while (i2[13] == 5);
+                do {
+                    i3 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                } while (i3[13] == 5);
+                i4[1] = "vazio"; i4[3] = 1;
+                i5[1] = "vazio"; i5[3] = 1;
+                size = parseInt(i1['13']) + parseInt(i2['13']) + parseInt(i3['13']);
+            } while (size > 13 || parseInt(i1['13']) == 4 && parseInt(i2['13']) == 4 && parseInt(i3['13']) == 4);
+        } else if (qtdi == 2) {
+            do {
+                i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                i3[1] = "vazio"; i3[3] = 1;
+                i4[1] = "vazio"; i4[3] = 1;
+                i5[1] = "vazio"; i5[3] = 1;
+            } while (i1[13] == 5 || i2[13] == 5);
+        } else if (qtdi == 1) {
+            do {
+                i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
+                i2[1] = "vazio"; i2[3] = 1;
+                i3[1] = "vazio"; i3[3] = 1;
+                i4[1] = "vazio"; i4[3] = 1;
+                i5[1] = "vazio"; i5[3] = 1;
+            } while (i1[13] == 5);
         }
     }
 
-    
-    
     i1p = i1[3];
     i2p = i2[3];
     i3p = i3[3];
