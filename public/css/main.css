@@ -20,6 +20,9 @@ body {
 .menu > .caixa {
     width: 100%;
 }
+.menu {
+    height: 200px;
+}
 .hidden { 
     display: none;
     visibility: hidden;

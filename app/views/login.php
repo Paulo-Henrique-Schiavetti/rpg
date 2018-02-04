@@ -22,11 +22,9 @@
             </div>
             <div class="menu">
                 <div class="caixa">
-                <p>Bem-vindo ao JoJo's bizarre adventures online!<br/>
-                É sua primeira vez aqui: <a href="/">cadastre-se</a></p>
-                </div>
-                <div class="caixa pequena">
-                    <a href="/">como jogar</a>
+                <h2>Bem-vindo ao JoJo's bizarre adventures online!</h2>
+                <br/>
+                <h2>É sua primeira vez aqui:<a href="/">cadastre-se.</a>Ou saiba<a href="/">como jogar.</a></h2>
                 </div>
             </div>
         </div>
