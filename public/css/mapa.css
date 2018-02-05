@@ -8,18 +8,18 @@
     position: absolute;
     width: 56px;
     height: 56px;
-    z-index: 60;
+    bottom: 45%;
+    right: 45%;
+    z-index: 100;
 }
-#eventoi1{
-    z-index: 0;
-}
-#eventoi2{
-    z-index: 0;
+#fundo {
+    position: absolute;
 }
 .evento {
     position: absolute;
     width: 56px;
     height: 56px;
+    z-index: 100;
 }
 .hidden { 
     display: none;
