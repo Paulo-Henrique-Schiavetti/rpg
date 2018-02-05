@@ -1,5 +1,6 @@
 .tela {
-    height: 520px;
+    height: 520px;    
+    overflow: hidden;
 }
 .menu {
     height: 126px;
