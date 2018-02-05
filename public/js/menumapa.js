@@ -96,7 +96,7 @@ function multmensagens(mensagem, qtd) {
     document.addEventListener("keydown", continuarmensagem, false);
 }
 function continuarmensagem(key) {
-    if (key.keyCode == 90) {
+    if (key.keyCode == 13) {
         contadormensagem += 1;
         document.getElementById("mensagem").innerHTML = multmensagem[contadormensagem];
         multmensagem[contadormensagem-1] = "";
@@ -109,7 +109,7 @@ function continuarmensagem(key) {
     }
 }
 function resetmensagem(key){
-    if (key.keyCode == 90) {
+    if (key.keyCode == 13) {
         document.getElementById("menu").className = "caixa";
         document.getElementById("mensagem").className = "hidden";
         mensagemativa = false;
