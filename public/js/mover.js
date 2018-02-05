@@ -1,10 +1,14 @@
-x = 45;
-y = 45;
+x = 60;
+y = 20;
 parado = true;
 direcao = "down";
 mirax = x-5;
 miray = y;
 
+
+var startmapa = setTimeout(function(){
+    position();
+}, 10);
 window.addEventListener("keydown", wasd, false);
 
 function wasd(key) {
@@ -89,7 +93,6 @@ function movimento(){
                 y -= 1;
             }
             position();
-            gerareventos();
         },100);
         setTimeout(function(){
             clearInterval(movimentacao);
@@ -99,10 +102,11 @@ function movimento(){
         parado = true;
     }
 }
-function position() {
-    document.getElementById('fundo').style.right = (-y+45)+"%";
-    document.getElementById('fundo').style.bottom = (-x+45)+"%";
-    document.getElementById('char').style.zIndex = 100-x;
+function position() {    
+    gerareventos();
+    document.getElementById('fundo').style.right = ((-y+62.5)*0.8)+"%";
+    document.getElementById('fundo').style.bottom = (-x+50)+"%";
+    document.getElementById('char').style.zIndex = 200-x;
 }
 function teletransporte(a,b) {
     x = a;

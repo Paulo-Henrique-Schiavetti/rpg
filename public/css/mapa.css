@@ -1,6 +1,7 @@
 .tela {
-    height: 520px;    
+    height: 480px;    
     overflow: hidden;
+    background-color: cadetblue;
 }
 .menu {
     height: 126px;
@@ -9,8 +10,8 @@
     position: absolute;
     width: 56px;
     height: 56px;
-    bottom: 45%;
-    right: 45%;
+    bottom: 50%;
+    right: 50%;
     z-index: 100;
 }
 #fundo {
@@ -28,16 +29,13 @@
 }
 @media only screen and (max-width: 768px) {
     .tela {
-    height: 360px;
-    }
-    .menu {
-    height: 120px;
+    height: 320px;
     }
     #char {
         width: 36px;
         height: 36px;
     }
-    #evento {
+    .evento {
         width: 36px;
         height: 36px;
     }

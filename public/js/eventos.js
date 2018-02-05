@@ -3,13 +3,22 @@ eva2ativo = false;
 eva3ativo = false;
 eva4ativo = false;
 eva5ativo = false;
+eva1x = 40;
+eva1y = 50;
+eva2x = 50;
+eva2y = 70;
+eva3x = 0;
+eva3y = 0;
+eva4x = 0;
+eva4y = 0;
+eva5x = 0;
+eva5y = 0;
 
 evi1ativo = false;
 evi2ativo = false;
 evi3ativo = false;
 evi4ativo = false;
 evi5ativo = false;
-
 evi1x = 40;
 evi1y = 20;
 evi2x = 10;
@@ -26,7 +35,7 @@ function qua1evi1(key) {
         if (key.keyCode == 90) {
             if(evi1ativo==false){
                 if (mirax == evi1x && miray == evi1y) {
-                    multmensagens('Garota:<br/>oi! Você é um aventureiro?|Garota:<br/>Minha irmã gêmea está presa na floresta, se você pudesse encontrá-la...|Garota:<br/>a propósito, meu nome é Airien.|Airien:<br/>a floresta fica naquela direção <br/> <--|Airien:<br/>estou contando com você!', 5);
+                    multmensagens('Garota:<br/>oi! Você é um aventureiro?|Garota:<br/>Meu nome é Irian.|Irian:<br/>Minha irmã Airien está presa na floresta... Se por um acaso você a encontrar...|Irian:<br/>a floresta fica naquela direção <br/> <--|Irian:<br/>estou contando com você!', 5);
                     evi1ativo = true;          
                 }
                 setTimeout(function(){
@@ -41,7 +50,7 @@ function qua1evi2(key) {
         if (key.keyCode == 90) {
             if(evi2ativo==false){
                 if (mirax == evi2x && miray == evi2y) {
-                    mensagem('Irmã da Airien:<br/>Ah, graças a Jojo! você veio me salvar?');
+                    mensagem('Airien:<br/>Ah, graças a Jojo! você veio me salvar?');
                     evi2ativo = true;          
                 }        
                 setTimeout(function(){
@@ -52,24 +61,24 @@ function qua1evi2(key) {
     }    
 }
 
-function eva1() {
+function qua1eva1() {
     if(eva1ativo==false){
-        if (x == 35 && y == 55) {
-            teletransporte(50,70);
+        if (x == eva1x && y == eva1y) {
+            teletransporte(eva2x,eva2y);
             eva2ativo = true; 
         }
-    } else if (x != 35 || y != 55) {
+    } else if (x != eva1x || y != eva1y) {
         eva1ativo = false;
         eva2ativo = false;          
     }
 }
-function eva2() {
+function qua1eva2() {
     if(eva2ativo==false){
-        if (x == 50 && y == 70) {
-            teletransporte(35,55);
+        if (x == eva2x && y == eva2y) {
+            teletransporte(eva1x,eva1y);
             eva1ativo = true; 
         }
-    } else if (x != 50 || y != 70) {
+    } else if (x != eva2x || y != eva2y) {
         eva1ativo = false;
         eva2ativo = false;          
     }
