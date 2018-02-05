@@ -32,7 +32,7 @@ evi5y = 0;
 
 function qua1evi1(key) {
     if (parado){
-        if (key.keyCode == 90) {
+        if (key.keyCode == 13) {
             if(evi1ativo==false){
                 if (mirax == evi1x && miray == evi1y) {
                     multmensagens('Garota:<br/>oi! Você é um aventureiro?|Garota:<br/>Meu nome é Irian.|Irian:<br/>Minha irmã Airien está presa na floresta... Se por um acaso você a encontrar...|Irian:<br/>a floresta fica naquela direção <br/> <--|Irian:<br/>estou contando com você!', 5);
@@ -47,7 +47,7 @@ function qua1evi1(key) {
 }
 function qua1evi2(key) {
     if (parado){
-        if (key.keyCode == 90) {
+        if (key.keyCode == 13) {
             if(evi2ativo==false){
                 if (mirax == evi2x && miray == evi2y) {
                     mensagem('Airien:<br/>Ah, graças a Jojo! você veio me salvar?');
