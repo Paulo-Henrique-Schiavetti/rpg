@@ -8,7 +8,7 @@ miray = y;
 
 var startmapa = setTimeout(function(){
     position();
-}, 10);
+}, 20);
 window.addEventListener("keydown", wasd, false);
 
 function wasd(key) {
