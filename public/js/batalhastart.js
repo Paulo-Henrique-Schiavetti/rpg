@@ -95,15 +95,15 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
     i4p = i4[3];
     i5p = i5[3];
 
-    inimigotext = "<div class='char size"+i1[13]+"' id='inimigo1' onclick='ataque2(1);'><div class='caixa pequena'><p class='small'>"+i1[1]+"</p><div id='i1barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i1[13]+"'><img src='/public/img/inimigos/inimigo_"+i1[0]+".png'></div></div>";
+    inimigotext = "<div class='char size"+i1[13]+"' id='inimigo1' onclick='ataque2(1);'><div class='caixa pequena'><p class='small'>"+i1[1]+"</p><div id='i1barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i1[13]+"'><img src='/public/img/inimigos/inimigo_"+i1[0]+"/v1.png'></div></div>";
     if (i2[1] != "vazio"){
-        inimigotext += "<div class='char size"+i2[13]+"' id='inimigo2' onclick='ataque2(2);'><div class='caixa pequena'><p class='small'>"+i2[1]+"</p><div id='i2barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i2[13]+"'><img src='/public/img/inimigos/inimigo_"+i2[0]+".png'></div></div>";
+        inimigotext += "<div class='char size"+i2[13]+"' id='inimigo2' onclick='ataque2(2);'><div class='caixa pequena'><p class='small'>"+i2[1]+"</p><div id='i2barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i2[13]+"'><img src='/public/img/inimigos/inimigo_"+i2[0]+"/v1.png'></div></div>";
         if (i3[1] != "vazio"){
-            inimigotext += "<div class='char size"+i3[13]+"' id='inimigo3' onclick='ataque2(3);'><div class='caixa pequena'><p class='small'>"+i3[1]+"</p><div id='i3barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i3[13]+"'><img src='/public/img/inimigos/inimigo_"+i3[0]+".png'></div></div>";
+            inimigotext += "<div class='char size"+i3[13]+"' id='inimigo3' onclick='ataque2(3);'><div class='caixa pequena'><p class='small'>"+i3[1]+"</p><div id='i3barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i3[13]+"'><img src='/public/img/inimigos/inimigo_"+i3[0]+"/v1.png'></div></div>";
             if (i4[1] != "vazio"){
-                inimigotext += "<div class='char size"+i4[13]+"' id='inimigo4' onclick='ataque2(4);'><div class='caixa pequena'><p class='small'>"+i4[1]+"</p><div id='i4barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i4[13]+"'><img src='/public/img/inimigos/inimigo_"+i4[0]+".png'></div></div>";
+                inimigotext += "<div class='char size"+i4[13]+"' id='inimigo4' onclick='ataque2(4);'><div class='caixa pequena'><p class='small'>"+i4[1]+"</p><div id='i4barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i4[13]+"'><img src='/public/img/inimigos/inimigo_"+i4[0]+"/v1.png'></div></div>";
                 if (i5[1] != "vazio"){
-                    inimigotext += "<div class='char size"+i5[13]+"' id='inimigo5' onclick='ataque2(5);'><div class='caixa pequena'><p class='small'>"+i5[1]+"</p><div id='i5barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i5[13]+"'><img src='/public/img/inimigos/inimigo_"+i5[0]+".png'></div></div>";
+                    inimigotext += "<div class='char size"+i5[13]+"' id='inimigo5' onclick='ataque2(5);'><div class='caixa pequena'><p class='small'>"+i5[1]+"</p><div id='i5barra'><p class='seta'>↼-------⇀</p></div></div><div class='size"+i5[13]+"'><img src='/public/img/inimigos/inimigo_"+i5[0]+"/v1.png'></div></div>";
                 } else {
                     inimigotext += "<div class='hidden' id='i5barra'></div>";
                 }
