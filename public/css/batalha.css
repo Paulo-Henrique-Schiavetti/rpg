@@ -42,11 +42,7 @@
     flex-direction: row;
     justify-content: flex-start;
 }
-.size2 > img {
-    width: 180px;
-    height: 240px;
-}
-.size3 > img {
+.size2 > img, .size3 > img {
     width: 200px;
     height: 280px;
 }

@@ -29,8 +29,8 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
         i4[1] = "vazio"; i4[3] = 1; 
         i5[1] = "vazio"; i5[3] = 1;
     } else {
-        qtdi = Math.trunc((Math.random()*5)+1);
-        if (qtdi == 5){
+        qtdi = Math.trunc((Math.random()*10)+1);
+        if (qtdi > 7){
             do {
                 i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
                 i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
@@ -38,7 +38,7 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
                 i4 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
                 i5 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
             } while (i1[13] > 3 || i2[13] > 3 || i3[13] > 3 || i4[13] > 3 || i5[13] > 3);
-        } else if (qtdi == 4) {
+        } else if (qtdi > 5) {
             do {
                 do {
                     i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
@@ -54,8 +54,8 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
                 } while (i4[13] == 5);
                 i5[1] = "vazio"; i5[3] = 1;
                 size = parseInt(i1['13']) + parseInt(i2['13']) + parseInt(i3['13']) + parseInt(i4['13']);
-            } while (size > 13 );
-        } else if (qtdi == 3) {
+            } while (size > 11 );
+        } else if (qtdi > 3) {
             do {
                 do {
                     i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
@@ -69,8 +69,8 @@ function start(a1p, a1t, a2p, a2t, a3p, a3t, a4p, a4t, a5p, a5t){
                 i4[1] = "vazio"; i4[3] = 1;
                 i5[1] = "vazio"; i5[3] = 1;
                 size = parseInt(i1['13']) + parseInt(i2['13']) + parseInt(i3['13']);
-            } while (size > 13 || parseInt(i1['13']) == 4 && parseInt(i2['13']) == 4 && parseInt(i3['13']) == 4);
-        } else if (qtdi == 2) {
+            } while (size > 12 || parseInt(i1['13']) == 4 && parseInt(i2['13']) == 4 && parseInt(i3['13']) == 4);
+        } else if (qtdi > 1) {
             do {
                 i1 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
                 i2 = inimigos[Math.trunc(Math.random()*inimigos.length)].split("|");
