@@ -13,7 +13,7 @@
         <script type="text/javascript" src="/public/js/eventos.js"></script>
         <script type="text/javascript" src="/public/js/menumapa.js"></script>
     </head>
-    <body>
+    <body onload="position();">
         <div class="game">
             <div class="tela" id='tela'>                
             </div>

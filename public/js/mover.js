@@ -5,10 +5,6 @@ direcao = "down";
 mirax = x-5;
 miray = y;
 
-
-var startmapa = setTimeout(function(){
-    position();
-}, 20);
 window.addEventListener("keydown", wasd, false);
 
 function wasd(key) {
